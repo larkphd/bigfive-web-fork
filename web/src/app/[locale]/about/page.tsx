@@ -55,24 +55,7 @@ export default function AboutPage({ params: { locale } }: Props) {
           . You may try to contact us, but the faq hopefully gives you the answers you need.
         </p>
       </div>
-      <section>
-        <div className='text-center justify-center mt-20'>
-          <h2 className={title()}>Feedback is nice!&nbsp;</h2>
-          <div className='flex md:inline-flex flex-col md:flex-row items-center'>
-            <HeartBoldIcon
-              className='text-pink-500 animate-heartbeat'
-              size={50}
-              style={{
-                animationDuration: '2.5s'
-              }}
-            />
-          </div>
-          <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
-            Feedback and suggestions down here.
-          </div>
-        </div>
-        <Feedback />
-      </section>
+
     </>
   );
 }
