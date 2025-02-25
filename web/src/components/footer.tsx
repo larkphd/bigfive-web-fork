@@ -74,21 +74,6 @@ export default function Footer({ footerLinks }: FooterProps) {
       <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
         © {year} — understandme2.com - all rights reserved.
       </div>
-
-
-      
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W87Q75T8PV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-W87Q75T8PV');
-</script>
-
-
-        
-    </footer>
+ </footer>
   );
 }
