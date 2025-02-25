@@ -8,25 +8,22 @@ export default function PrivacyPage() {
         <h5 className='text-default-500 text-lg'>Our privacy policy</h5>
       </div>
       <div className='mt-10'>
-        This privacy policy will explain how we use the personal data we collect
-        from you when you use our website.
-        <h2>What data do we collect?</h2>
-        We collect the following data
+        We collect this from you, when you visit us.
+        <h2>Wonder what we are talking about?</h2>
+        These data are retrived
         <br />
         <br />
         <ul>
-          <li>Choosen test language</li>
-          <li>Test answers</li>
-          <li>Datetime of submitted test</li>
+          <li>Test language</li>
+          <li>Your answers</li>
+          <li>When you did submit the test</li>
         </ul>
         <br />
-        We also use Google Analytics to measure traffic to our site and how
-        users interact with our site. The Google Analytics terms specify that no
-        personally identifiable information may be collected through the Google
-        Analytics software.
+        Some analytics from Google Analytics is used to improve the trafic. Google Analytics terms confirms that no
+        personally or identifiable information is collected.
         <br />
         <br />
-        Read more about Google Analytics privacy policy{' '}
+        Google Analytics privacy policy excplained{' '}
         <a
           href='https://policies.google.com/privacy'
           rel='noopener noreferrer'
@@ -34,44 +31,39 @@ export default function PrivacyPage() {
         >
           here
         </a>
-        .<h2>How do we collect your data?</h2>
-        Google Analytics sets the following cookies:
+        .<h2>Your collected data by Google Analytics</h2>
+        The following cookies:
         <br />
         <br />
         <ul>
           <li>
             &quot;_ga&quot; is used to distingusih users. The cookie is set the
-            first time a user access the website and has a lifetime of 2 until
-            years
+            first time use and with a lifetime of until 2 years
           </li>
           <li>
-            &quot;_gat&quot; is used to limit the traffic from Google Analytics,
-            this cookie has a lifetime of 10 minutes.
+            &quot;_gat&quot; limit Google Analytics trafic,
+            10 min lifetime .
           </li>
         </ul>
         <br />
-        Your web browser also automatically sends information to our hosting
-        provider Zeit.
+        Som browser information is automatically sent to our webservice.
         <br />
-        This can i.e. be information about wich browser and version you are
-        using and your Internet address (IP-address). For each page that is
-        displayed, the date and time information, which page you came from,
-        which page you are on, etc. are also stored.
+        I.e. information about browser/version, your IP-address, ttime information, and where you came from,
+       are also stored.
         <br />
         <br />
-        When you submit the test the information you provide (described above)
-        is stored in our database.
-        <h2>How will we use your data?</h2>
-        We use Google Analytics to get statistics on how visitors use the site.
+        When you finish the test, this will be stored in understandme2.
+        <h2>We use and store your data </h2>
+        Google Analytics gives us insite to get statistics on how visitors use the site.
         <br />
         <br />
-        We will create statistical, aggregated data from the test results for
-        analytical purposes.
-        <h2>How do we store your data?</h2>
-        <h2>How to contact us?</h2>
-        If you have any questions about this privacy policy, please{' '}
+        Aggregated and statistic data from tests can be used for
+        analytical purposes. And stored for a short periode of time.
+        <h2> </h2>
+        <h2>Contact us?</h2>
+        Questions regarding this privacy policy, use{' '}
         <a
-          href='mailto:support@bigfive-test.com'
+          href='mailto:contact@understandme2.com'
           rel='noopener noreferrer'
           target='_blank'
         >
