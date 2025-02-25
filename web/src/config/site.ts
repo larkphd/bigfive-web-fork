@@ -2,9 +2,9 @@ import { getTranslations } from 'next-intl/server';
 
 export type SiteConfig = typeof siteConfig;
 
-export const basePath = 'https://bigfive-test.com';
+export const basePath = 'https://understandme2.com';
 
-export const supportEmail = 'bigfive-test@rubynor.com';
+export const supportEmail = 'contact@understandme2.com';
 
 export type Language = {
   code: string;
@@ -54,10 +54,10 @@ export const languages: Language[] = [
 export const locales = languages.map((lang) => lang.code) as string[];
 
 export const siteConfig = {
-  name: 'Big Five Personality Test',
-  creator: '@maccyber',
+  name: 'Understand Me with the methode of big five Personality Test',
+  creator: 'Reborn from github',
   description:
-    'Learn to know yourself better with a free, open-source personality test.',
+    'Understand yourself to become a better version - and to know how you are.',
   navItems: [
     {
       label: 'home',
@@ -133,10 +133,10 @@ export const siteConfig = {
     }
   ],
   links: {
-    github: 'https://github.com/rubynor/bigfive-web',
-    twitter: 'https://twitter.com/rubynor',
-    linkedIn: 'https://www.linkedin.com/company/rubynor-as/',
-    facebook: 'https://www.facebook.com/rubynorno'
+    github: 'https://en.wikipedia.org/wiki/Big_Five_personality_traits',
+    twitter: 'https://wiki.personality-database.com/books/big-5-personality-traits',
+    linkedIn: 'https://www.scribd.com/document/445839163/Big-Five-personality-traits-Wikipedia-pdf',
+    facebook: 'https://www.worldwildlife.org/blogs/good-nature-travel/posts/ten-wild-facts-about-the-big-five'
   }
 };
 

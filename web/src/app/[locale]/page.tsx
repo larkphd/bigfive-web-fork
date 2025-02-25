@@ -239,10 +239,10 @@ export default function Home({ params: { locale } }: Props) {
 
       <div className='text-center mx-2'>
         <Link href='/articles' color='foreground'>
-          <h1 className={title()}>Latest posts</h1>
+          <h1 className={title()}>Articles</h1>
         </Link>
         <h2 className={subtitle({ class: 'mt-4' })}>
-          All the latest and greatest news and articles on #personality
+          Some articles on personality, to help you understand yourself
         </h2>
         <div className='mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
           {posts.map((post, idx) => (
@@ -258,7 +258,7 @@ export default function Home({ params: { locale } }: Props) {
             href='/articles'
             size='md'
           >
-            Show all articles ...
+            All articles ...
           </Link>
         </div>
       </div>

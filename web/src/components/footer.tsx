@@ -72,7 +72,7 @@ export default function Footer({ footerLinks }: FooterProps) {
       </div>
 
       <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
-        © {year} — B5 Holding AS - all rights reserved.
+        © {year} — understandme2.com - all rights reserved.
       </div>
     </footer>
   );

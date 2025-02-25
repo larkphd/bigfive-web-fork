@@ -34,13 +34,13 @@ export async function generateMetadata({
     },
     description: t('seo.description'),
     keywords: s('keywords'),
-    authors: [{ name: 'Jonas Enge', url: 'https://bigfive-test.com' }],
+    authors: [{ name: 'Jonas Enge', url: 'https://understandme2.com' }],
     icons: {
       icon: '/favicon.ico',
       shortcut: '/favicon-16x16.png',
       apple: '/apple-touch-icon.png'
     },
-    metadataBase: new URL('https://bigfive-test.com'),
+    metadataBase: new URL('https://understandme2.com'),
     // alternates: {
     //   canonical: '/',
     //   languages: alternatesLang
@@ -117,7 +117,7 @@ export default async function RootLayout({
           </div>
         </Providers>
         <Script
-          src='https://bigfive-test.com/sw.js'
+          src='https://understandme2.com/sw.js'
           strategy='beforeInteractive'
         />
         <Analytics />

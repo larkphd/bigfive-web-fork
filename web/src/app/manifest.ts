@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Bigfive web',
-    short_name: 'Bigfive',
+    name: 'Understand Me 2',
+    short_name: 'understandme2',
     description:
-      'Learn to know yourself better with a free, open-source personality test.',
+      'Unders Me, get under your own skin for free with this personality test.',
     start_url: '/',
     display: 'standalone',
     background_color: '#FFFFFF',
