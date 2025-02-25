@@ -117,7 +117,7 @@ export default async function RootLayout({
           </div>
         </Providers>
         <Script
-          src='https://bigfive-test.com/sw.js'
+          src='https://understandme2.com/sw.js'
           strategy='beforeInteractive'
         />
         <Analytics />
