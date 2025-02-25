@@ -206,7 +206,7 @@ export const Survey = ({
               <InfoIcon />
             </Button>
             <p>
-              Your answers has been restored. Click here to&nbsp;
+              Restore complete, your answers has been restored here to&nbsp;
               <a
                 className='underline cursor-pointer'
                 onClick={clearDataInLocalStorage}
