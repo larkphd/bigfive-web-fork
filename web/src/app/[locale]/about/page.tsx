@@ -30,36 +30,34 @@ export default function AboutPage({ params: { locale } }: Props) {
       </div>
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p>
-          Welcome to bigfive-test.com, your premier destination for exploring
-          personality traits using the scientifically acclaimed Big Five model.
-          Our free, open-source test offers detailed insights into the five key
-          dimensions of personality: Openness, Conscientiousness, Extraversion,
-          Agreeableness, and Neuroticism.
+          Welcome to understandme2.com – your gateway to fascinating personality insights!
+          Our free and user-friendly test is based on the renowned Big Five model and provides 
+          a deeper understanding of five key personality traits: Openness, Conscientiousness, 
+          Extraversion, Agreeableness, and Emotional Stability.
         </p>
         <br />
         <p>
-          Each dimension is carefully analyzed to provide a comprehensive view
-          of your traits and how they influence your behavior and interactions.
+          Whether you’re an individual seeking self-awareness, a company looking to enhance teamwork, 
+          a sports team optimizing group dynamics, an organization aiming for better collaboration, 
+          or an educator integrating it into learning – our test offers valuable insights.
         </p>
         <p>
-          Developed with precision and accessibility in mind, our test helps you
-          understand yourself better and foster personal growth. Embrace the
-          journey of self-discovery with bigfive-test.com, where psychological
-          insights meet user-friendly technology.
+          And why not turn it into a social activity? The test can also be a fun icebreaker at parties 
+          or social gatherings! Discover yourself and those around you in a whole new way with 
+          understandme2.com – where psychology meets engagement and practical use in every setting.
         </p>
         <br />
         <p>
-          If you have questions please read through the{' '}
+          What if... you wonder read the{' '}
           <Link href='/faq' className='underline'>
             FAQ
           </Link>{' '}
-          first. If you can&apos;t find an answer there, feel free to contact us
-          at bigfive-test@rubynor.com.
+          . You may try to contact us, but the faq hopefully gives you the answers you need.
         </p>
       </div>
       <section>
         <div className='text-center justify-center mt-20'>
-          <h2 className={title()}>We love feedback!&nbsp;</h2>
+          <h2 className={title()}>Feedback is nice!&nbsp;</h2>
           <div className='flex md:inline-flex flex-col md:flex-row items-center'>
             <HeartBoldIcon
               className='text-pink-500 animate-heartbeat'
@@ -70,8 +68,7 @@ export default function AboutPage({ params: { locale } }: Props) {
             />
           </div>
           <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
-            Send us feedback about how our features can be improved or specific
-            issues.
+            Feedback and suggestions down here.
           </div>
         </div>
         <Feedback />
