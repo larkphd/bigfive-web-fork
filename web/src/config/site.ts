@@ -134,8 +134,8 @@ export const siteConfig = {
   ],
   links: {
     Big5wiki: 'https://en.wikipedia.org/wiki/Big_Five_personality_traits',
-    Personality_db: 'https://wiki.personality-database.com/books/big-5-personality-traits',
-    scribd: 'https://www.scribd.com/document/445839163/Big-Five-personality-traits-Wikipedia-pdf',
+    Personalitydb: 'https://wiki.personality-database.com/books/big-5-personality-traits',
+    github: 'https://www.scribd.com/document/445839163/Big-Five-personality-traits-Wikipedia-pdf',
     not_big_five: 'https://www.worldwildlife.org/blogs/good-nature-travel/posts/ten-wild-facts-about-the-big-five'
   }
 };
