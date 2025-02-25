@@ -1,4 +1,4 @@
-# bigfive-web
+# UnderstandMe2
 
 Prod: https://understandme2.com
 
@@ -8,7 +8,7 @@ Tests and evaluation is gathered from [ipip.ori.org](http://ipip.ori.org).
 
 See it live @ [understandme2.com](https://understandme2.com)
 
-## Help wanted
+## Translate
 
 If you want to help by translating the items to other languages look at the source on github rubynor.
 
