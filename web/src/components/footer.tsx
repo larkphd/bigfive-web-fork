@@ -74,6 +74,6 @@ export default function Footer({ footerLinks }: FooterProps) {
       <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
         © {year} — understandme2.com - all rights reserved.
       </div>
-    </footer>
+ </footer>
   );
 }
