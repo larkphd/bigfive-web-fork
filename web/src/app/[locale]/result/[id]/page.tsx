@@ -47,8 +47,8 @@ export default async function ResultPage({
     return (
       <Alert title='Could not retrive report'>
         <>
-          <p>We could not retrive the following id {params.id}.</p>
-          <p>Please check that it is correct or contact us at {supportEmail}</p>
+          <p>This ID could not be found,ID {params.id}.</p>
+          <p>Check spelling or reach out on {supportEmail}</p>
         </>
       </Alert>
     );
