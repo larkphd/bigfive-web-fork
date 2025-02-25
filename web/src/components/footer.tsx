@@ -27,35 +27,7 @@ export default function Footer({ footerLinks }: FooterProps) {
             <Logo />
           </span>
         </div>
-        <div className='w-1/2 flex justify-end'>
-          <NextUILink
-            isExternal
-            href={siteConfig.links.twitter}
-            aria-label='Twitter'
-          >
-            <TwitterIcon size={48} className='text-default-500' />
-          </NextUILink>
-          <NextUILink
-            isExternal
-            href={siteConfig.links.github}
-            aria-label='Github'
-          >
-            <GithubIcon size={48} className='text-default-500' />
-          </NextUILink>
-          <NextUILink
-            isExternal
-            href={siteConfig.links.linkedIn}
-            aria-label='LinkedIn'
-          >
-            <LinkedInIcon size={48} className='text-default-500' />
-          </NextUILink>
-          <NextUILink
-            isExternal
-            href={siteConfig.links.facebook}
-            aria-label='Facebook'
-          >
-            <FacebookIcon size={48} className='text-default-500' />
-          </NextUILink>
+        <div className='w-1/2 flex justify-end'>    
         </div>
       </div>
 
