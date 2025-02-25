@@ -34,7 +34,7 @@ export async function generateMetadata({
     },
     description: t('seo.description'),
     keywords: s('keywords'),
-    authors: [{ name: 'Jonas Enge', url: 'https://understandme2.com' }],
+    authors: [{ name: 'Reborn from github', url: 'https://understandme2.com' }],
     icons: {
       icon: '/favicon.ico',
       shortcut: '/favicon-16x16.png',
