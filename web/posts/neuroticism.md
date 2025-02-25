@@ -4,10 +4,10 @@ date: 2021-12-24
 description: An article on the personality trait Neuroticism.
 image: '/blog/traits/neuroticism_2.webp'
 author:
-  name: 'Jonas Enge'
-  username: 'maccyber'
-  link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  name: 'Reborn from Github'
+  username: 'Reborn'
+  link: 'https://understandme2.com'
+  avatar: '/avatars/logo.webp'
 ---
 
 Neuroticism refers to the tendency to experience negative feelings.
