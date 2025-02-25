@@ -4,10 +4,10 @@ date: 2021-12-24
 description: An article on the personality trait openness to experience.
 image: '/blog/traits/openness_2.webp'
 author:
-  name: 'Jonas Enge'
-  username: 'maccyber'
-  link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  name: 'Reborn from Github'
+  username: 'Reborn'
+  link: 'https://understandme2.com'
+  avatar: '/avatars/logo.webp'
 ---
 
 Openness to Experience describes a dimension of cognitive style that distinguishes imaginative, creative people from down-to-earth, conventional people.
