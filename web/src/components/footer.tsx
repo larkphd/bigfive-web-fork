@@ -27,9 +27,7 @@ export default function Footer({ footerLinks }: FooterProps) {
             <Logo />
           </span>
         </div>
-        <div className='w-1/2 flex justify-end'>
-     ##   logo nede til hoyre  <NextUILink>  isExternal href={siteConfig.links.twitter} aria-label='Twitter'> <TwitterIcon size={48} className='text-default-500' /> </NextUILink>
-        
+        <div className='w-1/2 flex justify-end'>    
         </div>
       </div>
 
