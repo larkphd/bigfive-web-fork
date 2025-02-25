@@ -63,21 +63,20 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           <div className='flex items-center'>
             <CookieIcon className='mr-2' />
             <span className='whitespace-nowrap text-2xl font-semibold leading-none tracking-tight'>
-              Cookie Preferences
+              Cookie-preferences
             </span>
           </div>
           <div className='text-sm text-gray-500 font-normal m-4'>
-            Manage your cookie settings. You can enable or disable different
-            types of cookies below.
+            Configure cookie settings, or disable/enable all kinds of
+            cookies.
           </div>
         </ModalHeader>
         <ModalBody className='space-y-4 pt-4'>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Essential Cookies</label>
+              <label>Basic-cookies</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies are necessary for the website to function and
-                cannot be switched off.
+                Necessary stuff that needs to be on.
               </p>
             </div>
             <Switch
@@ -89,10 +88,9 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           </div>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Analytics Cookies</label>
+              <label>GoogleAnalytics-cookies</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies allow us to count visits and traffic sources, so
-                we can measure and improve the performance of our site.
+                Some small analytics, to ensure translations and size of machine is okay.
               </p>
             </div>
             <Switch
@@ -104,9 +102,9 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           </div>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Marketing Cookies</label>
+              <label>Some Incomerelatedcookies</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies help us show you relevant ads.
+                Ads or not ads, at least some relevanse.
               </p>
             </div>
             <Switch
