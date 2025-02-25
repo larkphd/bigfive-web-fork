@@ -88,7 +88,6 @@ export default function Footer({ footerLinks }: FooterProps) {
 </script>
 
 
-
         
     </footer>
   );
