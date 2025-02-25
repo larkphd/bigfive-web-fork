@@ -96,6 +96,16 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <head />
+
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W87Q75T8PV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W87Q75T8PV');
+</script>
+      
       <body
         className={clsx(
           'min-h-screen bg-background font-sans antialiased',
@@ -122,7 +132,7 @@ export default async function RootLayout({
         />
         <Analytics />
       </body>
-      <GoogleAnalytics gaId={gaId} />
+     # <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
