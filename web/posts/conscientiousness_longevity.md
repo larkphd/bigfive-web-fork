@@ -4,10 +4,10 @@ date: 2024-04-19
 description: High conscientiousness seems to pay off through multiple pathways.
 image: '/blog/longevity.webp'
 author:
-  name: 'Jonas Enge'
-  username: '@maccyber'
-  link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  name: 'Reborn from Github'
+  username: 'Reborn'
+  link: 'https://understandme2.com'
+  avatar: '/avatars/logo.webp'
 ---
 
 Research across multiple studies has consistently shown that the personality trait of conscientiousness plays a significant role in predicting a longer lifespan.

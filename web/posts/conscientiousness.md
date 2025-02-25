@@ -4,10 +4,10 @@ date: 2021-12-24
 description: An article on the personality trait Conscientiousness.
 image: '/blog/traits/conscientiousness_2.webp'
 author:
-  name: 'Jonas Enge'
-  username: 'maccyber'
-  link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  name: 'Reborn from Github'
+  username: 'Reborn'
+  link: 'https://understandme2.com'
+  avatar: '/avatars/logo.webp'
 ---
 
 Conscientiousness concerns the way in which we control, regulate, and direct our impulses.

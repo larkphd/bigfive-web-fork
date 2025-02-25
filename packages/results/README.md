@@ -126,9 +126,6 @@ console.log(getFacet({language: 'no', domain: 'O', facet: 2})) // returns conten
 
 ## Related
 
-- [bigfive-web](https://github.com/maccyber/bigfive-web) Web frontend for big five tests
-- [b5-web](https://github.com/alheimisins/b5-web) Standalone website for big five tests
-
 
 ## Supported languages
 
