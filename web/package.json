@@ -7,7 +7,8 @@
     "start": "next start --turbo",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "ts": "tsc --noEmit --incremental --watch"
   },
   "dependencies": {
     "@bigfive-org/questions": "1.3.3",

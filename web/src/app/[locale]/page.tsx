@@ -88,7 +88,7 @@ export default function Home({ params: { locale } }: Props) {
             </div>
 
             <div className='flex flex-col md:flex-row items-center gap-4 justify-center'>
-              <Link
+              <NextLink
                 href='/test'
                 className={clsx(
                   buttonStyles({
@@ -102,23 +102,7 @@ export default function Home({ params: { locale } }: Props) {
                 )}
               >
                 {t('call_to_action')} <ArrowRightIcon />
-              </Link>
-              <Link
-                isExternal
-                className={clsx(
-                  buttonStyles({
-                    variant: 'bordered',
-                    radius: 'full',
-                    size: 'lg',
-                    fullWidth: true
-                  }),
-                  'md:w-auto'
-                )}
-                href={siteConfig.links.github}
-              >
-                <GithubIcon size={20} />
-                GitHub
-              </Link>
+              </NextLink>
             </div>
           </div>
 
@@ -164,7 +148,7 @@ export default function Home({ params: { locale } }: Props) {
                 aria-label={t('call_to_action')}
                 className='z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]'
                 radius='full'
-                as={Link}
+                as={NextLink}
                 href='/test'
               >
                 <PlusLinearIcon

@@ -11,9 +11,9 @@ import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
-import useTextDirection from '@/hooks/use-text-direction';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
+import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -27,6 +27,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
   const alternatesLang = locales.reduce((a, v) => ({ ...a, [v]: `/${v}` }), {});
+
   return {
     title: {
       default: t('seo.title'),
@@ -34,17 +35,17 @@ export async function generateMetadata({
     },
     description: t('seo.description'),
     keywords: s('keywords'),
-    authors: [{ name: 'Reborn from github', url: 'https://understandme2.com' }],
+    authors: [{ name: 'Reborn from github', url: basePath }],
     icons: {
       icon: '/favicon.ico',
       shortcut: '/favicon-16x16.png',
       apple: '/apple-touch-icon.png'
     },
-    metadataBase: new URL('https://understandme2.com'),
-    // alternates: {
-    //   canonical: '/',
-    //   languages: alternatesLang
-    // },
+    metadataBase: new URL(basePath),
+    alternates: {
+      canonical: '/',
+      languages: alternatesLang
+    },
     openGraph: {
       type: 'website',
       url: basePath,
@@ -68,6 +69,7 @@ export async function generateMetadata({
     }
   };
 }
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -87,15 +89,13 @@ export default async function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
-  const direction = useTextDirection(locale);
-
+  const direction = getTextDirectionBasedOnLocale(locale);
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
   const footerLinks = await getNavItems({ locale, linkType: 'footerLinks' });
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
-      <head />
       <body
         className={clsx(
           'min-h-screen bg-background font-sans antialiased',
@@ -116,13 +116,10 @@ export default async function RootLayout({
             <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
-        <Script
-          src='https://understandme2.com/sw.js'
-          strategy='beforeInteractive'
-        />
+        <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
         <Analytics />
       </body>
-     # <GoogleAnalytics gaId='G-W87Q75T8PV' />
+      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
