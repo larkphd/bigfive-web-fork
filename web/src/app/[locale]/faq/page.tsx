@@ -5,52 +5,43 @@ import { Accordion, AccordionItem } from '@nextui-org/accordion';
 export default function FaqPage() {
   const faq = [
     {
-      question: 'I got an error on this website',
+      question: 'Oh no its a error on this website',
       answer:
-        'Submit an issue at GitHub or send us an e-mail at bigfive-test@rubynor.com'
+        'Send e-mail at contact@understandme2.com'
     },
     {
-      question: 'Can I use the code for this website for Commercial Purposes?',
-      answer: 'Yes, this project is licensed under the MIT license.'
+      question: 'Who made this website, and can I use it as i want?',
+      answer: 'Yes, this project is licensed under the MIT license. And originally made by the nice people at Rubynor'
     },
     {
-      question: 'Can I use the questions for Commercial Purposes?',
+      question: 'Use the questions for commercial purposes?',
       answer:
-        'Yes, the questions and translations are licensed under the MIT license.'
+        'Yes, everyting is under MIT license.'
     },
     {
-      question: 'How do I print my test results?',
+      question: 'How to print my test results?',
       answer:
-        'Try to print the results-page from your browser or save it as a PDF-document and print that instead.'
+        'You can prin the test, or print the PDF if you save the file. But please think about the enviroment.'
     },
     {
-      question: 'I want to translate the questions to my language',
+      question: 'Translate everything to my language',
       answer:
-        "Use this website to translate the questions. Select the language you want to translate from.Translate the questions and click 'generate'. This will generate a file and download it to your computer. Send the downloaded file to bigfive- test@rubynor.com and tell us which language you have translated. If you want to translate it directly on github instead, you can follow the description here."
+        "Contact the original makers of the test."
     },
     {
-      question: 'I want to translate the result text to my language',
+      question: 'Translate the result text to my language',
       answer:
-        'If you want to translate the result text you need to follow the description here.'
+        'Try use google translate if your langauage is not availible.'
     },
     {
       question:
-        'Where can I find more information about the questions and the evaluation?',
-      answer: 'See the IPIP Website for more information.'
-    },
-    {
-      question: 'Where can I find the questions?',
-      answer:
-        'All questions and translations are in this repo in the data folder. The questions and scoring is taken from ipip.ori.org'
-    },
-    {
-      question: 'Where can I find the code?',
-      answer: 'The code is found here at GitHub.'
+        'More information about the methode, questions and evaluation?',
+      answer: 'Google the IPIP Website, and read more.'
     }
   ];
   return (
     <div>
-      <h1 className={title()}>Frequently asked questions.</h1>
+      <h1 className={title()}>FAQ - Frequently Asked Questions.</h1>
       <Accordion className='mt-10'>
         {faq.map((item, index) => (
           <AccordionItem

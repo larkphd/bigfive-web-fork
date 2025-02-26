@@ -16,9 +16,9 @@ export default function ArticlesPage({ params: { locale } }: Props) {
   return (
     <div className='w-full lg:px-16 mt-12'>
       <div className='text-center'>
-        <h1 className='mb-2 font-bold text-4xl'>Personality articles</h1>
+        <h1 className='mb-2 font-bold text-4xl'>Articles on personalityes</h1>
         <h5 className='text-default-500 text-lg'>
-          All the latest and greatest news and articles on Personality
+          Some articles on Personality
         </h5>
       </div>
 

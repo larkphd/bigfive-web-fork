@@ -15,8 +15,8 @@ export default function NotFound() {
 
   return (
     <main className='flex h-full flex-col items-center justify-center'>
-      <h1 className={title()}>Not found</h1>
-      <h2 className='text-center mt-4'>Could not find requested resource</h2>
+      <h1 className={title()}>WOPS... Not found</h1>
+      <h2 className='text-center mt-4'>WOPS... Could not find requested resource</h2>
       <div className='flex space-x-4'>
         <Button color='danger' className='mt-4' onClick={() => onBackClick()}>
           Go back

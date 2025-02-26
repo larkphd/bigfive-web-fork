@@ -4,10 +4,10 @@ date: 2024-04-22
 description: A study examines how personality traits like extraversion, conscientiousness, and agreeableness affect the satisfaction of basic psychological needs such as autonomy, competence, and relatedness.
 image: '/blog/self_care.webp'
 author:
-  name: 'Jonas Enge'
-  username: '@maccyber'
-  link: 'https://twitter.com/maccyber'
-  avatar: '/avatars/maccyber.webp'
+  name: 'Reborn from Github'
+  username: 'Reborn'
+  link: 'https://understandme2.com'
+  avatar: '/avatars/logo.webp'
 ---
 
 Recent research in the Journal of Research in Personality spearheaded by Martina Pocrnic from the University of Zagreb has provided new insights into how personality traits influence our ability to satisfy our basic psychological needs — autonomy, competence, and relatedness. This study identifies the traits that are pivotal in caring for these essential aspects of our well-being.

@@ -17,38 +17,38 @@ export default function ShareBar({ report }: ShareBarProps) {
 
   return (
     <>
-      <Tooltip color='secondary' content='Share on facebook'>
+      <Tooltip color='secondary' content='Facebook Sharing'>
         <Button
           isIconOnly
-          aria-label='Share on facebook'
+          aria-label='Facebook Sharing'
           radius='full'
           size='md'
           variant='light'
           as={NextUiLink}
           isExternal
-          href={`https://www.facebook.com/sharer/sharer.php?u=https://bigfive-test.com/result/${report.id}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=https://understandme2.com/result/${report.id}`}
         >
           <FacebookIcon size={48} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Share on X'>
+      <Tooltip color='secondary' content='X Sharing'>
         <Button
           isIconOnly
-          aria-label='Share on X'
+          aria-label='X Sharing'
           radius='full'
           size='md'
           variant='light'
           target='_blank'
           as={NextUiLink}
-          href={`https://twitter.com/intent/tweet?text=See my personality traits!&url=https://bigfive-test.com/result/${report.id}`}
+          href={`https://twitter.com/intent/tweet?text=See my personality!&url=https://understandme2.com/result/${report.id}`}
         >
           <TwitterIcon size={42} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Download PDF'>
+      <Tooltip color='secondary' content='PDF Download'>
         <Button
           isIconOnly
-          aria-label='Download pdf'
+          aria-label='PDF Download'
           radius='full'
           size='md'
           variant='light'
@@ -57,14 +57,14 @@ export default function ShareBar({ report }: ShareBarProps) {
           <PDFIcon size={32} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Copy link'>
+      <Tooltip color='secondary' content='Copy Link'>
         <Button
           isIconOnly
-          aria-label='Copy link'
+          aria-label='Copy Link'
           radius='full'
           size='md'
           variant='light'
-          onPress={handleCopy(`https://bigfive-test.com/result/${report.id}`)}
+          onPress={handleCopy(`https://understandme2.com/result/${report.id}`)}
         >
           <CopyIcon size={42} />
         </Button>

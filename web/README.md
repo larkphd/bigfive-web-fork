@@ -1,12 +1,12 @@
-# bigfive-web
+# UnderstandMe2
 
-https://bigfive-test.com
+https://understandme2.com
 
 Website for five factor model of personality based on work from [IPIP-NEO-PI](https://github.com/kholia/IPIP-NEO-PI).
 
 Tests and evaluation is gathered from [ipip.ori.org](http://ipip.ori.org).
 
-See it live @ [bigfive-test.com](https://bigfive-test.com)
+See it live @ [understandme2.com](https://understandme2.com)
 
 The frontend is written in [nodejs](https://nodejs.org) using the
 [Next.js](https://nextjs.org/) framework.
