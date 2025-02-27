@@ -1,14 +1,14 @@
-import { kv } from '@vercel/kv';
+'use server';
 import { unstable_noStore as noStore } from 'next/cache';
+import { incrementArticleViews } from '@/actions/articles.actions';
 
 interface ViewCounterProps {
   postId: string;
 }
 
 export async function ViewCounter({ postId }: ViewCounterProps) {
-  'use server';
   noStore();
-  const views = await kv.incr(postId.replace('.md', ''));
+  const views = await incrementArticleViews(postId);
 
   return <p>{Intl.NumberFormat('en-us').format(views)} views</p>;
 }

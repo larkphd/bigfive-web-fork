@@ -11,19 +11,17 @@ import {
 } from '@nextui-org/navbar';
 import LocaleSwitcher from '@/components/locale-switcher';
 import LocaleSwitcherFull from '@/components/locale-switcher-full';
-import { Link } from '@nextui-org/link';
 
 import { link as linkStyles } from '@nextui-org/theme';
 
-import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 
 import { ThemeSwitch } from '@/components/theme-switch';
-import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import { Image } from '@nextui-org/image';
 
 interface NavbarProps {
   navItems: { label: string; href: string }[];
@@ -57,7 +55,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             href='/'
             aria-label='Home'
           >
-            <Logo />
+            <Image src='/icon-144x144.png' width={36} height={36} />
           </NextLink>
         </NavbarBrand>
         <div className='hidden md:flex gap-4 justify-start ml-2'>

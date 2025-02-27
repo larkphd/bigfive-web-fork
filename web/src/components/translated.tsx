@@ -20,8 +20,8 @@ export const Translated = () => {
       />
     );
   return (
-    <section className='border-t border-b border-divider px-8 mt-10 text-center'>
-      <div className='my-8'>
+    <section className='border-t border-divider pt-12 mt-12 text-center'>
+      <div>
         <h3 className={title()}>Available in multiple languages</h3>
         <div
           x-data='{}'

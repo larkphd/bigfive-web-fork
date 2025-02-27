@@ -1,19 +1,18 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@nextui-org/link';
-import { button as buttonStyles } from '@nextui-org/theme';
+import { button as buttonStyles, link as linkStyles } from '@nextui-org/theme';
 import { title, subtitle } from '@/components/primitives';
 import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
 import {
+  ChevronRightLinearIcon,
   ExperimentIcon,
-  GithubIcon,
   LanguageIcon,
   LogosOpensource,
   MoneyIcon,
   PlusLinearIcon
 } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
-import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
@@ -59,6 +58,27 @@ export default function Home({ params: { locale } }: Props) {
       icon: LanguageIcon({}),
       href: 'https://b5.translations.alheimsins.net/'
     }
+  ];
+
+  const circleLinks = [
+    {
+      name: f('openness_to_experience.title'),
+      href: '/articles/openness_to_experience'
+    },
+    {
+      name: f('conscientiousness.title'),
+      href: '/articles/conscientiousness'
+    },
+    { name: f('extraversion.title'), href: '/articles/extraversion' },
+    {
+      name: t('compare.action'),
+      href: '/compare'
+    },
+    {
+      name: f('agreeableness.title'),
+      href: '/articles/agreeableness'
+    },
+    { name: f('neuroticism.title'), href: '/articles/neuroticism' }
   ];
 
   const titleDescription = t.rich('description.top', {
@@ -167,34 +187,14 @@ export default function Home({ params: { locale } }: Props) {
               left: -120
             }}
           >
-            {buildCircle([
-              {
-                name: f('openness_to_experience.title'),
-                href: '/articles/openness_to_experience'
-              },
-              {
-                name: f('conscientiousness.title'),
-                href: '/articles/conscientiousness'
-              },
-              { name: f('extraversion.title'), href: '/articles/extraversion' },
-              {
-                name: t('compare.action'),
-                href: '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ'
-              },
-              {
-                name: f('agreeableness.title'),
-                href: '/articles/agreeableness'
-              },
-              { name: f('neuroticism.title'), href: '/articles/neuroticism' }
-            ]).map((e, idx) => (
+            {buildCircle(circleLinks).map((e, idx) => (
               <div key={idx}>
                 <Button
-                  key={idx}
                   name={e.name}
                   style={e.style}
-                  className='absolute hidden md:inline-flex hover:bg-secondary'
+                  className='absolute hidden md:inline-flex hover:bg-secondary hover:text-white'
                   variant='bordered'
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                   aria-label={e.name}
                 >
@@ -210,7 +210,7 @@ export default function Home({ params: { locale } }: Props) {
                     content: 'drop-shadow shadow-black text-white w-full w-36'
                   }}
                   style={e.smallStyle}
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                 >
                   {e.name}
@@ -234,16 +234,20 @@ export default function Home({ params: { locale } }: Props) {
           ))}
         </div>
         <div className='mt-10'>
-          <Link
-            isBlock
-            as={NextLink}
-            className='mb-8 -ml-3 text-default-500 hover:text-default-900 text-lg'
-            color='foreground'
+          <NextLink
             href='/articles'
-            size='md'
+            className={clsx(
+              linkStyles({
+                isBlock: true,
+                color: 'foreground',
+                size: 'md'
+              }),
+              'text-default-500 hover:text-default-900 justify-start px-4'
+            )}
           >
-            All articles ...
-          </Link>
+            All articles
+            <ChevronRightLinearIcon className='inline-block ml-1' size={15} />
+          </NextLink>
         </div>
       </div>
 
