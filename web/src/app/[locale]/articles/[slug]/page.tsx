@@ -28,7 +28,7 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
     <article className='w-full flex flex-col justify-start items-center prose prose-neutral'>
       <div className='w-full max-w-4xl'>
         <div className='flex'>
-          <div className='flex grow'>
+          <div className='flex grow items-center'>
             <NextLink
               href='/articles'
               className={clsx(

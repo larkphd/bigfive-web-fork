@@ -3,7 +3,7 @@
 import { Button, Tooltip } from '@nextui-org/react';
 import { CopyIcon, FacebookIcon, PDFIcon, TwitterIcon } from './icons';
 import { Link as NextUiLink } from '@nextui-org/link';
-import { Report } from '@/actions/index';
+import { Report } from '@/actions/test.actions';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 
 interface ShareBarProps {
