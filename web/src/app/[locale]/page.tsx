@@ -59,6 +59,27 @@ export default function Home({ params: { locale } }: Props) {
     }
   ];
 
+  const circleLinks = [
+    {
+      name: f('openness_to_experience.title'),
+      href: '/articles/openness_to_experience'
+    },
+    {
+      name: f('conscientiousness.title'),
+      href: '/articles/conscientiousness'
+    },
+    { name: f('extraversion.title'), href: '/articles/extraversion' },
+    {
+      name: t('compare.action'),
+      href: '/compare'
+    },
+    {
+      name: f('agreeableness.title'),
+      href: '/articles/agreeableness'
+    },
+    { name: f('neuroticism.title'), href: '/articles/neuroticism' }
+  ];
+
   const titleDescription = t.rich('description.top', {
     violet: (chunks) => (
       <span className={title({ color: 'violet' })}>{chunks}</span>
@@ -165,34 +186,14 @@ export default function Home({ params: { locale } }: Props) {
               left: -120
             }}
           >
-            {buildCircle([
-              {
-                name: f('openness_to_experience.title'),
-                href: '/articles/openness_to_experience'
-              },
-              {
-                name: f('conscientiousness.title'),
-                href: '/articles/conscientiousness'
-              },
-              { name: f('extraversion.title'), href: '/articles/extraversion' },
-              {
-                name: t('compare.action'),
-                href: '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ'
-              },
-              {
-                name: f('agreeableness.title'),
-                href: '/articles/agreeableness'
-              },
-              { name: f('neuroticism.title'), href: '/articles/neuroticism' }
-            ]).map((e, idx) => (
+            {buildCircle(circleLinks).map((e, idx) => (
               <div key={idx}>
                 <Button
-                  key={idx}
                   name={e.name}
                   style={e.style}
-                  className='absolute hidden md:inline-flex hover:bg-secondary'
+                  className='absolute hidden md:inline-flex hover:bg-secondary hover:text-white'
                   variant='bordered'
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                   aria-label={e.name}
                 >
@@ -208,7 +209,7 @@ export default function Home({ params: { locale } }: Props) {
                     content: 'drop-shadow shadow-black text-white w-full w-36'
                   }}
                   style={e.smallStyle}
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                 >
                   {e.name}
