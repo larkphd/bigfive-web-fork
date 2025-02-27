@@ -1,7 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 
-export type SiteConfig = typeof siteConfig;
-
 export const basePath = 'https://understandme2.com';
 
 export const supportEmail = 'contact@understandme2.com';

@@ -6,14 +6,12 @@ import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
 import {
   ExperimentIcon,
-  GithubIcon,
   LanguageIcon,
   LogosOpensource,
   MoneyIcon,
   PlusLinearIcon
 } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
-import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
