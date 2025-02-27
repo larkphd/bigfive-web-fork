@@ -1,10 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@nextui-org/link';
-import { button as buttonStyles } from '@nextui-org/theme';
+import { button as buttonStyles, link as linkStyles } from '@nextui-org/theme';
 import { title, subtitle } from '@/components/primitives';
 import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
 import {
+  ChevronRightLinearIcon,
   ExperimentIcon,
   LanguageIcon,
   LogosOpensource,
@@ -233,16 +234,20 @@ export default function Home({ params: { locale } }: Props) {
           ))}
         </div>
         <div className='mt-10'>
-          <Link
-            isBlock
-            as={NextLink}
-            className='mb-8 -ml-3 text-default-500 hover:text-default-900 text-lg'
-            color='foreground'
+          <NextLink
             href='/articles'
-            size='md'
+            className={clsx(
+              linkStyles({
+                isBlock: true,
+                color: 'foreground',
+                size: 'md'
+              }),
+              'text-default-500 hover:text-default-900 justify-start px-4'
+            )}
           >
-            All articles ...
-          </Link>
+            All articles
+            <ChevronRightLinearIcon className='inline-block ml-1' size={15} />
+          </NextLink>
         </div>
       </div>
 
