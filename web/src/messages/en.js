@@ -5,13 +5,13 @@ const english = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'preformance team, self understanding, mental health, big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, no registration, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'Registrationfree BigFive personality traits test',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'Take a free, no login, no registration Big Five personality test. Understand your self better, to become the best version of yourselfLearn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
@@ -41,11 +41,11 @@ const english = {
       },
       translated: {
         title: 'Translated',
-        text: 'Translated to over 20 languages. Help out on <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">this translation page</a>!'
+        text: 'Translated to over 20 languages.'
       }
     },
     description: {
-      top: 'Learn to know yourself better with a <violet>free</violet>, open-source personality test.',
+      top: '<violet>Understandme2.com</violet> - Understand your self, to be the best version you could be. No login/cost/registration.',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
