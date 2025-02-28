@@ -1,6 +1,6 @@
 ---
 title: Conscientiousness
-date: 2021-12-24
+date: 2025-02-28
 description: An article on the personality trait Conscientiousness.
 image: '/blog/bigfive-Conscientiousness.webp'
 author:
