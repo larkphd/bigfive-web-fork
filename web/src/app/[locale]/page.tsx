@@ -22,6 +22,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip, Tooltip } from '@nextui-org/react';
 import NextLink from 'next/link';
 import { Translated } from '@/components/translated';
+import { isRtlLang } from 'rtl-detect';
 
 interface Props {
   params: { locale: string };
@@ -184,7 +185,7 @@ export default function Home({ params: { locale } }: Props) {
             style={{
               width: '130px',
               top: 130 / 6,
-              left: -120
+              left: isRtlLang(locale) ? 70 : -120
             }}
           >
             {buildCircle(circleLinks).map((e, idx) => (
