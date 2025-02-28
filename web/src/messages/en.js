@@ -5,13 +5,13 @@ const english = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'preformance team, self understanding, mental health, big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, no registration, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'Registrationfree BigFive personality traits test',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'Take a free, no login, no registration Big Five personality test. Understand your self better, to become the best version of yourselfLearn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',
