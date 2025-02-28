@@ -41,11 +41,11 @@ const english = {
       },
       translated: {
         title: 'Translated',
-        text: 'Translated to over 20 languages. Help out on <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">this translation page</a>!'
+        text: 'Translated to over 20 languages.'
       }
     },
     description: {
-      top: 'Learn to know yourself better with a <violet>free</violet>, open-source personality test.',
+      top: '<violet>Understandme2.com</violet> - Understand your self, to be the best version you could be. No login/cost/registration.',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
