@@ -1,13 +1,10 @@
-import { title } from '@/components/primitives';
+import { Heading } from '@/components/heading';
 
 export default function PrivacyPage() {
   return (
-    <>
-      <div className='text-center'>
-        <h1 className={title()}>Privacy</h1>
-        <h5 className='text-default-500 text-lg'>Our privacy policy</h5>
-      </div>
-      <div className='mt-10'>
+    <div className='lg:px-16'>
+      <Heading title='Privacy policy' />
+      <div className='mt-6'>
         We collect this from you, when you visit us.
         <h2>Wonder what we are talking about?</h2>
         These data are retrived
@@ -19,8 +16,9 @@ export default function PrivacyPage() {
           <li>When you did submit the test</li>
         </ul>
         <br />
-        Some analytics from Google Analytics is used to improve the trafic. Google Analytics terms confirms that no
-        personally or identifiable information is collected.
+        Some analytics from Google Analytics is used to improve the trafic.
+        Google Analytics terms confirms that no personally or identifiable
+        information is collected.
         <br />
         <br />
         Google Analytics privacy policy excplained{' '}
@@ -41,25 +39,25 @@ export default function PrivacyPage() {
             first time use and with a lifetime of until 2 years
           </li>
           <li>
-            &quot;_gat&quot; limit Google Analytics trafic,
-            10 min lifetime .
+            &quot;_gat&quot; limit Google Analytics trafic, 10 min lifetime .
           </li>
         </ul>
         <br />
         Som browser information is automatically sent to our webservice.
         <br />
-        I.e. information about browser/version, your IP-address, ttime information, and where you came from,
-       are also stored.
+        I.e. information about browser/version, your IP-address, ttime
+        information, and where you came from, are also stored.
         <br />
         <br />
         When you finish the test, this will be stored in understandme2.
         <h2>We use and store your data </h2>
-        Google Analytics gives us insite to get statistics on how visitors use the site.
+        Google Analytics gives us insite to get statistics on how visitors use
+        the site.
         <br />
         <br />
-        Aggregated and statistic data from tests can be used for
-        analytical purposes. And stored for a short periode of time.
-        <h2> </h2>
+        Aggregated and statistic data from tests can be used for analytical
+        purposes. And stored for a short periode of time.
+        <h2></h2>
         <h2>Contact us?</h2>
         Questions regarding this privacy policy, use{' '}
         <a
@@ -71,6 +69,6 @@ export default function PrivacyPage() {
         </a>{' '}
         us.
       </div>
-    </>
+    </div>
   );
 }

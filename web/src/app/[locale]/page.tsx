@@ -95,7 +95,7 @@ export default function Home({ params: { locale } }: Props) {
   });
 
   return (
-    <section className='relative'>
+    <section className='relative pt-10'>
       <div>
         <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>

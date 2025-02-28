@@ -1,7 +1,6 @@
 'use client';
 
 import { button as buttonStyles } from '@nextui-org/theme';
-import { Link } from '@nextui-org/link';
 import clsx from 'clsx';
 import { Button } from '@nextui-org/button';
 import { useRouter } from '@/navigation';
@@ -9,6 +8,7 @@ import { formatAndValidateId, formatId } from '@/lib/helpers';
 import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@nextui-org/input';
 import { ResultIcon } from '@/components/icons';
+import Link from 'next/link';
 
 interface GetResultPageProps {
   viewPreviousText: string;
@@ -42,9 +42,36 @@ export const GetResultPage = ({
     router.push(`/result/${formatId(id)}`);
   };
 
+  const renderButtons = (size: 'sm' | 'md' | 'lg') => {
+    return (
+      <>
+        {previousResultId && (
+          <Link
+            className={clsx(
+              buttonStyles({ color: 'danger', size }),
+              'w-full md:w-auto'
+            )}
+            href={`/result/${previousResultId}`}
+          >
+            {viewPreviousText}
+          </Link>
+        )}
+        <Button
+          color='primary'
+          size={size}
+          className='w-full md:w-auto'
+          onClick={handleGetResults}
+          isDisabled={id === '' || isInvalidId}
+        >
+          {getResultsText}
+        </Button>
+      </>
+    );
+  };
+
   return (
     <>
-      <div className='w-full my-3'>
+      <div className='w-full'>
         <Input
           type='text'
           label='ID'
@@ -60,27 +87,11 @@ export const GetResultPage = ({
           value={id}
         />
       </div>
-      <div className='flex justify-end gap-3'>
-        {previousResultId && (
-          <Link
-            className={clsx(
-              buttonStyles({ color: 'danger', size: 'lg' }),
-              'w-full md:w-auto'
-            )}
-            href={`/result/${previousResultId}`}
-          >
-            {viewPreviousText}
-          </Link>
-        )}
-        <Button
-          color='primary'
-          size='lg'
-          className='w-full md:w-auto'
-          onClick={handleGetResults}
-          isDisabled={id === '' || isInvalidId}
-        >
-          {getResultsText}
-        </Button>
+      <div className='hidden md:flex justify-end gap-3 mt-6'>
+        {renderButtons('lg')}
+      </div>
+      <div className='md:hidden flex justify-end gap-3 mt-6'>
+        {renderButtons('md')}
       </div>
     </>
   );

@@ -21,6 +21,7 @@ export default function TestPage({
     lang || (questionLanguages.some((l) => l.id === locale) ? locale : 'en');
   const questions = getItems(language);
   const t = useTranslations('test');
+
   return (
     <>
       <div className='flex'>
