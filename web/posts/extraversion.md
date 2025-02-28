@@ -70,3 +70,4 @@ Extraversion is a gift, but like all traits, balance is key. Energy and enthusia
 So, ask yourself: Do you control your need for stimulation, or does it control you?
 
 Now go out there, connect, and bring your energy to the world—but don’t forget to recharge too!
+
