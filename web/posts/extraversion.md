@@ -1,6 +1,6 @@
 ---
 title: Extraversion
-date: 2025-22-28
+date: 2025-02-28
 description: An article on the personality trait extraversion.
 image: '/blog/bigfive-Extraversion.webp'
 author:
