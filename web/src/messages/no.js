@@ -5,11 +5,11 @@ const norsk = {
   },
   seo: {
     keywords:
-      'big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, sånn er du, harald eia, sammenlign, gratis, jordan peterson'
+      'team preformance, mental helse, big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, kjenn deg selv, utdanning, sammenlign, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis åpenkildekode big five personlighetstest',
+      title: 'Gratis big five personlighetstest',
       description:
         'Ta en gratis, open source Big Five-personlighetstest. Lær å kjenne personlighetstrekkene dine - sammenlign deg med partneren din, kollegene, venner eller familie.'
     },
@@ -41,11 +41,11 @@ const norsk = {
       },
       translated: {
         title: 'Oversettelser',
-        text: 'Testen er oversatt til mer enn 20 språk. Hjelp til på <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">oversettelsesiden</a>!'
+        text: 'Testen er oversatt til mer enn 20 språk.!'
       }
     },
     description: {
-      top: 'Forstå deg selv og andre bedre med en <violet>gratis</violet>, open-source personlighetstest.',
+      top: 'Understandme2.com - Lær deg selv å kjenne, og blir den <violet>beste versjonen</violet> av deg selv.',
       subtop: '',
       subtop2:
         ' er en vitenskapelig og troverdig psykologisk modell for å måle personlighet.',
