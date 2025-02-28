@@ -45,7 +45,7 @@ const norsk = {
       }
     },
     description: {
-      top: 'Understandme2.com - Lær deg selv å kjenne, og blir den <violet>beste versjonen</violet> av deg selv.',
+      top: 'Understandme2.com - Lær deg selv å kjenne og bli den <violet>beste versjonen</violet> av deg selv.',
       subtop: '',
       subtop2:
         ' er en vitenskapelig og troverdig psykologisk modell for å måle personlighet.',
