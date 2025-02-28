@@ -35,31 +35,48 @@ interface CompareProps {
   paramId?: string;
 }
 
+type Row = {
+  id: string;
+  name: string;
+};
+
+interface IColumn {
+  key: string;
+  label: string;
+}
+
+const columns: IColumn[] = [
+  {
+    key: 'name',
+    label: 'NAME'
+  },
+  {
+    key: 'id',
+    label: 'ID'
+  },
+  {
+    key: 'actions',
+    label: 'ACTIONS'
+  }
+];
+
+const mobileColumns: IColumn[] = [
+  {
+    key: 'name',
+    label: 'NAME'
+  },
+  {
+    key: 'actions',
+    label: 'ACTIONS'
+  }
+];
+
 export const ComparePeople = ({
   addPersonText,
   comparePeopleText,
   paramId
 }: CompareProps) => {
   const router = useRouter();
-  const columns = [
-    {
-      key: 'name',
-      label: 'NAME'
-    },
-    {
-      key: 'id',
-      label: 'ID'
-    },
-    {
-      key: 'actions',
-      label: 'ACTIONS'
-    }
-  ];
-
-  type Row = {
-    id: string;
-    name: string;
-  };
   const [rows, setRows] = useState<Row[]>([]);
   const [name, setName] = useState<string>('');
   const [id, setId] = useState(paramId ?? '');
@@ -129,8 +146,55 @@ export const ComparePeople = ({
     }
   }
 
+  const renderTable = (columns: IColumn[]) => {
+    return (
+      <Table
+        hideHeader
+        aria-label='List of persons to compare'
+        isStriped
+        classNames={{ base: '[&>div]:p-1 md:[&>div]:p-4' }}
+      >
+        <TableHeader columns={columns}>
+          {(column) => (
+            <TableColumn key={column.key}>{column.label}</TableColumn>
+          )}
+        </TableHeader>
+        <TableBody items={rows} emptyContent='No rows to display.'>
+          {(item) => (
+            <TableRow key={item.id}>
+              {(columnKey) =>
+                columnKey === 'actions' ? (
+                  <TableCell className='flex justify-end'>
+                    <Button
+                      isIconOnly
+                      variant='light'
+                      aria-label='Edit'
+                      onPress={() => onOpenEditPerson(onOpen, item)}
+                    >
+                      <EditIcon />
+                    </Button>
+                    <Button
+                      isIconOnly
+                      variant='light'
+                      aria-label='Delete'
+                      onClick={() => deleteItem(item.id)}
+                    >
+                      <DeleteIcon />
+                    </Button>
+                  </TableCell>
+                ) : (
+                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                )
+              }
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    );
+  };
+
   return (
-    <div className='w-full flex flex-col gap-4 mt-4'>
+    <div className='w-full flex flex-col gap-6 mt-4'>
       <div className='flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4 items-start'>
         <Input
           type='text'
@@ -171,43 +235,8 @@ export const ComparePeople = ({
         </div>
       </div>
       <div>
-        <Table hideHeader aria-label='List of persons to compare' isStriped>
-          <TableHeader columns={columns}>
-            {(column) => (
-              <TableColumn key={column.key}>{column.label}</TableColumn>
-            )}
-          </TableHeader>
-          <TableBody items={rows} emptyContent='No rows to display.'>
-            {(item) => (
-              <TableRow key={item.id}>
-                {(columnKey) =>
-                  columnKey === 'actions' ? (
-                    <TableCell className='flex justify-end'>
-                      <Button
-                        isIconOnly
-                        variant='light'
-                        aria-label='Edit'
-                        onPress={() => onOpenEditPerson(onOpen, item)}
-                      >
-                        <EditIcon />
-                      </Button>
-                      <Button
-                        isIconOnly
-                        variant='light'
-                        aria-label='Delete'
-                        onClick={() => deleteItem(item.id)}
-                      >
-                        <DeleteIcon />
-                      </Button>
-                    </TableCell>
-                  ) : (
-                    <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-                  )
-                }
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
+        <div className='hidden md:block'>{renderTable(columns)}</div>
+        <div className='md:hidden'>{renderTable(mobileColumns)}</div>
         <Button
           color='primary'
           className='mt-4'
