@@ -12,7 +12,7 @@ const articles = [
   'bigfive_relationships',
   'personality_diseases',
   'the_dark_of_personality',
-  'link_between_personality_trais_psychological_needs'
+  'article1_introduction_big_five'
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
