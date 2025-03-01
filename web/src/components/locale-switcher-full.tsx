@@ -16,6 +16,7 @@ export default function LocaleSwitcher() {
     const nextLocale = event.target.value;
     router.replace(pathname, { locale: nextLocale });
   }
+
   const usedLocale = languages.find((lang) => lang.code === locale) || {
     name: 'English',
     code: 'en',
@@ -25,16 +26,17 @@ export default function LocaleSwitcher() {
     lang.countryCode ? (
       <Avatar
         alt={lang.name}
-        className='w-6 h-6'
+        className='w-6 h-6 min-w-6 min-h-6'
         src={`/flags/${lang.countryCode}.svg`}
       />
     ) : (
       <Avatar
         alt={lang.name}
-        className='w-6 h-6'
+        className='w-6 h-6 min-w-6 min-h-6'
         name={lang.code.toUpperCase()}
       />
     );
+
   return (
     <div className='w-40'>
       <Select

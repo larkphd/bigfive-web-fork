@@ -38,10 +38,6 @@ const ukrainian = {
       scientific: {
         title: 'Науковий',
         text: "Велика п'ятірка - це научно обґрунтована та надійна модель для визначення особистісних якостей."
-      },
-      translated: {
-        title: 'Перекладений',
-        text: 'Перекладений більш ніж на 20 мов. Допоможи нам <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank"> тут </a>!'
       }
     },
     description: {

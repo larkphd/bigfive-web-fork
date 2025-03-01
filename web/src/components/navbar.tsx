@@ -60,11 +60,16 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         </NavbarBrand>
         <div className='hidden md:flex gap-4 justify-start ml-2'>
           {navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem
+              key={item.href}
+              className={clsx(
+                isCurrentPath(item.href) && 'border-b-1 border-primary'
+              )}
+            >
               <NextLink
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium'
+                  'font-medium data-[active=true]:text-primary'
                 )}
                 data-active={isCurrentPath(item.href)}
                 color='foreground'
@@ -113,7 +118,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
                 data-active={isCurrentPath(item.href)}
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium !text-3xl py-2'
+                  'data-[active=true]:text-primary data-[active=true]:font-medium !text-3xl py-2'
                 )}
               >
                 {item.label}
