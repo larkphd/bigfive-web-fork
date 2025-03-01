@@ -5,47 +5,47 @@ const dansk = {
   },
   seo: {
     keywords:
-      'performance team, selvforståelse, mental sundhed, børns sundhed, familie, Big Five personlighedstest, Big 5 personlighedstest, BigFive test, personlighedstræk, BigFive, sammenligne, gratis, ingen registrering, Jordan Peterson'
+      'performance team, selvforståelse, mental sundhed, børns sundhed, familie, big five personlighedstest, big 5 personlighedstest, bigfive test, personlighedstræk, bigfive, sammenligne, gratis, ingen registrering, Jordan Peterson'
   },
   frontpage: {
     seo: {
       title: 'Gratis big five personlighedstest',
       description:
-        'Ingen login eller registrering! Tag en gratis Big Five personlighedstest for at forstå dig selv bedre. Læs artikler, sammenlign partnere, kolleger, venner eller familie!'
+        'Ingen login eller registrering! Tag en gratis Big Five personlighedstest for at forstå dig selv bedre. Læs artikler, sammenlign partnere, kolleger, venner eller familie'
     },
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',
     no_registration: '* Ingen registrering krævet',
     tests_taken: 'Over <green>{n}</green> mennesker har taget testen',
     compare: {
-title: 'Sammenlign dig selv med andre',
-text1:
-  'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
-text2: 'Lær, hvordan du adskiller dig fra andre mennesker på alle fem områder:',
-action: 'Sammenlign med andre'
-},
-share: 'Del med venner og find ud af, hvor kompatible I er',
-cards: {
-  open: {
-    title: 'Mental sundhed',
-    text: 'Forstå dine styrker og svagheder, og brug dem til din fordel'
-  },
-  free: {
-    title: 'Ingen registrering! Ingen login!',
-    text: 'Ingen nonsens, testen er helt gratis'
-  },
-  scientific: {
-    title: 'Videnskabeligt valid',
-    text: 'Big Five er en videnskabeligt valid og pålidelig psykologisk model.'
-  },
-  translated: {
-    title: 'Oversat og åben',
-    text: 'Oversat til over 20 sprog. Åben MIT-licens'
-  }
-},
-description: {
-  top: 'Forstå dig selv for at blive den <violet>bedste version</violet> af dig selv.'
-      
+      title: 'Sammenlign dig selv med andre',
+      text1:
+        'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
+      text2:
+        'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:',
+      action: 'Se sammenligning i handling'
+    },
+    share: 'Del med dine venner, og find ud af hvor kompatibel du er.',
+    cards: {
+      open: {
+        title: 'Åben',
+        text: 'Dette er et open source-projekt under MIT-licensen.'
+      },
+      free: {
+        title: 'Gratis',
+        text: 'Testen er helt gratis.'
+      },
+      scientific: {
+        title: 'Videnskabelig',
+        text: 'Big Five er en videnskabeligt valideret og pålidelig psykologisk model.'
+      },
+      translated: {
+        title: 'Oversættelse',
+        text: 'Testen er blevet oversat til mere end 20 sprog. Hjælp <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">her</a>!'
+      }
+    },
+    description: {
+      top: 'Forstå dig selv og andre bedre med en <violet>gratis</violet> open source-personlighedstest.',
       subtop: '',
       subtop2:
         ' er en videnskabelig og troværdig psykologisk model til måling af personlighed.',
