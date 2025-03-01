@@ -2,20 +2,20 @@ const deutsh = {
   language: {
     label: 'Deutsch',
     locale: 'de'
-  },
-  seo: {
-    keywords:
-      'Big Five Persönlichkeitstest, Big 5 Persönlichkeitstest, B5 Test, BigFive Test, Persönlichkeitsmerkmale, bigfive, Vergleichen, Kostenlos, Jordan Perterson'
-  },
-  frontpage: {
-    seo: {
-      title: 'Kostenloser open-source BigFive Persönlichkeitstest',
-      description:
-        'Machen Sie einen kostenlosen open-source Persönlichkeitstest. Lernen Sie Ihre Persönlichkeitsmerkmale kennen und vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.'
     },
-    title: 'Big Five Persönlichkeitstest',
-    call_to_action: 'Nehmen Sie jetzt teil',
-    no_registration: '* Keine Registrierung erforderlich',
+seo: {
+  keywords:
+    'Performance-Team, Selbstverständnis, mentale Gesundheit, Kindergesundheit, Familie, Big Five Persönlichkeitstest, Big 5 Persönlichkeitstest, BigFive Test, Persönlichkeitseigenschaften, BigFive, vergleichen, kostenlos, keine Registrierung, Jordan Peterson'
+},
+frontpage: {
+  seo: {
+    title: 'Registrierungsfreier Big Five Persönlichkeitstest',
+    description:
+      'Kein Login oder Registrierung! Mache einen kostenlosen Big Five Persönlichkeitstest, um dich selbst besser zu verstehen. Lies Artikel, vergleiche Partner, Kollegen, Freunde oder Familie!'
+  },
+  title: 'Big Five Persönlichkeitstest',
+  call_to_action: 'Starte den kostenlosen Test',
+  no_registration: '* Keine Registrierung oder Anmeldung erforderlich *'
     tests_taken: 'Über <green>{n}</green> Menschen haben bisher teilgenommen',
     compare: {
       title: 'Vergleichen Sie sich mit anderen',
@@ -29,25 +29,25 @@ const deutsh = {
       'Teilen Sie Ihre Ergebnisse mit Freunden und finden Sie heraus wie kompatibel Sie sind',
     cards: {
       open: {
-        title: 'Öffentlich',
-        text: 'Dieser Test ist ein open-source Projekt mit MIT-Lizenz.'
-      },
-      free: {
-        title: 'Kostenlos',
-        text: 'Dieser Test ist kostenlos'
-      },
-      scientific: {
-        title: 'Wissenschaftlich',
-        text: 'BigFive ist ein wissenschaftlich validiertes und zuverlässiges Modell zur Persönlichkeitsmessung.'
-      },
-      translated: {
-        title: 'Übersetzung',
-        text: 'Übersetzt in über 20 Sprachen. Hilf mit <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">hier</a>!'
-      }
-    },
-    description: {
-      top: 'Lernen Sie sich besser kennen mithilfe dieses <violet>kostenlosen</violet>, open-source Persönlichkeitstests.',
-      subtop: 'Der',
+        title: 'Mentale Gesundheit',
+text: 'Verstehe deine Stärken und Schwächen und nutze sie zu deinem Vorteil'
+},
+free: {
+  title: 'Keine Registrierung! Kein Login!',
+  text: 'Kein Unsinn, der Test ist komplett kostenlos'
+},
+scientific: {
+  title: 'Wissenschaftlich validiert',
+  text: 'Big Five ist ein wissenschaftlich validiertes und zuverlässiges psychologisches Modell.'
+},
+translated: {
+  title: 'Übersetzt und offen',
+  text: 'Übersetzt in über 20 Sprachen. Offene MIT-Lizenz'
+}
+},
+description: {
+  top: 'Verstehe dich selbst, um die <violet>beste Version</violet> von dir zu sein.'    
+        subtop: 'Der',
       subtop2:
         ' ist das am meisten wissenschaftlich validierte und zuverlässigste psychologische Modell zur Persönlichkeitsmessung.',
       reference: `Die Tests und Auswertungen für diese Seite stammen von
