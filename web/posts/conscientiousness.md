@@ -1,7 +1,7 @@
 ---
 title: Conscientiousness
 date: 2025-02-28
-description: An article on the personality trait Conscientiousness.
+description: In the Big Five personality model, "Conscientiousness" refers to how organized, dependable, and disciplined a you are
 image: '/blog/bigfive-Conscientiousness.webp'
 author:
   name: 'Reborn from Github'

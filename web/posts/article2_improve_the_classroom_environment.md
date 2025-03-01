@@ -1,7 +1,7 @@
 ---
 title: Using the Test to Improve the Classroom Environment
 date: 2025-02-22
-description: Understanding each other’s personality traits can strengthen cohesion and improve communication in a school class. By using the Big Five test from understandme2.com, students and teachers can gain insights into these traits without requiring registration or login. Below are three tailored lesson plans for different educational levels, each designed for a 45-minute session with 15 to 25 students who have access to an phone, pad or PC.
+description: Understanding other’s personality traits can strengthen cohesion and improve communication in a school class. Students and teachers can gain insights into these traits without registration or login. Below are three tailored 45 minutes lesson plans for different educational levels.
 image: '/blog/Article2.webp'
 author:
   name: 'Reborn from Github'
