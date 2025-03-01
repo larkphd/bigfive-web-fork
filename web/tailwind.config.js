@@ -27,6 +27,18 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui']
+      },
+      colors: {
+        primary: {
+          DEFAULT: '#6D9886',
+          light: '#9DC5B4',
+          dark: '#507966'
+        },
+        secondary: {
+          DEFAULT: '#393E46',
+          light: '#4F5561',
+          dark: '#2A2E35'
+        }
       }
     }
   },

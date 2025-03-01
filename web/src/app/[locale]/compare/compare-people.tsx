@@ -281,7 +281,7 @@ export const ComparePeople = ({
                 />
               </ModalBody>
               <ModalFooter>
-                <Button color='danger' variant='light' onPress={onClose}>
+                <Button color='secondary' variant='light' onPress={onClose}>
                   Close
                 </Button>
                 <Button color='primary' onPress={() => editPerson(onClose)}>

@@ -95,7 +95,6 @@ export default function Home({ params: { locale } }: Props) {
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
             <div className='text-center justify-center mt-10'>
               <h1 className={title()}>{titleDescription}</h1>
-              <br />
               <h2 className={subtitle({ class: 'mt-4' })}>
                 {t('description.info')}
               </h2>
@@ -120,7 +119,7 @@ export default function Home({ params: { locale } }: Props) {
             </div>
           </div>
 
-          <div className='font-normal text-default-500 block max-w-full text-center underline'>
+          <div className='font-normal text-secondary block max-w-full text-center underline'>
             {t('no_registration')}
           </div>
         </section>
@@ -140,7 +139,7 @@ export default function Home({ params: { locale } }: Props) {
         <h1 className={title()}>{t('compare.title')}</h1>
 
         <div className='mt-10'>
-          <div className='text-lg lg:text-xl font-normal text-default-500'>
+          <div className='text-lg lg:text-xl font-normal text-secondary'>
             {t('compare.text1')} {t('compare.text2')}
           </div>
         </div>
@@ -148,7 +147,7 @@ export default function Home({ params: { locale } }: Props) {
 
       <div className='text-center h-64 md:h-80 mt-44 md:mt-56'>
         <SonarPulse
-          color='#7928CA'
+          color='#6D9886'
           icon={
             <Tooltip
               showArrow
@@ -160,7 +159,7 @@ export default function Home({ params: { locale } }: Props) {
               <Button
                 isIconOnly
                 aria-label={t('call_to_action')}
-                className='z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]'
+                className='z-50 w-auto h-auto bg-gradient-to-b from-[#A9CCBE] to-[#3E5F50]'
                 radius='full'
                 as={NextLink}
                 href='/test'
@@ -233,7 +232,7 @@ export default function Home({ params: { locale } }: Props) {
             className={clsx(
               linkStyles({
                 isBlock: true,
-                color: 'foreground',
+                color: 'secondary',
                 size: 'md'
               }),
               'text-default-500 hover:text-default-900 justify-start px-4'

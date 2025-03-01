@@ -48,7 +48,7 @@ export const GetResultPage = ({
         {previousResultId && (
           <Link
             className={clsx(
-              buttonStyles({ color: 'danger', size }),
+              buttonStyles({ color: 'secondary', size, variant: 'bordered' }),
               'w-full md:w-auto'
             )}
             href={`/result/${previousResultId}`}
