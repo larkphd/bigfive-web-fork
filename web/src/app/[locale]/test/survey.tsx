@@ -225,7 +225,7 @@ export const Survey = ({
         minValue={0}
         maxValue={100}
         size='lg'
-        color='secondary'
+        color='primary'
       />
       {currentQuestions.map((question) => (
         <div key={'q' + question.num}>
@@ -236,7 +236,7 @@ export const Survey = ({
               value={answers
                 .find((answer) => answer.id === question.id)
                 ?.score.toString()}
-              color='secondary'
+              color='primary'
               isDisabled={inProgress}
             >
               {question.choices.map((choice, index) => (
