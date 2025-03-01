@@ -3,66 +3,68 @@ const spanish = {
     label: 'Spanish',
     locale: 'es'
   },
+seo: {
+  keywords:
+    'equipo de rendimiento, autocomprensión, salud mental, salud infantil, familia, test de personalidad Big Five, test de personalidad Big 5, test BigFive, rasgos de personalidad, BigFive, comparar, gratis, sin registro, Jordan Peterson'
+},
+frontpage: {
   seo: {
-    keywords:
-      'test de personalidad Big Five, test de personalidad Big Five, test b5, test Big Five, rasgos de personalidad, Big Five, comparar, gratis, jordan peterson'
+    title: 'Test de rasgos de personalidad Big Five sin registro',
+    description:
+      '¡Sin inicio de sesión ni registro! Realiza un test de personalidad Big Five gratuito para comprenderte mejor. Lee artículos, compara parejas, colegas, amigos o familiares.'
   },
-  frontpage: {
-    seo: {
-      title: 'Prueba gratuita y open-source de rasgos de personalidad BigFive',
-      description:
-        'Realiza la prueba de personalidad Big Five, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
+  title: 'Test de Personalidad Big Five',
+  call_to_action: 'Comienza el test gratuito',
+  no_registration: '* No se requiere registro ni inicio de sesión *',
+  // no traduzcas las etiquetas <green>, {n} y </green>
+  tests_taken: 'Más de <green>{n}</green> personas han realizado el test',
+  compare: {
+    title: 'Compárate con otros',
+    text1:
+      'Compárate con tu pareja, colegas, amigos o familia.',
+    text2: 'Aprende en qué te diferencias de otras personas en los cinco dominios:',
+    action: 'Comparar con otros'
+  },
+  share: 'Comparte con amigos y descubre qué tan compatibles son',
+  cards: {
+    open: {
+      title: 'Salud mental',
+      text: 'Comprende tus fortalezas y debilidades y utilízalas a tu favor'
     },
-    title: 'Prueba de personalidad Big Five',
-    call_to_action: 'Haz la prueba gratis ahora',
-    no_registration: '*No es necesario registrarse',
-    tests_taken: 'Más de <green>{n}</green> personas han realizado la prueba',
-    compare: {
-      title: 'Compárese con los demás',
-      text1: 'Compárese con su pareja, colegas, amigos o familiares.',
-      text2:
-        'Descubra en qué se diferencia de otras personas en los cinco dominios:',
-      action: 'Míralo en vivo en acción'
+    free: {
+      title: '¡Sin registro! ¡Sin inicio de sesión!',
+      text: 'Sin complicaciones, el test es completamente gratuito'
     },
-    share: 'Comparte con tus amigos y descubre qué tan compatible eres',
-    cards: {
-      open: {
-        title: 'Open Source',
-        text: 'Este es un proyecto de código abierto con licencia MIT.'
-      },
-      free: {
-        title: 'Gratis',
-        text: 'La prueba es completamente gratuita'
-      },
-      scientific: {
-        title: 'Científico',
-        text: 'Big Five es un modelo psicológico confiable y científicamente validado.'
-      },
-      translated: {
-        title: 'Traducido',
-        text: 'Traducido a más de 20 idiomas. Puedes ayudar <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">aquí</a>!'
-      }
+    scientific: {
+      title: 'Científicamente validado',
+      text: 'Big Five es un modelo psicológico científicamente validado y confiable.'
     },
-    description: {
-      top: 'Aprende a conocerte mejor con un test de personalidad <violet>gratuito</violet> y open-source',
-      subtop: 'el',
-      subtop2:
-        ' es el modelo psicológico más confiable y científicamente validado para medir la personalidad.',
-      reference: `Las pruebas y la evaluación de este sitio se obtienen de
+    translated: {
+      title: 'Traducido y abierto',
+      text: 'Traducido a más de 20 idiomas. Licencia MIT abierta'
+    }
+  },
+  description: {
+    top: 'Compréndete a ti mismo para ser la <violet>mejor versión</violet> de ti.',
+    subtop: 'El',
+    subtop2:
+      ' es el modelo psicológico más validado científicamente y confiable para medir la personalidad.',
+    reference: `Las pruebas y evaluaciones de este sitio provienen de
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
-      info: 'La siguiente prueba contiene 120 preguntas que estimamos le tomará unos 10 minutos completar.',
-      result:
-        'Una vez que haya completado la prueba, recibirá un informe de personalidad detallado en los siguientes dominios:',
-      tests_taken: 'pruebas tomadas hasta ahora'
-    }
-  },
-  about: {
-    seo: {
-      title: 'Acerca de y el equipo de BigFive',
-      description:
-        'BigFive tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar BigFive adelante'
-    }
+el inventario es de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>. Y del repositorio de Rubynor en GitHub.`,
+    info: '¡Sin inicio de sesión, costos ni registro! El test consta de 120 preguntas y tarda aproximadamente 10 minutos en completarse.',
+    result:
+      'Completa el test y recibe un informe detallado de personalidad en los siguientes dominios:',
+    tests_taken: 'tests realizados hasta ahora'
+  }
+},
+about: {
+  seo: {
+    title: 'Sobre nosotros y el equipo de Big Five',
+    description:
+      'BigFive es un método moderno y en constante evolución.'
+  }
+}
   },
   toolbar: {
     home: 'Inicio',
