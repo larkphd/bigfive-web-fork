@@ -9,52 +9,52 @@ const english = {
   },
   frontpage: {
     seo: {
-      title: 'Registrationfree BigFive personality traits test',
+      title: 'Registrationfree Big Five personality traits test',
       description:
         'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Start the free test',
-    no_registration: '* No registration or login required',
+    no_registration: '* No registration or login required *',
     // do not translate <green>, {n}, and </green> tags
     tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
       title: 'Compare yourself to others',
       text1:
         'Compare yourself with your partner, colleagues, friends or family.',
-      text2: 'Learn how you differ from other people in the five domains:',
+      text2: 'Learn how you differ from other people in all five domains:',
       action: 'Compare with others'
     },
-    share: 'Share with your friends and find out how compatible you are',
+    share: 'Share with friends and find out how compatible you are',
     cards: {
       open: {
-        title: 'Open',
-        text: 'This is an open source project under MIT-license.'
+        title: 'Mental health',
+        text: 'Understand your best and worse, and use it to your advantage'
       },
       free: {
-        title: 'Free',
-        text: 'The test is completely free'
+        title: 'No registration! No login!',
+        text: 'No nonsense, the test is completely free'
       },
       scientific: {
-        title: 'Scientific',
-        text: 'BigFive is a scientifically validated and reliable psychological model.'
+        title: 'Scientifically validated',
+        text: 'Big Five is a scientifically validated and reliable psychological model.'
       },
       translated: {
-        title: 'Translated',
-        text: 'Translated to over 20 languages.'
+        title: 'Translated and open',
+        text: 'Translated to over 20 languages. Open MIT-licens'
       }
     },
     description: {
-      top: 'Understand your self, to be the <violet>best version</violet> you could be. No login, cost or registration.',
+      top: 'Understand yourself, to be the <violet>best version</violet> you could be.',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'The following test contains 120 questions which is estimated to take you about 10 minutes to complete.',
+inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>. And from Rubynors github repo.`,
+      info: 'No login, cost or registration! The test consists of 120 questions, which takes about 10 minutes to complete.',
       result:
-        'After you have completed the test you will receive a detailed personality report in the following domains:',
+        'Complete the test receive a full detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
     }
   },
