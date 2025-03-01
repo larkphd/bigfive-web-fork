@@ -1,5 +1,5 @@
 ---
-title: Big5 to Support Your Child’s Mental Well-Being
+title: Support Your Child’s Mental Well-Being
 date: 2025-03-01
 description: Parenting is one of life’s greatest challenges. Every child is unique, with a own way of thinking, feeling, and reacting. Want a tool to better understand your child’s personality and mental resilience?
 image: '/blog/Article1.webp'
