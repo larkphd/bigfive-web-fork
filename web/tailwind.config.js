@@ -24,6 +24,9 @@ module.exports = {
       animation: {
         heartbeat: 'heartbeat 1s ease-in-out infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite'
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui']
       }
     }
   },

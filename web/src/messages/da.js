@@ -38,10 +38,6 @@ const dansk = {
       scientific: {
         title: 'Videnskabelig',
         text: 'Big Five er en videnskabeligt valideret og pålidelig psykologisk model.'
-      },
-      translated: {
-        title: 'Oversættelse',
-        text: 'Testen er blevet oversat til mere end 20 sprog. Hjælp <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">her</a>!'
       }
     },
     description: {

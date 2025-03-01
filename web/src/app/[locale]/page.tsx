@@ -7,7 +7,6 @@ import { FeaturesGrid } from '@/components/features-grid';
 import {
   ChevronRightLinearIcon,
   ExperimentIcon,
-  LanguageIcon,
   LogosOpensource,
   MoneyIcon,
   PlusLinearIcon
@@ -52,12 +51,6 @@ export default function Home({ params: { locale } }: Props) {
       title: t('cards.scientific.title'),
       description: t('cards.scientific.text'),
       icon: ExperimentIcon({})
-    },
-    {
-      title: t('cards.translated.title'),
-      description: t.raw('cards.translated.text'),
-      icon: LanguageIcon({}),
-      href: 'https://b5.translations.alheimsins.net/'
     }
   ];
 

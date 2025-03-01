@@ -37,10 +37,6 @@ const icelandic = {
       scientific: {
         title: 'Vísindalegt',
         text: 'BigFive er vísindalega fullgilt og áreiðanlegt sálfræðilegt líkan.'
-      },
-      translated: {
-        title: 'Translated',
-        text: 'Þýtt á yfir 20 tungumál. Hjálpaðu <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank"> hér </a>!'
       }
     },
     description: {

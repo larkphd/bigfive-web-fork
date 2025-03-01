@@ -38,10 +38,6 @@ const indonesian = {
       scientific: {
         title: 'Ilmiah',
         text: 'BigFive adalah model psikologis yang divalidasi secara ilmiah dan dapat diandalkan.'
-      },
-      translated: {
-        title: 'Diterjemahkan',
-        text: 'Diterjemahkan ke lebih dari 20 bahasa. Membantu <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">sini</a>!'
       }
     },
     description: {

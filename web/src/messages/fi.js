@@ -37,10 +37,6 @@ const finnish = {
       scientific: {
         title: 'Tieteellinen',
         text: 'BigFive on tieteellisesti validoitu ja luotettava psykologinen malli.'
-      },
-      translated: {
-        title: 'Käännetty',
-        text: 'Käännetty yli 20 kielelle. Auttaa <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">tässä</a>!'
       }
     },
     description: {

@@ -37,10 +37,6 @@ const spanish = {
       scientific: {
         title: 'Científico',
         text: 'Big Five es un modelo psicológico confiable y científicamente validado.'
-      },
-      translated: {
-        title: 'Traducido',
-        text: 'Traducido a más de 20 idiomas. Puedes ayudar <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">aquí</a>!'
       }
     },
     description: {

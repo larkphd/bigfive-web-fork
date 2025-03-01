@@ -2,27 +2,27 @@ import { Avatar } from '@nextui-org/react';
 import { title } from '@/components/primitives';
 import { languages, Language } from '@/config/site';
 
+const CountryAvatar = ({ lang }: { lang: Language }) =>
+  lang.countryCode ? (
+    <Avatar
+      alt={lang.name}
+      className='w-12 h-12'
+      aria-label={lang.name}
+      src={`/flags/${lang.countryCode}.svg`}
+    />
+  ) : (
+    <Avatar
+      alt={lang.name}
+      aria-label={lang.name}
+      className='w-12 h-12'
+      name={lang.code.toUpperCase()}
+    />
+  );
+
 export const Translated = () => {
-  const CountryAvatar = ({ lang }: { lang: Language }) =>
-    lang.countryCode ? (
-      <Avatar
-        alt={lang.name}
-        className='w-12 h-12'
-        aria-label={lang.name}
-        src={`/flags/${lang.countryCode}.svg`}
-      />
-    ) : (
-      <Avatar
-        alt={lang.name}
-        aria-label={lang.name}
-        className='w-12 h-12'
-        name={lang.code.toUpperCase()}
-      />
-    );
   return (
     <section className='border-t border-divider pt-12 mt-12 text-center'>
       <div>
-        <h3 className={title()}>Available in multiple languages</h3>
         <div
           x-data='{}'
           x-init="$nextTick(() => {
