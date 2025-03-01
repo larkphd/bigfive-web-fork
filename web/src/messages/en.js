@@ -23,7 +23,7 @@ const english = {
       text1:
         'Compare yourself with your partner, colleagues, friends or family.',
       text2: 'Learn how you differ from other people in the five domains:',
-      action: 'See it live in action'
+      action: 'Compare with others'
     },
     share: 'Share with your friends and find out how compatible you are',
     cards: {
