@@ -14,6 +14,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
+import process from 'node:process';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -102,6 +103,13 @@ export default async function RootLayout({
           fontSans.variable
         )}
       >
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY}`}
+          crossOrigin='anonymous'
+          strategy='afterInteractive'
+        />
+
         <Providers
           themeProps={
             { attribute: 'class', defaultTheme: 'light' } as ThemeProviderProps
@@ -120,7 +128,6 @@ export default async function RootLayout({
         <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
-      
     </html>
   );
 }
