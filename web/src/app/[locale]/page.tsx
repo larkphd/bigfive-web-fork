@@ -136,6 +136,36 @@ export default function Home({ params: { locale } }: Props) {
       </section>
 
       <div className='mt-20 text-center'>
+        <Link href='/articles' color='foreground'>
+          <h1 className={title()}>Articles</h1>
+        </Link>
+        <h2 className={subtitle({ class: 'mt-4' })}>
+          Some articles on personality, to help you understand yourself
+        </h2>
+        <div className='mt-6 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
+          {posts.map((post, idx) => (
+            <PostCard key={idx} {...post} />
+          ))}
+        </div>
+        <div className='mt-6'>
+          <NextLink
+            href='/articles'
+            className={clsx(
+              linkStyles({
+                isBlock: true,
+                color: 'secondary',
+                size: 'md'
+              }),
+              'text-default-500 hover:text-default-900 justify-start px-4'
+            )}
+          >
+            All articles
+            <ChevronRightLinearIcon className='inline-block ml-1' size={15} />
+          </NextLink>
+        </div>
+      </div>
+
+      <div className='mt-20 text-center'>
         <h1 className={title()}>{t('compare.title')}</h1>
 
         <div className='mt-4'>
@@ -145,7 +175,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <div className='text-center h-64 md:h-80 mt-44 md:mt-50'>
+      <div className='text-center h-64 md:h-75 mt-44 md:mt-50'>
         <SonarPulse
           color='#6D9886'
           icon={
@@ -212,36 +242,6 @@ export default function Home({ params: { locale } }: Props) {
             ))}
           </div>
         </SonarPulse>
-      </div>
-
-      <div className='text-center'>
-        <Link href='/articles' color='foreground'>
-          <h1 className={title()}>Articles</h1>
-        </Link>
-        <h2 className={subtitle({ class: 'mt-4' })}>
-          Some articles on personality, to help you understand yourself
-        </h2>
-        <div className='mt-6 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
-          {posts.map((post, idx) => (
-            <PostCard key={idx} {...post} />
-          ))}
-        </div>
-        <div className='mt-6'>
-          <NextLink
-            href='/articles'
-            className={clsx(
-              linkStyles({
-                isBlock: true,
-                color: 'secondary',
-                size: 'md'
-              }),
-              'text-default-500 hover:text-default-900 justify-start px-4'
-            )}
-          >
-            All articles
-            <ChevronRightLinearIcon className='inline-block ml-1' size={15} />
-          </NextLink>
-        </div>
       </div>
 
       <Translated />
