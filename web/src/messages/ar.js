@@ -10,9 +10,9 @@ const arabic = {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'Registrationfree Big Five personality traits test',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
     title: 'اختبار السمات الخمسة الكبرى للشخصية',
     call_to_action: 'ابدأ الاختبار الآن مجاناً',
@@ -53,7 +53,7 @@ const arabic = {
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
       info: 'الاختبار يحتوي على ١٢٠ سؤال وسيستغرق منك إتمامه حوالي ١٠ دقائق',
       result:
-        'After you have completed the test you will receive a detailed personality report in the following domains:',
+        'Complete the test receive a full detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
     }
   },
@@ -61,7 +61,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'About and the big five team',
       description:
-        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+        'BigFive is modern and a methode that is always moving forward.'
     }
   },
   toolbar: {
