@@ -129,12 +129,6 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <section className='border-t border-b border-divider px-8 mt-16 lg:mt-20 text-center'>
-        <div className='my-8'>
-          <h1 className={title()}>{testsTaken}</h1>
-        </div>
-      </section>
-
       <div className='mt-20 text-center'>
         <Link href='/articles' color='foreground'>
           <h1 className={title()}>Articles</h1>
