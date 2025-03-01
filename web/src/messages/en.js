@@ -11,7 +11,7 @@ const english = {
     seo: {
       title: 'Registrationfree BigFive personality traits test',
       description:
-        'No login or registration! Take a free Big Five personality test to understand yourself better and grow. Read articles, compare with partners, colleagues, friends, or family!'
+        'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Start the free test',
@@ -45,7 +45,7 @@ const english = {
       }
     },
     description: {
-      top: '<violet>Understandme2.com</violet> - Understand your self, to be the best version you could be. No login/cost/registration.',
+      top: 'Understand your self, to be the <violet>best version</violet> you could be. No login, cost or registration.',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
