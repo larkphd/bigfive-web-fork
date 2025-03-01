@@ -118,7 +118,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
                 data-active={isCurrentPath(item.href)}
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium !text-3xl py-2'
+                  'data-[active=true]:text-primary data-[active=true]:font-medium !text-3xl py-2'
                 )}
               >
                 {item.label}

@@ -35,6 +35,7 @@ export default function FaqPage() {
       answer: 'Google the IPIP Website, and read more.'
     }
   ];
+
   return (
     <div className='lg:px-16'>
       <Heading title='FAQ - Frequently Asked Questions' />
@@ -49,7 +50,7 @@ export default function FaqPage() {
               </span>
             }
           >
-            <div className='py-2 pt-0 pb-6 text-base text-default-500'>
+            <div className='py-2 pt-0 pb-6 text-base text-secondary'>
               {item.answer}
             </div>
           </AccordionItem>

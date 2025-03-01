@@ -89,11 +89,11 @@ export default function Home({ params: { locale } }: Props) {
   });
 
   return (
-    <section className='relative pt-10'>
+    <section className='relative'>
       <div>
-        <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
+        <section className='flex flex-col items-center justify-center gap-4 md:pt-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
-            <div className='text-center justify-center mt-10'>
+            <div className='text-center justify-center mt-3 md:mt-10'>
               <h1 className={title()}>{titleDescription}</h1>
               <h2 className={subtitle({ class: 'mt-4' })}>
                 {t('description.info')}
@@ -129,7 +129,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <section className='border-t border-b border-divider px-8 mt-16 lg:mt-44 text-center'>
+      <section className='border-t border-b border-divider px-8 mt-16 lg:mt-20 text-center'>
         <div className='my-8'>
           <h1 className={title()}>{testsTaken}</h1>
         </div>
@@ -138,14 +138,14 @@ export default function Home({ params: { locale } }: Props) {
       <div className='mt-20 text-center'>
         <h1 className={title()}>{t('compare.title')}</h1>
 
-        <div className='mt-10'>
+        <div className='mt-4'>
           <div className='text-lg lg:text-xl font-normal text-secondary'>
             {t('compare.text1')} {t('compare.text2')}
           </div>
         </div>
       </div>
 
-      <div className='text-center h-64 md:h-80 mt-44 md:mt-56'>
+      <div className='text-center h-64 md:h-80 mt-44 md:mt-50'>
         <SonarPulse
           color='#6D9886'
           icon={
@@ -214,19 +214,19 @@ export default function Home({ params: { locale } }: Props) {
         </SonarPulse>
       </div>
 
-      <div className='text-center mx-2'>
+      <div className='text-center'>
         <Link href='/articles' color='foreground'>
           <h1 className={title()}>Articles</h1>
         </Link>
         <h2 className={subtitle({ class: 'mt-4' })}>
           Some articles on personality, to help you understand yourself
         </h2>
-        <div className='mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
+        <div className='mt-6 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
           {posts.map((post, idx) => (
             <PostCard key={idx} {...post} />
           ))}
         </div>
-        <div className='mt-10'>
+        <div className='mt-6'>
           <NextLink
             href='/articles'
             className={clsx(

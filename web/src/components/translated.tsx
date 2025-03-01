@@ -1,5 +1,4 @@
 import { Avatar } from '@nextui-org/react';
-import { title } from '@/components/primitives';
 import { languages, Language } from '@/config/site';
 
 const CountryAvatar = ({ lang }: { lang: Language }) =>
@@ -21,7 +20,7 @@ const CountryAvatar = ({ lang }: { lang: Language }) =>
 
 export const Translated = () => {
   return (
-    <section className='border-t border-divider pt-12 mt-12 text-center'>
+    <section className='border-t border-divider pt-6 md:pt-10 mt-10 text-center'>
       <div>
         <div
           x-data='{}'
@@ -34,7 +33,7 @@ export const Translated = () => {
         >
           <ul
             x-ref='logos'
-            className='flex gap-x-2 mt-8 items-center justify-center md:justify-start [&_li]:mx-8 [&_span]:max-w-none animate-infinite-scroll'
+            className='flex gap-x-2 items-center justify-center md:justify-start [&_li]:mx-8 [&_span]:max-w-none animate-infinite-scroll'
           >
             {languages.map((lang) => (
               <li key={lang.code}>
