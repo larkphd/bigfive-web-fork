@@ -1,6 +1,6 @@
 ---
 title: Openness to experience
-date: 2025-02-28
+date: 2025-02-22
 description: In the Big Five personality model, Openness to Experience refers to the extent to which you are open-minded, imaginative, and willing to engage with new experiences.
 image: '/blog/Article1.webp'
 author:
