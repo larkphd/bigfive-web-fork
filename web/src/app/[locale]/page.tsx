@@ -92,7 +92,7 @@ export default function Home({ params: { locale } }: Props) {
     <section className='relative'>
       <div>
         <section className='flex flex-col items-center justify-center gap-4 md:pt-10'>
-          <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
+          <div className='flex relative z-20 flex-col gap-6 w-full lg:max-w-2xl xl:mt-10'>
             <div className='text-center justify-center mt-3 md:mt-10'>
               <h1 className={title()}>{titleDescription}</h1>
               <h2 className={subtitle({ class: 'mt-4' })}>
