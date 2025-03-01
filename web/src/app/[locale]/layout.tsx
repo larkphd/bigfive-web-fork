@@ -120,6 +120,10 @@ export default async function RootLayout({
         <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6536716063099722"
+     crossorigin="anonymous"></script>
+      
     </html>
   );
 }
