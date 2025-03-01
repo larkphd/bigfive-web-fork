@@ -120,6 +120,7 @@ export default async function RootLayout({
         <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
+      
     </html>
   );
 }
