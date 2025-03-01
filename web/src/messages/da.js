@@ -5,13 +5,13 @@ const dansk = {
   },
   seo: {
     keywords:
-      'big five personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
+      'performance team, selvforståelse, mental sundhed, børns sundhed, familie, big five personlighedstest, big 5 personlighedstest, bigfive test, personlighedstræk, bigfive, sammenligne, gratis, ingen registrering, Jordan Peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighedstest',
+      title: 'Gratis big five personlighedstest',
       description:
-        'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
+        'Ingen login eller registrering! Tag en gratis Big Five personlighedstest for at forstå dig selv bedre. Læs artikler, sammenlign partnere, kolleger, venner eller familie'
     },
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',
