@@ -67,6 +67,9 @@ export async function generateMetadata({
         url: `${basePath}/og-image.png`,
         alt: 'People comparing personality tests'
       }
+    },
+    other: {
+      'google-adsense-account': process.env.NEXT_PUBLIC_AD_KEY || ''
     }
   };
 }
