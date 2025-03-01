@@ -5,17 +5,17 @@ const english = {
   },
   seo: {
     keywords:
-      'preformance team, self understanding, mental health, big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, no registration, jordan peterson'
+      'preformance team, self understanding, mental health, childres health, famility, big five personality test, big 5 personality test, bigfive test, personality traits, bigfive, compare, free, no registration, jordan peterson'
   },
   frontpage: {
     seo: {
       title: 'Registrationfree BigFive personality traits test',
       description:
-        'Take a free, no login, no registration Big Five personality test. Understand your self better, to become the best version of yourselfLearn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'No login or registration! Take a free Big Five personality test to understand yourself better and grow. Read articles, compare with partners, colleagues, friends, or family!'
     },
     title: 'Big Five Personality Test',
-    call_to_action: 'Take the free test now',
-    no_registration: '* No registration required',
+    call_to_action: 'Start the free test',
+    no_registration: '* No registration or login required',
     // do not translate <green>, {n}, and </green> tags
     tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
@@ -62,7 +62,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'About and the big five team',
       description:
-        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+        'BigFive is modern and a methode that is always moving forward.'
     }
   },
   toolbar: {
