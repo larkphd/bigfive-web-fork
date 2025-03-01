@@ -10,11 +10,11 @@ author:
   avatar: '/avatars/logo.webp'
 ---
 
-## Agreeableness: The Superpower of Kindness in Personality
+### Agreeableness: The Superpower of Kindness in Personality
 
 Imagine walking into a room full of strangers. Who do you gravitate toward? The loudest person? The most confident? Or maybe… the one with the warmest smile, the one who makes you feel instantly at ease? If so, you might be drawn to people high in Agreeableness, one of the five major traits in the Big Five Personality Model.
 
-<violet>But what exactly is Agreeableness, and how does it shape our lives?</violet>
+_But what exactly is Agreeableness, and how does it shape our lives?_
 
 ### What is Agreeableness?
 
@@ -25,24 +25,24 @@ According to research by DeYoung, Quilty, and Peterson (2007), Agreeableness is 
 ### The Hidden Power of Being Agreeable
 
 Having a high level of Agreeableness might seem like an obvious advantage. 
-<violet>Who wouldn’t want to be well-liked and trusted?</violet> But as with all personality traits, there are trade-offs.
+_Who wouldn’t want to be well-liked and trusted?_ But as with all personality traits, there are trade-offs.
 
 ✅ The Upside:
 
-	•	You’re seen as warm, kind, and approachable.
-	•	You build strong, lasting friendships.
-	•	You handle conflicts with grace and patience.
-	•	You contribute to a positive, cooperative environment.
+* You’re seen as warm, kind, and approachable.
+* You build strong, lasting friendships.
+* You handle conflicts with grace and patience.
+* You contribute to a positive, cooperative environment.
 
 ❌ The Potential Downsides:
 
-	•	You might struggle to say no and set boundaries.
-	•	You could be taken advantage of by more dominant personalities.
-	•	You might avoid necessary confrontations to keep the peace.
+* You might struggle to say no and set boundaries.
+* You could be taken advantage of by more dominant personalities.
+* You might avoid necessary confrontations to keep the peace.
 
-<violet>eep question: Do you prioritize being liked over standing up for yourself? If so, why?</violet>
+_Deep question: Do you prioritize being liked over standing up for yourself? If so, why?_
 
-## Agreeableness in Everyday Life
+### Agreeableness in Everyday Life
 
 ### At Work
 
@@ -54,7 +54,7 @@ Tip: Practice assertive communication—being kind doesn’t mean being passive!
 
 Agreeable individuals make excellent friends and partners. They listen, care, and avoid unnecessary arguments. However, if you never express your own needs, you might find yourself feeling undervalued or unheard.
 
-<violet>Deep question: Do you express your true feelings in relationships, or do you hide them to keep the peace?</violet>
+_Deep question: Do you express your true feelings in relationships, or do you hide them to keep the peace?_
 
 ### In Leadership
 
@@ -65,13 +65,13 @@ Tip: Being a good leader sometimes means making unpopular decisions for the grea
 #### Can You Become More (or Less) Agreeable?
 
 Absolutely! Personality isn’t fixed in stone. Studies show that while our core traits remain relatively stable, they can shift over time with effort and intention.
-	•	Want to be more agreeable? Practice empathy by actively listening and considering other people’s perspectives before responding.
-	•	Want to be less agreeable? Work on setting firm boundaries and voicing your opinions confidently.
+* _Want to be more agreeable?_ Practice empathy by actively listening and considering other people’s perspectives before responding.
+* _Want to be less agreeable?_ Work on setting firm boundaries and voicing your opinions confidently.
 
 ### Final Thought
 
 Agreeableness is a beautiful trait, but like all strengths, it needs balance. Being kind doesn’t mean being a pushover, and being firm doesn’t mean being unkind.
 
-<violet>So, here’s the big question to reflect on: Are you using your Agreeableness to uplift yourself as much as you uplift others?</violet>
+_So, here’s the big question to reflect on: Are you using your Agreeableness to uplift yourself as much as you uplift others?_
 
 Now go forth and be kind—but wisely!
