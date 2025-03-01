@@ -23,7 +23,6 @@ export default function Footer({ footerLinks }: FooterProps) {
           ))}
         </ul>
       </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6536716063099722" crossorigin="anonymous"></script>
       <div className='flex text-sm text-gray-500 mt-6 md:mt-12 justify-center'>
         © {year} — understandme2.com - all rights reserved.
       </div>
