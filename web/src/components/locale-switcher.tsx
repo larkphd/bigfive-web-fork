@@ -5,6 +5,10 @@ import { languages } from '../config/site';
 import { Select, SelectItem } from '@nextui-org/select';
 import { useRouter, usePathname } from '../navigation';
 
+function formatLocalCode(locale: string) {
+  return locale[0].toUpperCase() + locale.slice(1);
+}
+
 export default function LocaleSwitcher() {
   const locale = useLocale();
 
@@ -13,8 +17,10 @@ export default function LocaleSwitcher() {
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
+
     router.replace(pathname, { locale: nextLocale });
   }
+
   return (
     <div className='w-20'>
       <Select
@@ -24,8 +30,12 @@ export default function LocaleSwitcher() {
         name='localeSelectSmall'
       >
         {languages.map((lang) => (
-          <SelectItem key={lang.code} value={lang.code} textValue={lang.code}>
-            {lang.code}
+          <SelectItem
+            key={lang.code}
+            value={lang.code}
+            textValue={formatLocalCode(lang.code)}
+          >
+            {formatLocalCode(lang.code)}
           </SelectItem>
         ))}
       </Select>

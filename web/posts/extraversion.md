@@ -1,7 +1,7 @@
 ---
 title: Extraversion
 date: 2025-22-28
-description: In the Big Five personality model, "Extraversion" refers to how outgoing, energetic, and sociable you are.
+description: In the Big Five personality model, Extraversion refers to how outgoing, energetic, and sociable you are.
 image: '/blog/bigfive-Extraversion.webp'
 author:
   name: 'Reborn from Github'

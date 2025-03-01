@@ -2,6 +2,7 @@ import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { Heading } from '@/components/heading';
 
 interface Props {
   params: { locale: string };
@@ -14,15 +15,12 @@ export default function ArticlesPage({ params: { locale } }: Props) {
   );
 
   return (
-    <div className='w-full lg:px-16 mt-12'>
-      <div className='text-center'>
-        <h1 className='mb-2 font-bold text-4xl'>Articles on personalityes</h1>
-        <h5 className='text-default-500 text-lg'>
-          Some articles on Personality
-        </h5>
-      </div>
-
-      <div className='mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
+    <div className='w-full lg:px-16'>
+      <Heading
+        title='Articles on personalityes'
+        subtitle='Some articles on Personality'
+      />
+      <div className='grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}

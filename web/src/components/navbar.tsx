@@ -55,7 +55,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             href='/'
             aria-label='Home'
           >
-            <Image src='/icon-144x144.png' width={36} height={36} />
+            <Image src='/icon-144x144.png' width={36} height={36} alt='Logo' />
           </NextLink>
         </NavbarBrand>
         <div className='hidden md:flex gap-4 justify-start ml-2'>

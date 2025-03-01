@@ -22,6 +22,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip, Tooltip } from '@nextui-org/react';
 import NextLink from 'next/link';
 import { Translated } from '@/components/translated';
+import { isRtlLang } from 'rtl-detect';
 
 interface Props {
   params: { locale: string };
@@ -95,7 +96,7 @@ export default function Home({ params: { locale } }: Props) {
   });
 
   return (
-    <section className='relative'>
+    <section className='relative pt-10'>
       <div>
         <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
           <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
@@ -184,7 +185,7 @@ export default function Home({ params: { locale } }: Props) {
             style={{
               width: '130px',
               top: 130 / 6,
-              left: -120
+              left: isRtlLang(locale) ? 70 : -120
             }}
           >
             {buildCircle(circleLinks).map((e, idx) => (

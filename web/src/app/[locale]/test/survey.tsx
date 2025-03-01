@@ -187,35 +187,24 @@ export const Survey = ({
   }
 
   return (
-    <div className='mt-2'>
-      <Progress
-        aria-label='Progress bar'
-        value={progress}
-        className='max-w'
-        showValueLabel={true}
-        label={formatTimer(seconds)}
-        minValue={0}
-        maxValue={100}
-        size='lg'
-        color='secondary'
-      />
+    <div className='mt-4'>
       {restored && (
-        <Card className='mt-4 bg-warning/20 text-warning-600 dark:text-warning'>
+        <Card className='mb-4 bg-warning/20 text-warning-600 dark:text-warning'>
           <CardHeader className='justify-between'>
-            <Button isIconOnly variant='light' color='warning'>
+            <div className='flex items-center gap-3'>
               <InfoIcon />
-            </Button>
-            <p>
-              Restore complete, your answers has been restored here to&nbsp;
-              <a
-                className='underline cursor-pointer'
-                onClick={clearDataInLocalStorage}
-                aria-label='Clear data'
-              >
-                start a new test
-              </a>
-              .
-            </p>
+              <p>
+                Restore complete, your answers has been restored.
+                <Button
+                  color='secondary'
+                  variant='bordered'
+                  className='ml-3 md:ml-5'
+                  onClick={clearDataInLocalStorage}
+                >
+                  Start a new test
+                </Button>
+              </p>
+            </div>
             <Button
               isIconOnly
               variant='light'
@@ -227,6 +216,17 @@ export const Survey = ({
           </CardHeader>
         </Card>
       )}
+      <Progress
+        aria-label='Progress bar'
+        value={progress}
+        className='max-w'
+        showValueLabel={true}
+        label={formatTimer(seconds)}
+        minValue={0}
+        maxValue={100}
+        size='lg'
+        color='secondary'
+      />
       {currentQuestions.map((question) => (
         <div key={'q' + question.num}>
           <h2 className='text-2xl my-4'>{question.text}</h2>
