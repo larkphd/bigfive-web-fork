@@ -2,7 +2,7 @@
 title: Support Your Child’s Mental Well-Being
 date: 2025-02-28
 description: Parenting is one of life’s greatest challenges. Every child is unique, with a own way of thinking, feeling, and reacting. Want a tool to better understand your child’s personality and mental resilience?
-image: '/blog/Article1.webp'
+image: '/blog/Article4-familiy-child.webp'
 author:
   name: 'Reborn from Github'
   username: 'Reborn'

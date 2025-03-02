@@ -2,7 +2,7 @@
 title: Introduction to the Big Five Model
 date: 2025-03-01
 description: The Big Five model, also known as the five-factor model, is one of the most recognized methods in personality psychology for describing human personality traits. It divides personality into five main dimensions Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
-image: '/blog/Article1.webp'
+image: '/blog/Article1-intro.webp'
 author:
   name: 'Reborn from Github'
   username: 'Reborn'
