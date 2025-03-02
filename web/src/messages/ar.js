@@ -10,7 +10,7 @@ const arabic = {
   },
   frontpage: {
     seo: {
-      title: 'Registrationfree Big Five personality traits test',
+      title: 'Personality test Big5',
       description:
         'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
