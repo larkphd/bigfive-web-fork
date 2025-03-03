@@ -83,10 +83,6 @@ export default function AboutPage({ params: { locale } }: Props) {
 
     <p>Ready to explore? <a href="https://www.understandme2.com/test">Take the test</a>, read our insights, and discover the power of personality psychology today!</p>
 
-</body>
-</html>
-
-
           
           What if... you wonder read the{' '}
           <Link href='/faq' className='underline'>
