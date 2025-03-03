@@ -4,8 +4,8 @@ date: 2025-02-26
 description: In team sports, cooperation and understanding among athletes are crucial for success. Team members can gain insight into each other’s personality traits, strengthening communication, trust, and efficiency on the field. Understanding these traits can help teams to maximize performance.
 image: '/blog/Article3.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---
