@@ -4,8 +4,8 @@ date: 2025-02-28
 description: Parenting is one of life’s greatest challenges. Every child is unique, with a own way of thinking, feeling, and reacting. Want a tool to better understand your child’s personality and mental resilience?
 image: '/blog/Article4-familiy-child.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---

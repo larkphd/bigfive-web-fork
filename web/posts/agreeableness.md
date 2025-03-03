@@ -4,8 +4,8 @@ date: 2022-02-25
 description: In the Big Five personality model, "Agreeableness" refers to how compassionate, cooperative, and friendly you are.
 image: '/blog/bigfive-Agreeableness.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---

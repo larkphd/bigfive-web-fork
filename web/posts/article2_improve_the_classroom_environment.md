@@ -4,8 +4,8 @@ date: 2025-02-27
 description: Understanding other’s personality traits can strengthen cohesion and improve communication in a school class. Students and teachers can gain insights into these traits without registration or login. Below are three tailored 45 minutes lesson plans for different educational levels.
 image: '/blog/Article2.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---
