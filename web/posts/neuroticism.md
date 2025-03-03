@@ -4,8 +4,8 @@ date: 2025-02-23
 description: In the Big Five personality model, "Neuroticism" refers to the tendency to experience negative emotions, such as anxiety, insecurity, and moodiness.
 image: '/blog/Article1.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---
