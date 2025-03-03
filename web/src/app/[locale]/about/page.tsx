@@ -26,8 +26,8 @@ export default function AboutPage({ params: { locale } }: Props) {
       <Heading title='About' />
       <div className='mt-6 text-medium lg:text-large'>
 
-
-    <h2>About Us</h1>
+<p>
+    <h2>About Us</h2>
 
     <h2>Understanding Personality, Unlocking Potential</h2>
     <p>Welcome to our platform dedicated to the <strong>Big Five Personality Model</strong>—a scientifically backed framework for understanding human personality. Some of the tech is inherited from Rubynors github, modified and changed.
