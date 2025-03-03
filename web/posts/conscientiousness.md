@@ -4,8 +4,8 @@ date: 2025-02-24
 description: In the Big Five personality model, "Conscientiousness" refers to how organized, dependable, and disciplined a you are
 image: '/blog/bigfive-Conscientiousness.webp'
 author:
-  name: 'Reborn from Github'
-  username: 'Reborn'
+  name: 'Larsen'
+  username: 'phdlark@gmail.com'
   link: 'https://understandme2.com'
   avatar: '/avatars/logo.webp'
 ---
