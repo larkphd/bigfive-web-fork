@@ -27,13 +27,13 @@ export default function AboutPage({ params: { locale } }: Props) {
       <div className='mt-6 text-medium lg:text-large'>
 
 <p>
-    <h2>About Us</h2>
+    About Us
 
-    <h2>Understanding Personality, Unlocking Potential</h2>
+    <br>Understanding Personality, Unlocking Potential
     <p>Welcome to our platform dedicated to the <strong>Big Five Personality Model</strong>—a scientifically backed framework for understanding human personality. Some of the tech is inherited from Rubynors github, modified and changed.
       Whether you_re here to explore your own traits, improve relationships, or gain deeper insights into mental well-being, our goal is to make personality psychology accessible, insightful, and practical.</p>
 
-    <h2>What is the Big Five Personality Model?</h2>
+    <br><strong>What is the Big Five Personality Model?</strong>
     <p>The <strong>Big Five Model</strong>, also known as the <strong>Five-Factor Model (FFM)</strong>, is one of the most widely accepted and research-backed theories 
       of personality. It categorizes personality into five core dimensions:</p>
 
@@ -43,9 +43,9 @@ export default function AboutPage({ params: { locale } }: Props) {
         <li><strong>Extraversion</strong> – Energy, sociability, and preference for social interaction.</li>
         <li><strong>Agreeableness</strong> – Empathy, kindness, and cooperation.</li>
         <li><strong>Neuroticism</strong> – Emotional sensitivity, stress response, and mood stability.</li>
-    </ul>
+    </ul><br>
 
-    <h2>How Our Platform Helps</h2>
+    <strong>How Our Platform Helps</strong>
     <p>Our website is designed to provide valuable <strong>personality insights</strong> through engaging <strong>articles, guides, and exercises</strong>. Here’s what you’ll find:</p>
 
     <ul>
@@ -53,31 +53,20 @@ export default function AboutPage({ params: { locale } }: Props) {
         <li><strong>Personality Tests</strong> – Learn more about your own Big Five traits with quick and insightful assessments.</li>
         <li><strong>Practical Applications</strong> – Discover how to use personality psychology in education, family dynamics, sports teams, and personal development.</li>
     </ul>
-        <p>
-          Whether you’re an individual seeking self-awareness, a company looking
-          to enhance teamwork, a sports team optimizing group dynamics, an
-          organization aiming for better collaboration, or an educator
-          integrating it into learning – our test offers valuable insights.
-        </p>
-        <p>
-          And why not turn it into a social activity? The test can also be a fun
-          icebreaker at parties or social gatherings! Discover yourself and
-          those around you in a whole new way with understandme2.com – where
-          psychology meets engagement and practical use in every setting.
-        </p>
-    <h2>Who Can Benefit?</h2>
-    <ul>
+   
+    <stron>Who Can Benefit?</strong><br>
+      <ul>
         <li><strong>Individuals</strong> – Gain self-awareness and strategies for personal growth.</li>
         <li><strong>Parents</strong> – Understand your child’s personality and support their mental resilience.</li>
         <li><strong>Educators</strong> – Foster a positive classroom environment through personality-based approaches.</li>
         <li><strong>Teams & Leaders</strong> – Use personality insights to enhance collaboration and performance.</li>
     </ul>
 
-    <h2>Your Privacy Matters</h2>
+    <strong>Your Privacy Matters</strong>
     <p>We prioritize <strong>privacy and security</strong>. Our personality test does not store personal data, does not require login, and does not collect identifying information. 
       The test is anonymous, ensuring a safe and confidential experience for all users. Some ads to get the webpage running.</p>
-
-    <h2>Join the Journey of Self-Discovery</h2>
+<br>
+    <strong>Join the Journey of Self-Discovery</strong>
     <p>Understanding personality is <strong>not about labeling</strong>—it_s about <strong>growth, connection, and unlocking potential</strong>. Whether you_re taking the test, r
       eading our articles, or applying Big Five insights in daily life, we_re here to support your journey toward deeper self-awareness and better relationships.</p>
 
