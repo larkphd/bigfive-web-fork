@@ -31,7 +31,7 @@ export default function AboutPage({ params: { locale } }: Props) {
 
     <h2>Understanding Personality, Unlocking Potential</h2>
     <p>Welcome to our platform dedicated to the <strong>Big Five Personality Model</strong>—a scientifically backed framework for understanding human personality. Some of the tech is inherited from Rubynors github, modified and changed.
-      Whether you're here to explore your own traits, improve relationships, or gain deeper insights into mental well-being, our goal is to make personality psychology accessible, insightful, and practical.</p>
+      Whether you_re here to explore your own traits, improve relationships, or gain deeper insights into mental well-being, our goal is to make personality psychology accessible, insightful, and practical.</p>
 
     <h2>What is the Big Five Personality Model?</h2>
     <p>The <strong>Big Five Model</strong>, also known as the <strong>Five-Factor Model (FFM)</strong>, is one of the most widely accepted and research-backed theories 
@@ -78,8 +78,8 @@ export default function AboutPage({ params: { locale } }: Props) {
       The test is anonymous, ensuring a safe and confidential experience for all users. Some ads to get the webpage running.</p>
 
     <h2>Join the Journey of Self-Discovery</h2>
-    <p>Understanding personality is <strong>not about labeling</strong>—it’s about <strong>growth, connection, and unlocking potential</strong>. Whether you're taking the test, r
-      eading our articles, or applying Big Five insights in daily life, we’re here to support your journey toward deeper self-awareness and better relationships.</p>
+    <p>Understanding personality is <strong>not about labeling</strong>—it_s about <strong>growth, connection, and unlocking potential</strong>. Whether you_re taking the test, r
+      eading our articles, or applying Big Five insights in daily life, we_re here to support your journey toward deeper self-awareness and better relationships.</p>
 
     <p>Ready to explore? <a href="https://www.understandme2.com/test">Take the test</a>, read our insights, and discover the power of personality psychology today!</p>
 
