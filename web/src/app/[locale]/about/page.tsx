@@ -50,39 +50,39 @@ export default function AboutPage({ params: { locale } }: Props) {
           personality insights through engaging articles, guides, and exercises.
           Here’s what you’ll find:
         </p>
-        <ul className='mb-4 pl-5'>
+        <ul className='mb-4 pl-5 list-disc'>
           <li className='mb-2'>
-            • Comprehensive Articles – Explore how personality impacts different
+            Comprehensive Articles – Explore how personality impacts different
             aspects of life, from teamwork and leadership to parenting and
             mental health.
           </li>
           <li className='mb-2'>
-            • Personality Tests – Learn more about your own Big Five traits with
+            Personality Tests – Learn more about your own Big Five traits with
             quick and insightful assessments.
           </li>
           <li className='mb-2'>
-            • Practical Applications – Discover how to use personality
-            psychology in education, family dynamics, sports teams, and personal
+            Practical Applications – Discover how to use personality psychology
+            in education, family dynamics, sports teams, and personal
             development.
           </li>
         </ul>
         <p className='mb-2'>Who Can Benefit?</p>
-        <ul className='mb-4 pl-5'>
+        <ul className='mb-4 pl-5 list-disc'>
           <li className='mb-2'>
-            • Individuals – Gain self-awareness and strategies for personal
+            Individuals – Gain self-awareness and strategies for personal
             growth.
           </li>
           <li className='mb-2'>
-            • Parents – Understand your child’s personality and support their
+            Parents – Understand your child’s personality and support their
             mental resilience.
           </li>
           <li className='mb-2'>
-            • Educators – Foster a positive classroom environment through
+            Educators – Foster a positive classroom environment through
             personality-based approaches.
           </li>
           <li className='mb-2'>
-            • Teams & Leaders – Use personality insights to enhance
-            collaboration and performance.
+            Teams & Leaders – Use personality insights to enhance collaboration
+            and performance.
           </li>
         </ul>
         <p>
