@@ -1,7 +1,4 @@
-import { HeartBoldIcon } from '@/components/icons';
-import { title } from '@/components/primitives';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import Feedback from './feedback';
 import { Link } from '@/navigation';
 import { Heading } from '@/components/heading';
 
