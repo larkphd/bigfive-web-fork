@@ -7,7 +7,13 @@ import clsx from 'clsx';
 import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
+import {
+  basePath,
+  getHrefLangUrls,
+  getNavItems,
+  locales,
+  siteConfig
+} from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
@@ -27,7 +33,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
+  const path = '/';
+  const hrefLangUrls = getHrefLangUrls(path);
   const alternatesLang = locales.reduce((a, v) => ({ ...a, [v]: `/${v}` }), {});
+  const alternates = {
+    canonical: '/',
+    languages: alternatesLang,
+    'x-default': hrefLangUrls[0].href
+  };
 
   return {
     title: {
@@ -43,10 +56,7 @@ export async function generateMetadata({
       apple: '/apple-touch-icon.png'
     },
     metadataBase: new URL(basePath),
-    alternates: {
-      canonical: '/',
-      languages: alternatesLang
-    },
+    alternates,
     openGraph: {
       type: 'website',
       url: basePath,

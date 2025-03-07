@@ -2,6 +2,19 @@ import { getTranslations } from 'next-intl/server';
 
 export const basePath = 'https://understandme2.com';
 
+export const getHrefLangUrls = (path: string) => {
+  return languages.map((lang) => ({
+    href: `${basePath}/${lang.code}${path}`,
+    hrefLang: lang.code,
+    ...(lang.map && {
+      additionalTags: lang.map.map((code) => ({
+        href: `${basePath}/${lang.code}${path}`,
+        hrefLang: code
+      }))
+    })
+  }));
+};
+
 export const supportEmail = 'contact@understandme2.com';
 
 export type Language = {
