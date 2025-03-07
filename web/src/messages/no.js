@@ -44,19 +44,15 @@ const norsk = {
         text: 'Testen er oversatt til mer enn 20 språk.!'
       }
     },
-    description: {
-      top: 'Understandme2.com - Lær deg selv å kjenne og bli den <violet>beste versjonen</violet> av deg selv.',
-      subtop: '',
-      subtop2:
-        ' er en vitenskapelig og troverdig psykologisk modell for å måle personlighet.',
-      reference: `Tester og evalueringer for understandme2.com er hentet fra
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Testen som følger har 120 spørsmål og estimert tidsbruk er 10 minutter.',
-      result:
-        'Etter at testen er gjennomført vil du bli presentert en detaljert personlighetsrapport innen følgende domener:',
-      tests_taken: 'tester utført så langt'
-    }
+description: {
+  top: 'Ta en personlighetstest og forstå deg selv, vær den beste versjonen av deg selv.',
+  subtop: 'Den',
+  subtop2: ' er den mest vitenskapelig validerte og pålitelige psykologiske modellen for å måle personlighet.',
+  reference: `Tester og evaluering for denne siden er hentet fra ipip.ori.org, inventaret er fra Johnson's (2014) 120-item IPIP NEO-PI-R. Og fra Rubynors GitHub-repo.`,
+  info: 'Ingen innlogging, kostnad eller registrering! Personlighetstesten består av 120 spørsmål, som tar omtrent 10 minutter å fullføre. Umiddelbart anonymt resultat.',
+  result: 'Fullfør testen og motta en fullstendig detaljert personlighetsrapport innen følgende domener:',
+  tests_taken: 'tester tatt så langt'
+}
   },
   about: {
     seo: {
