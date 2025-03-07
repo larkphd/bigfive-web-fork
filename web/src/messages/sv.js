@@ -43,19 +43,15 @@ const svenska = {
         text: 'Testet har översatts till mer än 20 språk. Hjälp till <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">här</a>!'
       }
     },
-    description: {
-      top: 'Förstå dig själv och andra bättre med ett <violet>gratis</violet> personlighetstest med öppen källkod.',
-      subtop: '',
-      subtop2:
-        ' är en vetenskaplig och trovärdig psykologisk modell för att mäta personlighet.',
-      reference: `Tester og evalueringer for understandme2.com er hentet fra
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Testet som följer har 120 frågor och beräknad tid är 10 minuter.',
-      result:
-        'När du har slutfört testet får du en detaljerad personlighetsrapport inom följande domäner:',
-      tests_taken: 'test utförda hittills'
-    }
+description: {
+  top: 'Gör ett personlighetstest och förstå dig själv, var den bästa versionen av dig själv.',
+  subtop: 'Den',
+  subtop2: ' är den mest vetenskapligt validerade och pålitliga psykologiska modellen för att mäta personlighet.',
+  reference: `Tester och utvärderingar för denna webbplats är hämtade från ipip.ori.org, inventariet kommer från Johnson's (2014) 120-item IPIP NEO-PI-R. Och från Rubynors GitHub-repo.`,
+  info: 'Ingen inloggning, kostnad eller registrering! Personlighetstestet består av 120 frågor, vilket tar cirka 10 minuter att genomföra. Omedelbart anonymt resultat.',
+  result: 'Fullfölj testet och få en fullständig detaljerad personlighetsrapport inom följande områden:',
+  tests_taken: 'tester gjorda hittills'
+}
   },
   about: {
     seo: {
