@@ -42,19 +42,15 @@ const hindi = {
         text: '20 से अधिक भाषाओं में अनुवादित. मदद करना <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">here</a>!'
       }
     },
-    description: {
-      top: 'एक मुक्त, मुक्त-स्रोत व्यक्तित्व परीक्षण के साथ खुद को बेहतर जानना सीखें।',
-      subtop: 'The',
-      subtop2:
-        ' is the most scientifically validated and reliable psychological model to measure personality.',
-      reference: `Tests and evaluation for this site is gathered from
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'निम्नलिखित परीक्षण में 120 प्रश्न शामिल हैं जिन्हें पूरा करने में आपको लगभग 10 मिनट लगने का अनुमान है।',
-      result:
-        'After you have completed the test you will receive a detailed personality report in the following domains:',
-      tests_taken: 'tests taken so far'
-    }
+description: {
+  top: 'व्यक्तित्व परीक्षण लें और खुद को समझें, अपने सबसे अच्छे संस्करण बनें।',
+  subtop: '',
+  subtop2: ' व्यक्तित्व मापने के लिए सबसे वैज्ञानिक रूप से मान्य और विश्वसनीय मनोवैज्ञानिक मॉडल है।',
+  reference: `इस साइट के लिए परीक्षण और मूल्यांकन ipip.ori.org से संकलित किए गए हैं, सूची Johnson's (2014) 120-आइटम IPIP NEO-PI-R से है। और Rubynors के गिटहब रिपॉजिटरी से।`,
+  info: 'कोई लॉगिन, लागत या पंजीकरण नहीं! व्यक्तित्व परीक्षण में 120 प्रश्न होते हैं, जिन्हें पूरा करने में लगभग 10 मिनट लगते हैं। त्वरित गुमनाम परिणाम।',
+  result: 'परीक्षण पूरा करें और निम्नलिखित डोमेन में एक पूर्ण विस्तृत व्यक्तित्व रिपोर्ट प्राप्त करें:',
+  tests_taken: 'अब तक लिए गए परीक्षण'
+}
   },
   about: {
     seo: {
