@@ -28,8 +28,8 @@ const english = {
     share: 'Share with friends and find out how compatible you are',
     cards: {
       open: {
-        title: 'Mental health',
-        text: 'Understand your best and worse, and use it to your advantage'
+        title: 'Unlock better mental health',
+        text: 'Take a personality test to understand your best and worse, and use it to your advantage'
       },
       free: {
         title: 'No registration! No login!',
@@ -45,14 +45,14 @@ const english = {
       }
     },
     description: {
-      top: 'Understand yourself, to be the <violet>best version</violet> you could be.',
+      top: 'Take a personality test to understand yourself, be the <violet>best version</violet> you could be.',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>. And from Rubynors github repo.`,
-      info: 'No login, cost or registration! The test consists of 120 questions, which takes about 10 minutes to complete.',
+      info: 'No login, cost or registration! The personality test consists of 120 questions, which takes about 10 minutes to complete. Immediate anynomouse report.',
       result:
         'Complete the test receive a full detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
