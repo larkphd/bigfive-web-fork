@@ -3,16 +3,30 @@ import { getTranslations } from 'next-intl/server';
 export const basePath = 'https://understandme2.com';
 
 export const getHrefLangUrls = (path: string) => {
-  return languages.map((lang) => ({
-    href: `${basePath}/${lang.code}${path}`,
-    hrefLang: lang.code,
-    ...(lang.map && {
-      additionalTags: lang.map.map((code) => ({
-        href: `${basePath}/${lang.code}${path}`,
-        hrefLang: code
-      }))
-    })
-  }));
+  const currentUrl = `${basePath}${path}`;
+  const urls = languages.map((lang) => {
+    const langUrl = `${basePath}/${lang.code}${path}`;
+    return {
+      href: langUrl,
+      hrefLang: lang.code,
+      isSelf: true,
+      ...(lang.map && {
+        additionalTags: lang.map.map((code) => ({
+          href: langUrl,
+          hrefLang: code,
+          isSelf: false
+        }))
+      })
+    };
+  });
+
+  urls.push({
+    href: currentUrl,
+    hrefLang: 'x-default',
+    isSelf: false
+  });
+
+  return urls;
 };
 
 export const supportEmail = 'contact@understandme2.com';

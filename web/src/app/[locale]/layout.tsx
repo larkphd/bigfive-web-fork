@@ -35,11 +35,17 @@ export async function generateMetadata({
   const s = await getTranslations({ locale, namespace: 'seo' });
   const path = '/';
   const hrefLangUrls = getHrefLangUrls(path);
-  const alternatesLang = locales.reduce((a, v) => ({ ...a, [v]: `/${v}` }), {});
+  const canonicalUrl = `${basePath}/${locale}${path}`;
   const alternates = {
-    canonical: '/',
-    languages: alternatesLang,
-    'x-default': hrefLangUrls[0].href
+    canonical: canonicalUrl,
+    languages: hrefLangUrls.reduce(
+      (acc, { href, hrefLang }) => ({
+        ...acc,
+        [hrefLang]: href
+      }),
+      {}
+    ),
+    'x-default': `${basePath}${path}`
   };
 
   return {
