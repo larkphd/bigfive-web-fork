@@ -39,19 +39,15 @@ const finnish = {
         text: 'BigFive on tieteellisesti validoitu ja luotettava psykologinen malli.'
       }
     },
-    description: {
-      top: 'Opi tuntemaan itsesi paremmin <violet>ilmaisen</violet>, avoimen lähdekoodin persoonallisuustestin avulla.',
-      subtop: 'The',
-      subtop2:
-        ' on tieteellisesti validoitu ja luotettava psykologinen malli persoonallisuuden mittaamiseksi.',
-      reference: `Tämän sivuston testit ja arvioinnit on kerätty osoitteesta
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  varasto on peräisin <i>Johnsonin (2014) 120 nimikkeen IPIP NEO-PI-R</i>.`,
-      info: 'Seuraava testi sisältää 120 kysymystä, joiden suorittamisen arvioidaan vievän noin 10 minuuttia.',
-      result:
-        'Testin suorittamisen jälkeen saat yksityiskohtaisen persoonallisuusraportin seuraavista verkkotunnuksista:',
-      tests_taken: 'toistaiseksi tehdyt testit'
-    }
+ description: {
+  top: 'Tee persoonallisuustesti ja ymmärrä itseäsi, ole paras versio itsestäsi.',
+  subtop: 'Tämä',
+  subtop2: ' on tieteellisesti validoiduimman ja luotettavin psykologinen malli persoonallisuuden mittaamiseen.',
+  reference: `Testit ja arviointi tälle sivustolle ovat peräisin <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>, inventaario on <i>Johnsonin (2014) 120-kohtainen IPIP NEO-PI-R</i>. Ja Rubynorsin GitHub-reposta.`,
+  info: 'Ei kirjautumista, kustannuksia tai rekisteröintiä! Persoonallisuustesti koostuu 120 kysymyksestä ja sen tekeminen vie noin 10 minuuttia. Välitön anonyymi tulos.',
+  result: 'Suorita testi saadaksesi yksityiskohtaisen persoonallisuusraportin seuraavilla osa-alueilla:',
+  tests_taken: 'testiä suoritettu tähän mennessä'
+}
   },
   about: {
     seo: {
