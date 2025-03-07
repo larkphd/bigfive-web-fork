@@ -7,13 +7,7 @@ import clsx from 'clsx';
 import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import {
-  basePath,
-  getHrefLangUrls,
-  getNavItems,
-  locales,
-  siteConfig
-} from '@/config/site';
+import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
@@ -34,18 +28,31 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
   const path = '/';
-  const hrefLangUrls = getHrefLangUrls(path);
   const canonicalUrl = `${basePath}/${locale}${path}`;
+
   const alternates = {
-    canonical: canonicalUrl,
-    languages: hrefLangUrls.reduce(
-      (acc, { href, hrefLang }) => ({
-        ...acc,
-        [hrefLang]: href
-      }),
-      {}
-    ),
-    'x-default': `${basePath}${path}`
+    canonical: `${basePath}/${locale}${path}`,
+    languages: {
+      ar: `${basePath}/ar`,
+      'da-DK': `${basePath}/da`,
+      'de-DE': `${basePath}/de`,
+      'es-ES': `${basePath}/es`,
+      'fi-FI': `${basePath}/fi`,
+      hi: `${basePath}/hi`,
+      'id-ID': `${basePath}/id`,
+      'is-IS': `${basePath}/is`,
+      'it-IT': `${basePath}/it`,
+      'ja-JP': `${basePath}/ja`,
+      'nb-NO': `${basePath}/no`,
+      'pl-PL': `${basePath}/pl`,
+      'pt-BR': `${basePath}/pt`,
+      'ru-RU': `${basePath}/ru`,
+      'sv-SE': `${basePath}/sv`,
+      'th-TH': `${basePath}/th`,
+      'uk-UA': `${basePath}/uk`,
+      'zh-CN': `${basePath}/zh`
+    },
+    'x-default': `${basePath}/en`
   };
 
   return {

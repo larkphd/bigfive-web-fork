@@ -2,31 +2,6 @@ import { getTranslations } from 'next-intl/server';
 
 export const basePath = 'https://understandme2.com';
 
-export const getHrefLangUrls = (path: string, currentLocale?: string) => {
-  const urls = languages.map((lang) => {
-    const langUrl = `${basePath}/${lang.code}${path}`;
-    return {
-      href: langUrl,
-      hrefLang: lang.code,
-      ...(lang.map && {
-        additionalTags: lang.map.map((code) => ({
-          href: langUrl,
-          hrefLang: code
-        }))
-      })
-    };
-  });
-
-  if (!currentLocale || currentLocale === 'en') {
-    urls.push({
-      href: `${basePath}/en${path}`,
-      hrefLang: 'x-default'
-    });
-  }
-
-  return urls;
-};
-
 export const supportEmail = 'contact@understandme2.com';
 
 export type Language = {
