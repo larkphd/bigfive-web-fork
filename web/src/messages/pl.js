@@ -41,19 +41,15 @@ const polish = {
         text: 'BigFive jest udowodnionym naukowo i wiarygodnym modelem psychologicznym.'
       }
     },
-    description: {
-      top: "Poznaj siebie dzięki <violet>darmowemu</violet>, open-source'owemu testowi osobowości.",
-      subtop: '',
-      subtop2:
-        'jest najbardziej wiarygodnym i naukowo potwierdzonym modelem psychologicznym opisującym osobowość.',
-      reference: `Testy i ocena użyte na tej stronie pochodzą z
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Następujący test zawiera 120 pytań. Odpowiedź na wszystkie zajmuje ok. 10 minut.',
-      result:
-        'Kiedy wypełnisz test, otrzymasz szczegółowy opis Twojej osobowości obejmujący pięć czynników:',
-      tests_taken: 'dotychczasowe testy'
-    }
+description: {
+  top: 'Zrób test osobowości i zrozum siebie, bądź najlepszą wersją siebie, jaką możesz być.',
+  subtop: 'To',
+  subtop2: ' jest najbardziej naukowo zweryfikowanym i wiarygodnym modelem psychologicznym do pomiaru osobowości.',
+  reference: `Testy i oceny dla tej strony są zebrane z ipip.ori.org, a inwentarz pochodzi z Johnson's (2014) 120-elementowego IPIP NEO-PI-R. Oraz z repozytorium GitHub Rubynors.`,
+  info: 'Brak logowania, kosztów lub rejestracji! Test osobowości składa się ze 120 pytań, które zajmują około 10 minut na ukończenie. Natychmiastowy anonimowy wynik.',
+  result: 'Ukończ test, aby otrzymać pełny, szczegółowy raport o osobowości w następujących obszarach:',
+  tests_taken: 'testy wykonane do tej pory'
+}
   },
   about: {
     seo: {

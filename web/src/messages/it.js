@@ -39,19 +39,15 @@ const italian = {
         text: 'BigFive è un modello psicologico scientificamente convalidato e affidabile.'
       }
     },
-    description: {
-      top: 'Impara a conoscerti meglio con un test della personalità <violet>gratuito</violet> e open source.',
-      subtop: 'Il',
-      subtop2:
-        ' è il modello psicologico più scientificamente convalidato e affidabile per misurare la personalità.',
-      reference: `I test e le valutazioni per questo sito sono raccolti da
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`,
-      info: 'Il seguente test contiene 120 domande che si stima richiederanno circa 10 minuti per il completamento.',
-      result:
-        'Dopo aver completato il test riceverai un rapporto dettagliato sulla personalità nei seguenti domini:',
-      tests_taken: 'test effettuati finora'
-    }
+description: {
+  top: 'Fai un test della personalità e comprendi te stesso, sii la migliore versione di te stesso.',
+  subtop: 'Il',
+  subtop2: ' è il modello psicologico più scientificamente validato e affidabile per misurare la personalità.',
+  reference: `I test e le valutazioni per questo sito sono raccolti da ipip.ori.org, l'inventario proviene da Johnson's (2014) 120-item IPIP NEO-PI-R. E dal repository GitHub di Rubynors.`,
+  info: 'Nessun login, costo o registrazione! Il test della personalità consiste di 120 domande, che richiedono circa 10 minuti per essere completate. Risultato anonimo immediato.',
+  result: 'Completa il test per ricevere un rapporto dettagliato sulla personalità nei seguenti domini:',
+  tests_taken: 'test effettuati finora'
+}
   },
   about: {
     seo: {
