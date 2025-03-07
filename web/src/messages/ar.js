@@ -38,19 +38,19 @@ const arabic = {
         text: 'نموذج السمات الخمسة في علم النفس هو نموذج علمي محقّق وموثوق'
       }
     },
-    description: {
-      top: 'تعرّف على نفسك أكثر عن طريق هذا الاختبار <violet>المجاني</violet> ومفتوح المصدر',
-      subtop: 'The',
-      subtop2:
-        ' is the most scientifically validated and reliable psychological model to measure personality.',
-      reference: `Tests and evaluation for this site is gathered from
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'الاختبار يحتوي على ١٢٠ سؤال وسيستغرق منك إتمامه حوالي ١٠ دقائق',
-      result:
-        'Complete the test receive a full detailed personality report in the following domains:',
-      tests_taken: 'tests taken so far'
-    }
+description: {
+  top: 'قم بإجراء اختبار الشخصية وافهم نفسك، كن <violet>أفضل نسخة</violet> يمكنك أن تكونها.',
+  subtop: 'إن',
+  subtop2:
+    ' هو النموذج النفسي الأكثر موثوقية وصحة علمياً لقياس الشخصية.',
+  reference: `الاختبارات والتقييمات لهذا الموقع مجمعة من
+<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>،
+والمخزون من <i>مخزون جونسون (2014) المكون من 120 عنصراً IPIP NEO-PI-R</i>. وكذلك من مستودع Rubynors على GitHub.`,
+  info: 'لا تسجيل دخول، لا تكلفة أو تسجيل! يتكون اختبار الشخصية من 120 سؤالاً ويستغرق حوالي 10 دقائق لإكماله. النتيجة المجهولة فورًا.',
+  result:
+    'أكمل الاختبار واحصل على تقرير شخصية مفصل بالكامل في المجالات التالية:',
+  tests_taken: 'الاختبارات المأخوذة حتى الآن'
+}
   },
   about: {
     seo: {
