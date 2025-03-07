@@ -88,13 +88,15 @@ export default function AboutPage({ params: { locale } }: Props) {
             collaboration and performance.
           </li>
         </ul>
-        <p className='mb-4'>
+        <p>
           Your Privacy Matters We prioritize privacy and security. Our
           personality test does not store personal data, does not require login,
           and does not collect identifying information. The test is anonymous,
           ensuring a safe and confidential experience for all users. Just some
           ads to have the website going.
-          <p>Join the Journey of Self-Discovery</p>
+        </p>
+        <p>Join the Journey of Self-Discovery</p>
+        <p className='mb-4'>
           Understanding personality is not about labeling—it’s about growth,
           connection, and unlocking potential. Whether you’re taking the test,
           reading our articles, or applying Big Five insights in daily life,
