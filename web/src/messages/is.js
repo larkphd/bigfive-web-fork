@@ -43,19 +43,15 @@ const icelandic = {
         text: 'Þýtt á yfir 20 tungumál. Hjálpaðu <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank"> hér </a>!'
       }
     },
-    description: {
-      top: 'Lærðu að þekkja sjálfan þig betur með <violet>ókeypis</violet> opnu persónuleikaprófi.',
-      subtop: 'The',
-      subtop2:
-        ' er vísindalega staðfestasta og áreiðanlegasta sálfræðilíkanið til að mæla persónuleika.',
-      reference: `Próf og mat fyrir þessa síðu er safnað saman frá
-        <a href="http://ipip.ori.org" rel="noopener" target="_blank"> ipip.ori.org </a>,
-        birgðir eru frá <i> Johnson (2014) 120 hlutum IPIP NEO-PI-R </i>.`,
-      info: 'Eftirfarandi próf inniheldur 120 spurningar sem áætlað er að taki þig um það bil 10 mínútur.',
-      result:
-        'Eftir að prófinu lýkur færðu nákvæma persónuleikaskýrslu á eftirfarandi sviðum:',
-      tests_taken: 'próf sem tekin hafa verið hingað til'
-    }
+description: {
+  top: 'Taktu persónuleikapróf og skildu sjálfan þig, vertu besta útgáfan af sjálfum þér.',
+  subtop: 'Sá',
+  subtop2: ' er vísindalega staðfesta og áreiðanlegasta sálfræðilega módelið til að mæla persónuleika.',
+  reference: `Prófanir og mat fyrir þessa síðu eru sótt frá ipip.ori.org, birgðaskráin er úr Johnson's (2014) 120-liða IPIP NEO-PI-R. Og frá GitHub geymslu Rubynors.`,
+  info: 'Engin innskráning, kostnaður eða skráning! Persónuleikaprófið samanstendur af 120 spurningum, sem taka um það bil 10 mínútur að ljúka. Strax nafnlaus niðurstaða.',
+  result: 'Ljúktu prófinu og fáðu fullkomlega ítarlega persónuleikaskýrslu á eftirfarandi sviðum:',
+  tests_taken: 'próf tekin hingað til'
+}
   },
   about: {
     seo: {
