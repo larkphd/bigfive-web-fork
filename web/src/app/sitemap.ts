@@ -7,11 +7,11 @@ const articles = [
   'conscientiousness',
   'neuroticism',
   'extraversion',
-  'openness_to_experience',
-  'article1_introduction_big_five',
-  'article2_improve_the_classroom_environment',
-  'article3_team_performance',
-  'article4_family_child_mental_health_big_five',
+  'openness-to-experience',
+  'article1-introduction-big-five',
+  'article2-improve-the-classroom-environment',
+  'article3-team-performance',
+  'article4-family-child-mental-health-big-five',
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
