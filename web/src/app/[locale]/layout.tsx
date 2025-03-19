@@ -6,7 +6,6 @@ import { Navbar } from '@/components/navbar';
 import clsx from 'clsx';
 import Footer from '@/components/footer';
 import { ThemeProviderProps } from 'next-themes/dist/types';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import {
   basePath,
   getNavItems,
@@ -21,6 +20,7 @@ import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
 import process from 'node:process';
+import GoogleAnalytics from '@/components/google-analytics';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -145,8 +145,8 @@ export default async function RootLayout({
         </Providers>
         <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
         <Analytics />
+        <GoogleAnalytics gaId={gaId} />
       </body>
-      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
