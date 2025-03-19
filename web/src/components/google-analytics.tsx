@@ -54,10 +54,8 @@ const GoogleAnalytics: React.FC<PropsType> = ({ gaId }) => {
                 gtag('js', new Date());
 
                 gtag('consent', 'default', {
-                    'analytics_storage': 'denied',
-                    'ad_storage': 'denied',
-                    'functionality_storage': 'granted',
-                    'security_storage': 'granted'
+                    'analytics_storage': localStorage.getItem('cookie_consent_analytics') === 'true' ? 'granted' : 'denied',
+                    'ad_storage': localStorage.getItem('cookie_consent_marketing') === 'true' ? 'granted' : 'denied'
                 });
                 
                 gtag('config', '${gaId}', {
