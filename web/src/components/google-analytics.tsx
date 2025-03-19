@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -70,4 +70,12 @@ const GoogleAnalytics: React.FC<PropsType> = ({ gaId }) => {
   );
 };
 
-export default GoogleAnalytics;
+const GoogleAnalyticsContainer = ({ gaId }: PropsType) => {
+  return (
+    <Suspense>
+      <GoogleAnalytics gaId={gaId} />
+    </Suspense>
+  );
+};
+
+export default GoogleAnalyticsContainer;
