@@ -11,7 +11,8 @@ export function setGAConsent({
   localStorage.setItem('cookie_consent_marketing', isMarketing.toString());
   window.gtag?.('consent', 'update', {
     analytics_storage: isAnalytics ? 'granted' : 'denied',
-    ad_storage: isMarketing ? 'granted' : 'denied'
+    ad_storage: isMarketing ? 'granted' : 'denied',
+    ad_personalization: isMarketing ? 'granted' : 'denied'
   });
 }
 
