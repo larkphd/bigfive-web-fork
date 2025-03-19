@@ -12,6 +12,7 @@ import { Link } from '@nextui-org/link';
 import { useEffect, useState } from 'react';
 import { SettingsIcon } from './icons';
 import { CookieConsentSettings } from './cookie-consent-settings';
+import { setGAConsent } from '@/utils/ga';
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
@@ -27,11 +28,20 @@ export default function CookieBanner() {
 
   const handleAllowCookies = () => {
     localStorage.setItem('cookie_consent', 'accepted');
+    setGAConsent({
+      isAnalytics: true,
+      isMarketing: true
+    });
+
     setShowBanner(false);
   };
 
   const handleDeclineCookies = () => {
     localStorage.setItem('cookie_consent', 'declined');
+    setGAConsent({
+      isAnalytics: false,
+      isMarketing: false
+    });
     setShowBanner(false);
   };
 
@@ -46,10 +56,7 @@ export default function CookieBanner() {
         isOpen={showBanner}
         placement='bottom'
         onOpenChange={setShowBanner}
-        // isDismissable={false}
-        // isKeyboardDismissDisabled
         hideCloseButton
-        // backdrop='transparent'
       >
         <ModalContent>
           <ModalHeader className='flex flex-col gap-1'>
