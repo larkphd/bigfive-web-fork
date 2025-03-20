@@ -52,11 +52,14 @@ const GoogleAnalytics: React.FC<PropsType> = ({ gaId }) => {
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+                const isAnalytics = localStorage.getItem('cookie_consent_analytics') === 'true';
+                const isMarketing = localStorage.getItem('cookie_consent_marketing') === 'true';
 
                 gtag('consent', 'default', {
-                    'analytics_storage': localStorage.getItem('cookie_consent_analytics') === 'true' ? 'granted' : 'denied',
-                    'ad_storage': localStorage.getItem('cookie_consent_marketing') === 'true' ? 'granted' : 'denied',
-                    'ad_personalization': localStorage.getItem('cookie_consent_marketing') === 'true' ? 'granted' : 'denied'
+                    'analytics_storage': isAnalytics ? 'granted' : 'denied',
+                    'ad_storage': isMarketing ? 'granted' : 'denied',
+                    'ad_personalization': isMarketing ? 'granted' : 'denied',
+                    'ad_user_data': isMarketing ? 'granted' : 'denied'
                 });
                 
                 gtag('config', '${gaId}', {

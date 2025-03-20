@@ -12,7 +12,8 @@ export function setGAConsent({
   window.gtag?.('consent', 'update', {
     analytics_storage: isAnalytics ? 'granted' : 'denied',
     ad_storage: isMarketing ? 'granted' : 'denied',
-    ad_personalization: isMarketing ? 'granted' : 'denied'
+    ad_personalization: isMarketing ? 'granted' : 'denied',
+    ad_user_data: isMarketing ? 'granted' : 'denied'
   });
 }
 
