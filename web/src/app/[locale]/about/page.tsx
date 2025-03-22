@@ -27,7 +27,6 @@ export default function AboutPage({ params: { locale } }: Props) {
       <Heading title='About' />
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p className='mb-4'>
-
           About understandme2.com – your gateway to fascinating personality
           insights! 
           /p>
@@ -102,7 +101,6 @@ export default function AboutPage({ params: { locale } }: Props) {
             and performance.
           </li>
         </ul>
-
         <p className='mb-4'>
           Your Privacy Matters 
         </p>         
@@ -130,7 +128,6 @@ export default function AboutPage({ params: { locale } }: Props) {
           <Link href='/faq' className='underline'>
             FAQ
           </Link>{' '}
-
           . 
         </p>
         <p className='mb-4'>
