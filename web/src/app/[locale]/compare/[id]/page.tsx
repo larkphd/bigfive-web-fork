@@ -1,5 +1,5 @@
 import { base64url } from '@/lib/helpers';
-import { getTestResult } from '@/actions';
+import { getTestResult } from '@/actions/test.actions';
 import { title } from '@/components/primitives';
 import { DomainComparePage } from './domain';
 import { BarChartCompare } from '@/components/bar-chart-generic';

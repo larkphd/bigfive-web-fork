@@ -36,23 +36,17 @@ const chinese = {
       scientific: {
         title: '科学',
         text: '五大人格是经过科学验证且可靠的心理模型'
-      },
-      translated: {
-        title: '已翻译',
-        text: '翻译成 20 多种语言。<a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">点击这里</a>帮助翻译!'
       }
     },
-    description: {
-      top: '通过免费的开源个性测试，学会更好地了解自己。',
-      subtop: '的',
-      subtop2: ' 是衡量人格最科学、最可靠的心理模型。',
-      reference: `此站点的测试和评估来自
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: '以下测试包含 120 个问题，估计需要大约 10 分钟才能完成。',
-      result: '完成测试后，您将取得与详尽地人格报告。该报告将记载以下领域：',
-      tests_taken: '目前为止完成的测验'
-    }
+description: {
+  top: '进行性格测试，了解自己，成为你能成为的最佳版本。',
+  subtop: '这',
+  subtop2: ' 是测量性格的最具科学验证和可靠的心理模型。',
+  reference: `本网站的测试和评估来自于 ipip.ori.org，数据来自 Johnson's (2014) 120-item IPIP NEO-PI-R，以及 Rubynors 的 GitHub 仓库。`,
+  info: '无需登录、费用或注册！性格测试由 120 道题组成，大约需要 10 分钟完成。即时匿名结果。',
+  result: '完成测试后，您将获得以下领域的详细性格报告：',
+  tests_taken: '已完成的测试次数'
+}
   },
   about: {
     seo: {

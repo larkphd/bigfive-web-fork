@@ -1,3 +1,5 @@
+import { isRtlLang } from 'rtl-detect';
+
 export const formatId = (id: string): string => {
   return id
     .replace(/^https?:\/\/.+\/result\//, '')
@@ -67,4 +69,8 @@ export function calculateReadingTime(content: string) {
   const readingTime = Math.ceil(wordCount / wordsPerMinute);
 
   return readingTime;
+}
+
+export function getTextDirectionBasedOnLocale(locale: string): string {
+  return isRtlLang(locale) ? 'rtl' : 'ltr';
 }

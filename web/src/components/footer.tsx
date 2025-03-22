@@ -1,14 +1,4 @@
-import { Link as NextUILink } from '@nextui-org/link';
 import { Link } from '../navigation';
-
-import {
-  TwitterIcon,
-  GithubIcon,
-  LinkedInIcon,
-  FacebookIcon,
-  Logo
-} from '@/components/icons';
-import { siteConfig } from '@/config/site';
 
 interface FooterProps {
   footerLinks: {
@@ -19,23 +9,14 @@ interface FooterProps {
 
 export default function Footer({ footerLinks }: FooterProps) {
   const year = new Date().getFullYear();
-  return (
-    <footer className='container mx-auto max-w-7xl py-24 px-12'>
-      <div className='container mx-auto flex justify-between'>
-        <div className='w-1/2'>
-          <span className='text-center'>
-            <Logo />
-          </span>
-        </div>
-        <div className='w-1/2 flex justify-end'>    
-        </div>
-      </div>
 
-      <div className='w-full flex justify-center mt-12'>
+  return (
+    <footer className='container mx-auto max-w-7xl pt-6 md:pt-10 pb-6 mt-6 md:mt-10 border-t border-divider'>
+      <div className='w-full flex justify-center'>
         <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
           {footerLinks.map((item, index) => (
-            <li key={index}>
-              <Link href={item.href} className='hover:underline me-4 md:me-6'>
+            <li key={index} className='me-4 md:me-6 last:me-0'>
+              <Link href={item.href} className='hover:underline'>
                 {item.label}
               </Link>
             </li>
@@ -43,9 +24,9 @@ export default function Footer({ footerLinks }: FooterProps) {
         </ul>
       </div>
 
-      <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
+      <div className='flex text-sm text-gray-500 mt-6 md:mt-10 justify-center'>
         © {year} — understandme2.com - all rights reserved.
       </div>
- </footer>
+    </footer>
   );
 }

@@ -1,4 +1,4 @@
-import { Report, getTestResult } from '@/actions';
+import { Report, getTestResult } from '@/actions/test.actions';
 import { Snippet } from '@nextui-org/snippet';
 import { useTranslations } from 'next-intl';
 import { title } from '@/components/primitives';

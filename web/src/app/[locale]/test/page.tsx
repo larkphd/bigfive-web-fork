@@ -1,7 +1,7 @@
 import { getItems, getInfo } from '@bigfive-org/questions';
 import { Survey } from './survey';
 import { useTranslations } from 'next-intl';
-import { saveTest } from '@/actions';
+import { saveTest } from '@/actions/test.actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { TestLanguageSwitch } from './test-language-switch';
 
@@ -21,6 +21,7 @@ export default function TestPage({
     lang || (questionLanguages.some((l) => l.id === locale) ? locale : 'en');
   const questions = getItems(language);
   const t = useTranslations('test');
+
   return (
     <>
       <div className='flex'>

@@ -37,25 +37,17 @@ const japanese = {
       scientific: {
         title: '科学的',
         text: 'BigFiveは、科学的に検証された信頼できる心理モデルです。'
-      },
-      translated: {
-        title: '翻訳済み',
-        text: '20以上の言語に翻訳されています。 <a href="https://b5.translations.alheimsins.net/" rel="noreferrer"target="blank">こちら</a>をご覧ください。'
       }
     },
-    description: {
-      top: '無料のオープンソースの性格検査で自分自身をよりよく知ることを学びましょう。',
-      subtop: 'ザ・',
-      subtop2:
-        ' は、人格を測定するための最も科学的に検証された信頼できる心理モデルです。',
-      reference: `Tests and evaluation for this site is gathered from
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: '次のテストには120の質問が含まれており、完了するまでに約10分かかると推定されています。',
-      result:
-        'テストが完了すると、次のドメインで詳細なパーソナリティレポートが届きます。',
-      tests_taken: 'これまでに行われたテスト'
-    }
+   description: {
+  top: 'パーソナリティテストを受けて自分を理解し、最高の自分になりましょう。',
+  subtop: '',
+  subtop2: ' は、パーソナリティを測定するための最も科学的に検証された信頼できる心理学モデルです。',
+  reference: `このサイトのテストと評価は ipip.ori.org から収集されており、インベントリは Johnson's (2014) 120-item IPIP NEO-PI-R から取得されています。また、Rubynors の GitHub レポからも取得されています。`,
+  info: 'ログイン、費用、登録不要！パーソナリティテストは120の質問で構成されており、完了には約10分かかります。即座に匿名の結果を提供します。',
+  result: 'テストを完了して、以下の領域での詳細なパーソナリティレポートを受け取ります。',
+  tests_taken: 'これまでに受けたテスト'
+}
   },
   about: {
     seo: {

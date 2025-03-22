@@ -27,6 +27,7 @@ export default function AboutPage({ params: { locale } }: Props) {
       <Heading title='About' />
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p className='mb-4'>
+
           About understandme2.com – your gateway to fascinating personality
           insights! 
           /p>
@@ -39,6 +40,7 @@ export default function AboutPage({ params: { locale } }: Props) {
           Whether you’re an individual seeking self-awareness, a company looking
           to enhance teamwork, a sports team optimizing group dynamics, an
           organization aiming for better collaboration, or an educator
+
           integrating it into learning – our test offers free valuable insights.
         </p>
         <p className='mb-4'>
@@ -50,6 +52,19 @@ export default function AboutPage({ params: { locale } }: Props) {
           Our website gives you personality insights through articles, guides, and exercises.
         </p>
           <p className='mb-2'>          
+
+          integrating it into learning – our test offers valuable insights.
+        </p>
+        <p className='mb-4'>
+          And why not turn it into a social activity? The test can also be a fun
+          icebreaker at parties or social gatherings! Discover yourself and
+          those around you in a whole new way with understandme2.com – where
+          psychology meets engagement and practical use in every setting.
+        </p>
+        <p className='mb-2'>
+          How Our Platform Helps Our website is designed to provide valuable
+          personality insights through engaging articles, guides, and exercises.
+
           Here’s what you’ll find:
         </p>
         <ul className='mb-4 pl-5 list-disc'>
@@ -87,6 +102,7 @@ export default function AboutPage({ params: { locale } }: Props) {
             and performance.
           </li>
         </ul>
+
         <p className='mb-4'>
           Your Privacy Matters 
         </p>         
@@ -109,14 +125,16 @@ export default function AboutPage({ params: { locale } }: Props) {
           insights, and discover the power of personality psychology today!
         </p>
         <p className='mb-4'>
+
           What if... you wonder read the{' '}
           <Link href='/faq' className='underline'>
             FAQ
           </Link>{' '}
+
           . 
         </p>
         <p className='mb-4'>
-          You may try to contact us, but the faq hopefully gives you the
+          You may try to contact us at phdlark@gmail.com, but the faq hopefully gives you the
           answers you need.
         </p>
       </div>

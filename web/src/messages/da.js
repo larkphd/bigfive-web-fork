@@ -5,13 +5,13 @@ const dansk = {
   },
   seo: {
     keywords:
-      'big five personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
+      'performance team, selvforståelse, mental sundhed, børns sundhed, familie, big five personlighedstest, big 5 personlighedstest, bigfive test, personlighedstræk, bigfive, sammenligne, gratis, ingen registrering, Jordan Peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighedstest',
+      title: 'Gratis big five personlighedstest',
       description:
-        'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
+        'Ingen login eller registrering! Tag en gratis Big Five personlighedstest for at forstå dig selv bedre. Læs artikler, sammenlign partnere, kolleger, venner eller familie'
     },
     title: 'Big Five personlighedstest',
     call_to_action: 'Start testen',
@@ -38,25 +38,21 @@ const dansk = {
       scientific: {
         title: 'Videnskabelig',
         text: 'Big Five er en videnskabeligt valideret og pålidelig psykologisk model.'
-      },
-      translated: {
-        title: 'Oversættelse',
-        text: 'Testen er blevet oversat til mere end 20 sprog. Hjælp <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">her</a>!'
       }
     },
-    description: {
-      top: 'Forstå dig selv og andre bedre med en <violet>gratis</violet> open source-personlighedstest.',
-      subtop: '',
-      subtop2:
-        ' er en videnskabelig og troværdig psykologisk model til måling af personlighed.',
-      reference: `Tester og evalueringer for understandme2.com er hentet fra
+description: {
+  top: 'Tag en personlighedstest og forstå dig selv, vær den <violet>bedste version</violet> du kan være.',
+  subtop: 'Den',
+  subtop2:
+    ' er den mest videnskabeligt valide og pålidelige psykologiske model til måling af personlighed.',
+  reference: `Testene og evalueringerne for denne side er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Den følgende test har 120 spørgsmål, og den estimerede tid er 10 minutter.',
-      result:
-        'Efter afslutningen af testen får du en detaljeret personlighedsrapport inden for følgende domæner:',
-      tests_taken: 'tester utført hidtil'
-    }
+inventar er fra <i>Johnsons (2014) 120-item IPIP NEO-PI-R</i>. Og fra Rubynors GitHub-repositorium.`,
+  info: 'Ingen login, omkostninger eller registrering! Personlighedstesten består af 120 spørgsmål og tager omkring 10 minutter at gennemføre. Straks anonymt resultat.',
+  result:
+    'Fuldfør testen og modtag en fuld detaljeret personlighedsrapport i følgende domæner:',
+  tests_taken: 'tests udført indtil videre'
+}
   },
   about: {
     seo: {

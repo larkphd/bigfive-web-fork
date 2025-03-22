@@ -39,25 +39,17 @@ const portuguese = {
       scientific: {
         title: 'Científico',
         text: 'Big Five é um modelo psicológico cientificamente validado e confiável.'
-      },
-      translated: {
-        title: 'Traduzido',
-        text: 'Traduzido para mais de 20 idiomas. Ajude <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">aqui</a>!'
       }
     },
-    description: {
-      top: 'Aprenda a se conhecer melhor com um teste de personalidade <violet>gratuito</violet> e de código aberto.',
-      subtop: 'O',
-      subtop2:
-        ' é o modelo psicológico mais validado cientificamente e confiável para medir a personalidade.',
-      reference: `Os testes e a avaliação deste site são coletados de
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'O teste a seguir contém 120 questões que levam cerca de 10 minutos para serem concluídas.',
-      result:
-        'Depois de concluir o teste, você receberá um relatório de personalidade detalhado nos seguintes domínios:',
-      tests_taken: 'testes feitos até agora'
-    }
+description: {
+  top: 'Faça um teste de personalidade e entenda a si mesmo, seja a melhor versão de você mesmo.',
+  subtop: 'O',
+  subtop2: ' é o modelo psicológico mais cientificamente validado e confiável para medir a personalidade.',
+  reference: `Os testes e avaliações para este site são coletados de ipip.ori.org, o inventário é do IPIP NEO-PI-R de 120 itens de Johnson (2014). E do repositório GitHub de Rubynors.`,
+  info: 'Sem login, custo ou registro! O teste de personalidade consiste em 120 perguntas, que levam cerca de 10 minutos para serem concluídas. Resultado anônimo imediato.',
+  result: 'Complete o teste e receba um relatório de personalidade detalhado nos seguintes domínios:',
+  tests_taken: 'testes realizados até agora'
+}
   },
   about: {
     seo: {

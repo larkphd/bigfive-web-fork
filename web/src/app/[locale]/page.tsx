@@ -1,19 +1,17 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@nextui-org/link';
-import { button as buttonStyles } from '@nextui-org/theme';
+import { button as buttonStyles, link as linkStyles } from '@nextui-org/theme';
 import { title, subtitle } from '@/components/primitives';
 import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
 import {
+  ChevronRightLinearIcon,
   ExperimentIcon,
-  GithubIcon,
-  LanguageIcon,
   LogosOpensource,
   MoneyIcon,
   PlusLinearIcon
 } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
-import { siteConfig } from '@/config/site';
 import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
@@ -23,6 +21,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip, Tooltip } from '@nextui-org/react';
 import NextLink from 'next/link';
 import { Translated } from '@/components/translated';
+import { isRtlLang } from 'rtl-detect';
 
 interface Props {
   params: { locale: string };
@@ -52,13 +51,28 @@ export default function Home({ params: { locale } }: Props) {
       title: t('cards.scientific.title'),
       description: t('cards.scientific.text'),
       icon: ExperimentIcon({})
+    }
+  ];
+
+  const circleLinks = [
+    {
+      name: f('openness_to_experience.title'),
+      href: '/articles/openness_to_experience'
     },
     {
-      title: t('cards.translated.title'),
-      description: t.raw('cards.translated.text'),
-      icon: LanguageIcon({}),
-      href: 'https://b5.translations.alheimsins.net/'
-    }
+      name: f('conscientiousness.title'),
+      href: '/articles/conscientiousness'
+    },
+    { name: f('extraversion.title'), href: '/articles/extraversion' },
+    {
+      name: t('compare.action'),
+      href: '/compare'
+    },
+    {
+      name: f('agreeableness.title'),
+      href: '/articles/agreeableness'
+    },
+    { name: f('neuroticism.title'), href: '/articles/neuroticism' }
   ];
 
   const titleDescription = t.rich('description.top', {
@@ -77,18 +91,17 @@ export default function Home({ params: { locale } }: Props) {
   return (
     <section className='relative'>
       <div>
-        <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
-          <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
-            <div className='text-center justify-center mt-10'>
+        <section className='flex flex-col items-center justify-center gap-4 md:pt-10'>
+          <div className='flex relative z-20 flex-col gap-6 w-full lg:max-w-2xl xl:mt-10'>
+            <div className='text-center justify-center mt-3 md:mt-10'>
               <h1 className={title()}>{titleDescription}</h1>
-              <br />
               <h2 className={subtitle({ class: 'mt-4' })}>
                 {t('description.info')}
               </h2>
             </div>
 
             <div className='flex flex-col md:flex-row items-center gap-4 justify-center'>
-              <Link
+              <NextLink
                 href='/test'
                 className={clsx(
                   buttonStyles({
@@ -102,27 +115,11 @@ export default function Home({ params: { locale } }: Props) {
                 )}
               >
                 {t('call_to_action')} <ArrowRightIcon />
-              </Link>
-              <Link
-                isExternal
-                className={clsx(
-                  buttonStyles({
-                    variant: 'bordered',
-                    radius: 'full',
-                    size: 'lg',
-                    fullWidth: true
-                  }),
-                  'md:w-auto'
-                )}
-                href={siteConfig.links.github}
-              >
-                <GithubIcon size={20} />
-                GitHub
-              </Link>
+              </NextLink>
             </div>
           </div>
 
-          <div className='font-normal text-default-500 block max-w-full text-center underline'>
+          <div className='font-normal text-secondary block max-w-full text-center underline'>
             {t('no_registration')}
           </div>
         </section>
@@ -132,25 +129,49 @@ export default function Home({ params: { locale } }: Props) {
         </div>
       </div>
 
-      <section className='border-t border-b border-divider px-8 mt-16 lg:mt-44 text-center'>
-        <div className='my-8'>
-          <h1 className={title()}>{testsTaken}</h1>
+      <div className='mt-20 text-center'>
+        <Link href='/articles' color='foreground'>
+          <h1 className={title()}>Articles</h1>
+        </Link>
+        <h2 className={subtitle({ class: 'mt-4' })}>
+          Some articles on personality, to help you understand yourself
+        </h2>
+        <div className='mt-6 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
+          {posts.map((post, idx) => (
+            <PostCard key={idx} {...post} />
+          ))}
         </div>
-      </section>
+        <div className='mt-6'>
+          <NextLink
+            href='/articles'
+            className={clsx(
+              linkStyles({
+                isBlock: true,
+                color: 'secondary',
+                size: 'md'
+              }),
+              'text-default-500 hover:text-default-900 justify-start px-4'
+            )}
+          >
+            All articles
+            <ChevronRightLinearIcon className='inline-block ml-1' size={15} />
+          </NextLink>
+        </div>
+      </div>
 
       <div className='mt-20 text-center'>
         <h1 className={title()}>{t('compare.title')}</h1>
 
-        <div className='mt-10'>
-          <div className='text-lg lg:text-xl font-normal text-default-500'>
+        <div className='mt-4'>
+          <div className='text-lg lg:text-xl font-normal text-secondary'>
             {t('compare.text1')} {t('compare.text2')}
           </div>
         </div>
       </div>
 
-      <div className='text-center h-64 md:h-80 mt-44 md:mt-56'>
+      <div className='text-center h-64 md:h-75 mt-44 md:mt-50'>
         <SonarPulse
-          color='#7928CA'
+          color='#6D9886'
           icon={
             <Tooltip
               showArrow
@@ -162,9 +183,9 @@ export default function Home({ params: { locale } }: Props) {
               <Button
                 isIconOnly
                 aria-label={t('call_to_action')}
-                className='z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]'
+                className='z-50 w-auto h-auto bg-gradient-to-b from-[#A9CCBE] to-[#3E5F50]'
                 radius='full'
-                as={Link}
+                as={NextLink}
                 href='/test'
               >
                 <PlusLinearIcon
@@ -180,37 +201,17 @@ export default function Home({ params: { locale } }: Props) {
             style={{
               width: '130px',
               top: 130 / 6,
-              left: -120
+              left: isRtlLang(locale) ? 70 : -120
             }}
           >
-            {buildCircle([
-              {
-                name: f('openness_to_experience.title'),
-                href: '/articles/openness_to_experience'
-              },
-              {
-                name: f('conscientiousness.title'),
-                href: '/articles/conscientiousness'
-              },
-              { name: f('extraversion.title'), href: '/articles/extraversion' },
-              {
-                name: t('compare.action'),
-                href: '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ'
-              },
-              {
-                name: f('agreeableness.title'),
-                href: '/articles/agreeableness'
-              },
-              { name: f('neuroticism.title'), href: '/articles/neuroticism' }
-            ]).map((e, idx) => (
+            {buildCircle(circleLinks).map((e, idx) => (
               <div key={idx}>
                 <Button
-                  key={idx}
                   name={e.name}
                   style={e.style}
-                  className='absolute hidden md:inline-flex hover:bg-secondary'
+                  className='absolute hidden md:inline-flex hover:bg-secondary hover:text-white'
                   variant='bordered'
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                   aria-label={e.name}
                 >
@@ -226,7 +227,7 @@ export default function Home({ params: { locale } }: Props) {
                     content: 'drop-shadow shadow-black text-white w-full w-36'
                   }}
                   style={e.smallStyle}
-                  as={Link}
+                  as={NextLink}
                   href={e.href}
                 >
                   {e.name}
@@ -235,32 +236,6 @@ export default function Home({ params: { locale } }: Props) {
             ))}
           </div>
         </SonarPulse>
-      </div>
-
-      <div className='text-center mx-2'>
-        <Link href='/articles' color='foreground'>
-          <h1 className={title()}>Articles</h1>
-        </Link>
-        <h2 className={subtitle({ class: 'mt-4' })}>
-          Some articles on personality, to help you understand yourself
-        </h2>
-        <div className='mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
-          {posts.map((post, idx) => (
-            <PostCard key={idx} {...post} />
-          ))}
-        </div>
-        <div className='mt-10'>
-          <Link
-            isBlock
-            as={NextLink}
-            className='mb-8 -ml-3 text-default-500 hover:text-default-900 text-lg'
-            color='foreground'
-            href='/articles'
-            size='md'
-          >
-            All articles ...
-          </Link>
-        </div>
       </div>
 
       <Translated />

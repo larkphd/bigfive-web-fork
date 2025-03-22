@@ -11,6 +11,7 @@ import {
 import { Switch } from '@nextui-org/switch';
 import { CookieIcon } from './icons';
 import { useEffect, useState } from 'react';
+import { getGAConsentFromLS, setGAConsent } from '@/utils/ga';
 
 interface CookieConsentSettingsProps {
   showCookieConsentSettings: boolean;
@@ -22,31 +23,23 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
   const [isMarketingSelected, setIsMarketingSelected] = useState(true);
 
   const handleSavePreferences = () => {
-    localStorage.setItem(
-      'cookie_consent_analytics',
-      isAnalyticsSelected.toString()
-    );
-    localStorage.setItem(
-      'cookie_consent_marketing',
-      isAnalyticsSelected.toString()
-    );
     localStorage.setItem('cookie_consent', 'accepted');
+    setGAConsent({
+      isAnalytics: isAnalyticsSelected,
+      isMarketing: isMarketingSelected
+    });
+
     props.setShowCookieConsentSettings(false);
   };
 
   useEffect(() => {
-    const storedMarketingCookieConsent = localStorage.getItem(
-      'cookie_consent_marketing'
-    );
-    const storedAnalyticsCookieConsent = localStorage.getItem(
-      'cookie_consent_analytics'
-    );
+    const { isAnalytics, isMarketing } = getGAConsentFromLS();
 
-    if (storedAnalyticsCookieConsent === 'false') {
-      setIsAnalyticsSelected(false);
+    if (isAnalytics !== null) {
+      setIsAnalyticsSelected(isAnalytics);
     }
-    if (storedMarketingCookieConsent === 'false') {
-      setIsAnalyticsSelected(false);
+    if (isMarketing !== null) {
+      setIsMarketingSelected(isMarketing);
     }
   }, []);
 
@@ -67,8 +60,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             </span>
           </div>
           <div className='text-sm text-gray-500 font-normal m-4'>
-            Configure cookie settings, or disable/enable all kinds of
-            cookies.
+            Configure cookie settings, or disable/enable all kinds of cookies.
           </div>
         </ModalHeader>
         <ModalBody className='space-y-4 pt-4'>
@@ -90,7 +82,8 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             <div>
               <label>GoogleAnalytics-cookies</label>
               <p className='text-dark-gray-500 text-sm'>
-                Some small analytics, to ensure translations and size of machine is okay.
+                Some small analytics, to ensure translations and size of machine
+                is okay.
               </p>
             </div>
             <Switch

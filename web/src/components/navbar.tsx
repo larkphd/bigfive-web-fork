@@ -11,19 +11,17 @@ import {
 } from '@nextui-org/navbar';
 import LocaleSwitcher from '@/components/locale-switcher';
 import LocaleSwitcherFull from '@/components/locale-switcher-full';
-import { Link } from '@nextui-org/link';
 
 import { link as linkStyles } from '@nextui-org/theme';
 
-import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 
 import { ThemeSwitch } from '@/components/theme-switch';
-import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import { Image } from '@nextui-org/image';
 
 interface NavbarProps {
   navItems: { label: string; href: string }[];
@@ -57,16 +55,21 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             href='/'
             aria-label='Home'
           >
-            <Logo />
+            <Image src='/icon-144x144.png' width={36} height={36} alt='Logo' />
           </NextLink>
         </NavbarBrand>
         <div className='hidden md:flex gap-4 justify-start ml-2'>
           {navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem
+              key={item.href}
+              className={clsx(
+                isCurrentPath(item.href) && 'border-b-1 border-primary'
+              )}
+            >
               <NextLink
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium'
+                  'font-medium data-[active=true]:text-primary'
                 )}
                 data-active={isCurrentPath(item.href)}
                 color='foreground'
@@ -84,8 +87,6 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         justify='end'
       >
         <NavbarItem className='hidden sm:flex gap-2'>
-     ##     <Link isExternal href={siteConfig.links.twitter} aria-label='Twitter'> <TwitterIcon className='text-default-500' /> </Link>
-       
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem>
@@ -96,11 +97,6 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
       <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
         <NavbarItem>
           <LocaleSwitcher />
-        </NavbarItem>
-        <NavbarItem>
-          <Link isExternal href={siteConfig.links.github} aria-label='Github'>
-            <GithubIcon className='text-default-500' />
-          </Link>
         </NavbarItem>
         <NavbarItem>
           <ThemeSwitch />
@@ -122,7 +118,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
                 data-active={isCurrentPath(item.href)}
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium !text-3xl py-2'
+                  'data-[active=true]:text-primary data-[active=true]:font-medium !text-3xl py-2'
                 )}
               >
                 {item.label}

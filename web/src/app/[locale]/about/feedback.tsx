@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { Input, Textarea } from '@nextui-org/input';
 import { Button } from '@nextui-org/button';
-import { FeebackState, saveFeedback } from '@/actions';
+import { FeebackState, saveFeedback } from '@/actions/test.actions';
 import { useFormState, useFormStatus } from 'react-dom';
 import { Chip } from '@nextui-org/react';
 

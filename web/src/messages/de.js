@@ -39,25 +39,21 @@ const deutsh = {
       scientific: {
         title: 'Wissenschaftlich',
         text: 'BigFive ist ein wissenschaftlich validiertes und zuverlässiges Modell zur Persönlichkeitsmessung.'
-      },
-      translated: {
-        title: 'Übersetzung',
-        text: 'Übersetzt in über 20 Sprachen. Hilf mit <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">hier</a>!'
       }
     },
     description: {
-      top: 'Lernen Sie sich besser kennen mithilfe dieses <violet>kostenlosen</violet>, open-source Persönlichkeitstests.',
-      subtop: 'Der',
-      subtop2:
-        ' ist das am meisten wissenschaftlich validierte und zuverlässigste psychologische Modell zur Persönlichkeitsmessung.',
-      reference: `Die Tests und Auswertungen für diese Seite stammen von
+  top: 'Machen Sie einen Persönlichkeitstest und verstehen Sie sich selbst, seien Sie die <violet>beste Version</violet>, die Sie sein könnten.',
+  subtop: 'Das',
+  subtop2:
+    ' ist das am wissenschaftlich bester validierte und zuverlässigste psychologische Modell zur Messung der Persönlichkeit.',
+  reference: `Die Tests und Auswertungen für diese Seite stammen von
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Der folgende Test umfasst 120 Fragen und beansprucht schätzungsweise 10 Minuten Ihrer Zeit.',
-      result:
-        'Nach dem vervollständigen des Tests erhalten Sie eine detaillierte  Beschreibung Ihrer Persönlichkeit in den folgenden Dimensionen:',
-      tests_taken: 'Bisher gemachte Tests'
-    }
+das Inventar stammt aus <i>Johnsons (2014) 120-Item IPIP NEO-PI-R</i>. Und aus Rubynors GitHub-Repo.`,
+  info: 'Kein Login, keine Kosten oder Registrierung! Der Persönlichkeitstest besteht aus 120 Fragen und dauert etwa 10 Minuten. Sofortiges anonymes Ergebnis.',
+  result:
+    'Führen Sie den Test durch und erhalten Sie einen vollständigen, detaillierten Persönlichkeitsbericht in den folgenden Bereichen:',
+  tests_taken: 'bisher durchgeführte Tests'
+}
   },
   about: {
     seo: {

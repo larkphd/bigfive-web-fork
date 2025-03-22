@@ -1,8 +1,8 @@
-import { title } from '@/components/primitives';
 import { useTranslations } from 'next-intl';
 import { ComparePeople } from './compare-people';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
+import { Heading } from '@/components/heading';
 
 interface Props {
   params: { locale: string };
@@ -15,12 +15,10 @@ export default function ComparePage({
 }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('getCompare');
+
   return (
-    <div className='h-[calc(60vh)]'>
-      <h1 className={title()}>{t('title')}</h1>
-      <br />
-      <br />
-      <span className='mt-2'>{t('description1')}</span>
+    <div className='lg:px-16'>
+      <Heading title={t('title')} subtitle={t('description1')} />
       <Suspense fallback='loading...'>
         <ComparePeople
           addPersonText={t('addPerson')}

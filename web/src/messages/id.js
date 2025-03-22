@@ -38,25 +38,17 @@ const indonesian = {
       scientific: {
         title: 'Ilmiah',
         text: 'BigFive adalah model psikologis yang divalidasi secara ilmiah dan dapat diandalkan.'
-      },
-      translated: {
-        title: 'Diterjemahkan',
-        text: 'Diterjemahkan ke lebih dari 20 bahasa. Membantu <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">sini</a>!'
       }
     },
-    description: {
-      top: 'Belajar mengenal diri Anda lebih baik dengan tes kepribadian sumber terbuka <violet>gratis</violet>.',
-      subtop: 'Itu',
-      subtop2:
-        ' adalah model psikologis yang paling tervalidasi secara ilmiah dan dapat diandalkan untuk mengukur kepribadian.',
-      reference: `Tes dan evaluasi untuk situs ini dikumpulkan dari
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  inventaris berasal<i>Johnson (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Tes berikut berisi 120 soal yang diperkirakan membutuhkan waktu sekitar 10 menit untuk diselesaikan.',
-      result:
-        'Setelah Anda menyelesaikan tes, Anda akan menerima laporan kepribadian terperinci di domain berikut: ',
-      tests_taken: 'tes yang dilakukan sejauh ini'
-    }
+ description: {
+  top: 'Ikuti tes kepribadian dan pahami diri Anda, jadilah versi terbaik dari diri Anda.',
+  subtop: '',
+  subtop2: ' adalah model psikologis yang paling divalidasi secara ilmiah dan andal untuk mengukur kepribadian.',
+  reference: `Tes dan evaluasi untuk situs ini dikumpulkan dari ipip.ori.org, inventaris berasal dari Johnson's (2014) 120-item IPIP NEO-PI-R. Dan dari repositori GitHub Rubynors.`,
+  info: 'Tidak perlu login, biaya, atau pendaftaran! Tes kepribadian ini terdiri dari 120 pertanyaan, yang memakan waktu sekitar 10 menit untuk diselesaikan. Hasil anonim segera.',
+  result: 'Selesaikan tes untuk menerima laporan kepribadian yang lengkap dan terperinci dalam domain berikut:',
+  tests_taken: 'tes yang telah diambil sejauh ini'
+}
   },
   about: {
     seo: {

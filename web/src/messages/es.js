@@ -37,25 +37,21 @@ const spanish = {
       scientific: {
         title: 'Científico',
         text: 'Big Five es un modelo psicológico confiable y científicamente validado.'
-      },
-      translated: {
-        title: 'Traducido',
-        text: 'Traducido a más de 20 idiomas. Puedes ayudar <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">aquí</a>!'
       }
     },
-    description: {
-      top: 'Aprende a conocerte mejor con un test de personalidad <violet>gratuito</violet> y open-source',
-      subtop: 'el',
-      subtop2:
-        ' es el modelo psicológico más confiable y científicamente validado para medir la personalidad.',
-      reference: `Las pruebas y la evaluación de este sitio se obtienen de
+description: {
+  top: 'Realiza una prueba de personalidad y entiende quién eres, sé la <violet>mejor versión</violet> que puedes ser.',
+  subtop: 'El',
+  subtop2:
+    ' es el modelo psicológico más validado y confiable científicamente para medir la personalidad.',
+  reference: `Las pruebas y evaluaciones para este sitio se obtienen de
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
-      info: 'La siguiente prueba contiene 120 preguntas que estimamos le tomará unos 10 minutos completar.',
-      result:
-        'Una vez que haya completado la prueba, recibirá un informe de personalidad detallado en los siguientes dominios:',
-      tests_taken: 'pruebas tomadas hasta ahora'
-    }
+el inventario es de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>. Y del repositorio de GitHub de Rubynors.`,
+  info: '¡Sin inicio de sesión, costo o registro! La prueba de personalidad consta de 120 preguntas y toma alrededor de 10 minutos completarla. Resultado anónimo inmediato.',
+  result:
+    'Completa la prueba y recibe un informe detallado de personalidad en los siguientes dominios:',
+  tests_taken: 'pruebas realizadas hasta ahora'
+}
   },
   about: {
     seo: {

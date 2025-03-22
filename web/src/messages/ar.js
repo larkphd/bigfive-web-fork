@@ -1,5 +1,4 @@
 const arabic = {
-  language: 'Arabic',
   language: {
     label: 'Arabic',
     locale: 'ar'
@@ -10,9 +9,9 @@ const arabic = {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'Personality test Big5',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
     title: 'اختبار السمات الخمسة الكبرى للشخصية',
     call_to_action: 'ابدأ الاختبار الآن مجاناً',
@@ -37,31 +36,27 @@ const arabic = {
       scientific: {
         title: 'علمي',
         text: 'نموذج السمات الخمسة في علم النفس هو نموذج علمي محقّق وموثوق'
-      },
-      translated: {
-        title: 'مترجم',
-        text: 'الاختبار مترجم إلى أكثر من ٢٠ لغة. بإمكانك المساعدة <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">here</a>!'
       }
     },
-    description: {
-      top: 'تعرّف على نفسك أكثر عن طريق هذا الاختبار <violet>المجاني</violet> ومفتوح المصدر',
-      subtop: 'The',
-      subtop2:
-        ' is the most scientifically validated and reliable psychological model to measure personality.',
-      reference: `Tests and evaluation for this site is gathered from
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'الاختبار يحتوي على ١٢٠ سؤال وسيستغرق منك إتمامه حوالي ١٠ دقائق',
-      result:
-        'After you have completed the test you will receive a detailed personality report in the following domains:',
-      tests_taken: 'tests taken so far'
-    }
+description: {
+  top: 'قم بإجراء اختبار الشخصية وافهم نفسك، كن <violet>أفضل نسخة</violet> يمكنك أن تكونها.',
+  subtop: 'إن',
+  subtop2:
+    ' هو النموذج النفسي الأكثر موثوقية وصحة علمياً لقياس الشخصية.',
+  reference: `الاختبارات والتقييمات لهذا الموقع مجمعة من
+<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>،
+والمخزون من <i>مخزون جونسون (2014) المكون من 120 عنصراً IPIP NEO-PI-R</i>. وكذلك من مستودع Rubynors على GitHub.`,
+  info: 'لا تسجيل دخول، لا تكلفة أو تسجيل! يتكون اختبار الشخصية من 120 سؤالاً ويستغرق حوالي 10 دقائق لإكماله. النتيجة المجهولة فورًا.',
+  result:
+    'أكمل الاختبار واحصل على تقرير شخصية مفصل بالكامل في المجالات التالية:',
+  tests_taken: 'الاختبارات المأخوذة حتى الآن'
+}
   },
   about: {
     seo: {
       title: 'About and the big five team',
       description:
-        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+        'BigFive is modern and a methode that is always moving forward.'
     }
   },
   toolbar: {

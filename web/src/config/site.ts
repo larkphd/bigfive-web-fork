@@ -1,7 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 
-export type SiteConfig = typeof siteConfig;
-
 export const basePath = 'https://understandme2.com';
 
 export const supportEmail = 'contact@understandme2.com';
@@ -131,13 +129,7 @@ export const siteConfig = {
       label: 'faq',
       href: '/faq'
     }
-  ],
-  links: {
-    github: 'https://en.wikipedia.org/wiki/Big_Five_personality_traits',
-    twitter: 'https://wiki.personality-database.com/books/big-5-personality-traits',
-    linkedIn: 'https://www.scribd.com/document/445839163/Big-Five-personality-traits-Wikipedia-pdf',
-    facebook: 'https://www.worldwildlife.org/blogs/good-nature-travel/posts/ten-wild-facts-about-the-big-five'
-  }
+  ]
 };
 
 export const getNavItems = async ({

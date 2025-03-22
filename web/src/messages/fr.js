@@ -38,25 +38,17 @@ const french = {
       scientific: {
         title: 'Scientifique',
         text: 'BigFive est un modèle psychologique scientifiquement validé et fiable.'
-      },
-      translated: {
-        title: 'Traduit',
-        text: 'Traduit dans plus de 20 langues. Aider <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">here</a>!'
       }
     },
-    description: {
-      top: 'Lgagnez à mieux vous connaître grâce à un test de personnalité <violet>gratuit</violet> et open source.',
-      subtop: 'The',
-      subtop2:
-        ' is the most scientifically validated and reliable psychological model to measure personality.',
-      reference: `Tests and evaluation for this site is gathered from
-  <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-  inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Le test suivant contient 120 questions qui devraient vous prendre environ 10 minutes.',
-      result:
-        'After you have completed the test you will receive a detailed personality report in the following domains:',
-      tests_taken: 'tests taken so far'
-    }
+description: {
+  top: 'Faites un test de personnalité et comprenez-vous, soyez la meilleure version de vous-même.',
+  subtop: 'Le',
+  subtop2: ' est le modèle psychologique le plus validé scientifiquement et fiable pour mesurer la personnalité.',
+  reference: `Les tests et évaluations pour ce site sont recueillis à partir de ipip.ori.org, l'inventaire provient de Johnson's (2014) 120-item IPIP NEO-PI-R. Et du dépôt GitHub de Rubynors.`,
+  info: 'Pas de connexion, de coût ou d\'inscription! Le test de personnalité se compose de 120 questions, qui prennent environ 10 minutes pour être complétées. Résultat anonyme immédiat.',
+  result: 'Complétez le test pour recevoir un rapport de personnalité détaillé dans les domaines suivants:',
+  tests_taken: 'tests effectués jusqu\'à présent'
+}
   },
   about: {
     seo: {

@@ -5,11 +5,11 @@ const norsk = {
   },
   seo: {
     keywords:
-      'big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, sånn er du, harald eia, sammenlign, gratis, jordan peterson'
+      'team preformance, mental helse, big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, kjenn deg selv, utdanning, sammenlign, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis åpenkildekode big five personlighetstest',
+      title: 'Gratis big five personlighetstest',
       description:
         'Ta en gratis, open source Big Five-personlighetstest. Lær å kjenne personlighetstrekkene dine - sammenlign deg med partneren din, kollegene, venner eller familie.'
     },
@@ -41,22 +41,18 @@ const norsk = {
       },
       translated: {
         title: 'Oversettelser',
-        text: 'Testen er oversatt til mer enn 20 språk. Hjelp til på <a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">oversettelsesiden</a>!'
+        text: 'Testen er oversatt til mer enn 20 språk.!'
       }
     },
-    description: {
-      top: 'Forstå deg selv og andre bedre med en <violet>gratis</violet>, open-source personlighetstest.',
-      subtop: '',
-      subtop2:
-        ' er en vitenskapelig og troverdig psykologisk modell for å måle personlighet.',
-      reference: `Tester og evalueringer for understandme2.com er hentet fra
-<a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
-innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Testen som følger har 120 spørsmål og estimert tidsbruk er 10 minutter.',
-      result:
-        'Etter at testen er gjennomført vil du bli presentert en detaljert personlighetsrapport innen følgende domener:',
-      tests_taken: 'tester utført så langt'
-    }
+description: {
+  top: 'Ta en personlighetstest og forstå deg selv, vær den beste versjonen av deg selv.',
+  subtop: 'Den',
+  subtop2: ' er den mest vitenskapelig validerte og pålitelige psykologiske modellen for å måle personlighet.',
+  reference: `Tester og evaluering for denne siden er hentet fra ipip.ori.org, inventaret er fra Johnson's (2014) 120-item IPIP NEO-PI-R. Og fra Rubynors GitHub-repo.`,
+  info: 'Ingen innlogging, kostnad eller registrering! Personlighetstesten består av 120 spørsmål, som tar omtrent 10 minutter å fullføre. Umiddelbart anonymt resultat.',
+  result: 'Fullfør testen og motta en fullstendig detaljert personlighetsrapport innen følgende domener:',
+  tests_taken: 'tester tatt så langt'
+}
   },
   about: {
     seo: {

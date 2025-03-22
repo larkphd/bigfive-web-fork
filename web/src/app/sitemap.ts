@@ -5,14 +5,13 @@ import { getInfo } from '@bigfive-org/results';
 const articles = [
   'agreeableness',
   'conscientiousness',
-  'extraversion',
   'neuroticism',
-  'openness',
-  'conscientiousness_longevity',
-  'bigfive_relationships',
-  'personality_diseases',
-  'the_dark_of_personality',
-  'link_between_personality_trais_psychological_needs'
+  'extraversion',
+  'openness-to-experience',
+  'article1-introduction-big-five',
+  'article2-improve-the-classroom-environment',
+  'article3-team-performance',
+  'article4-family-child-mental-health-big-five',
 ];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
@@ -40,20 +39,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     },
     {
-      url: `${basePath}/result/58a70606a835c400c8b38e84?showExpanded=true`,
+      url: `${basePath}/result/67cbfa5261e949470fc1db7e?showExpanded=true`,
       lastModified: new Date(),
       alternates: {
         languages: alternatesParamsLang(
-          '/result/58a70606a835c400c8b38e84?showExpanded=true'
+          '/result/67cbfa5261e949470fc1db7e?showExpanded=true'
         )
       }
     },
     {
-      url: `${basePath}/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ==`,
+      url: `${basePath}/compare/W3siaWQiOiI2N2NiZmFlMzYxZTk0OTQ3MGZjMWRiN2YiLCJuYW1lIjoiQ2xpZmYifSx7ImlkIjoiNjdjYmZhNTI2MWU5NDk0NzBmYzFkYjdlIiwibmFtZSI6IkplbmlmZXIifV0`,
       lastModified: new Date(),
       alternates: {
         languages: alternatesPageLang(
-          '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ=='
+          '/compare/W3siaWQiOiI2N2NiZmFlMzYxZTk0OTQ3MGZjMWRiN2YiLCJuYW1lIjoiQ2xpZmYifSx7ImlkIjoiNjdjYmZhNTI2MWU5NDk0NzBmYzFkYjdlIiwibmFtZSI6IkplbmlmZXIifV0'
         )
       }
     },
