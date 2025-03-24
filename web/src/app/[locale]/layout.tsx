@@ -122,13 +122,6 @@ export default async function RootLayout({
           fontSans.variable
         )}
       >
-        <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY}`}
-          crossOrigin='anonymous'
-          strategy='afterInteractive'
-        />
-
         <Providers
           themeProps={
             { attribute: 'class', defaultTheme: 'light' } as ThemeProviderProps
@@ -143,6 +136,12 @@ export default async function RootLayout({
             <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY}`}
+          crossOrigin='anonymous'
+          strategy='afterInteractive'
+        />
         <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
         <Analytics />
         <GoogleAnalytics gaId={gaId} />
