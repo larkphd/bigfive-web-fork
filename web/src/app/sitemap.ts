@@ -1,6 +1,15 @@
 import { MetadataRoute } from 'next';
 import { basePath, locales } from '@/config/site';
-import { getInfo } from '@bigfive-org/results';
+
+const mainPages = [
+  '',
+  '/result',
+  '/test',
+  '/about',
+  '/faq',
+  '/privacy',
+  '/articles'
+];
 
 const articles = [
   'agreeableness',
@@ -11,75 +20,53 @@ const articles = [
   'article1-introduction-big-five',
   'article2-improve-the-classroom-environment',
   'article3-team-performance',
-  'article4-family-child-mental-health-big-five',
+  'article4-family-child-mental-health-big-five'
 ];
-const resultLanguages = getInfo().languages.map((l) => l.id);
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const alternatesPageLang = (path: string = '') =>
-    locales.reduce((a, v) => ({ ...a, [v]: basePath + `/${v}${path}` }), {});
-  const alternatesParamsLang = (path: string = '') =>
-    resultLanguages.reduce(
-      (a, v) => ({ ...a, [v]: basePath + `${path}&amp;lang=${v}` }),
-      {}
-    );
-  return [
-    {
-      url: basePath,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+
+  for (const page of mainPages) {
+    sitemapEntries.push({
+      url: `${basePath}${page}`,
       lastModified: new Date(),
-      alternates: {
-        languages: alternatesPageLang()
-      }
-    },
-    {
-      url: basePath,
-      lastModified: new Date(),
-      alternates: {
-        languages: alternatesPageLang('/result')
-      }
-    },
-    {
-      url: `${basePath}/result/67cbfa5261e949470fc1db7e?showExpanded=true`,
-      lastModified: new Date(),
-      alternates: {
-        languages: alternatesParamsLang(
-          '/result/67cbfa5261e949470fc1db7e?showExpanded=true'
-        )
-      }
-    },
-    {
-      url: `${basePath}/compare/W3siaWQiOiI2N2NiZmFlMzYxZTk0OTQ3MGZjMWRiN2YiLCJuYW1lIjoiQ2xpZmYifSx7ImlkIjoiNjdjYmZhNTI2MWU5NDk0NzBmYzFkYjdlIiwibmFtZSI6IkplbmlmZXIifV0`,
-      lastModified: new Date(),
-      alternates: {
-        languages: alternatesPageLang(
-          '/compare/W3siaWQiOiI2N2NiZmFlMzYxZTk0OTQ3MGZjMWRiN2YiLCJuYW1lIjoiQ2xpZmYifSx7ImlkIjoiNjdjYmZhNTI2MWU5NDk0NzBmYzFkYjdlIiwibmFtZSI6IkplbmlmZXIifV0'
-        )
-      }
-    },
-    {
-      url: `${basePath}/test`,
-      lastModified: new Date()
-      // add lang
-    },
-    {
-      url: `${basePath}/about`,
-      lastModified: new Date()
-    },
-    {
-      url: `${basePath}/faq`,
-      lastModified: new Date()
-    },
-    {
-      url: `${basePath}/privacy`,
-      lastModified: new Date()
-    },
-    {
-      url: `${basePath}/articles`,
-      lastModified: new Date()
-    },
-    ...articles.map((article) => ({
+      changeFrequency: 'daily',
+      priority: page === '' ? 1 : 0.8
+    });
+  }
+
+  for (const article of articles) {
+    sitemapEntries.push({
       url: `${basePath}/articles/${article}`,
-      lastModified: new Date()
-    }))
-  ];
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7
+    });
+  }
+
+  for (const locale of locales) {
+    if (locale === 'en') {
+      continue;
+    }
+
+    for (const page of mainPages) {
+      sitemapEntries.push({
+        url: `${basePath}/${locale}${page}`,
+        lastModified: new Date(),
+        changeFrequency: 'daily',
+        priority: page === '' ? 0.9 : 0.7
+      });
+    }
+
+    for (const article of articles) {
+      sitemapEntries.push({
+        url: `${basePath}/${locale}/articles/${article}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.6
+      });
+    }
+  }
+
+  return sitemapEntries;
 }
