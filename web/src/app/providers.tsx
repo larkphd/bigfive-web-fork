@@ -11,7 +11,7 @@ export interface ProvidersProps {
   themeProps?: ThemeProviderProps;
 }
 
-export function Providers({ children, themeProps }: ProvidersProps) {
+function ProvidersComponent({ children, themeProps }: ProvidersProps) {
   const router = useRouter();
 
   return (
@@ -20,3 +20,5 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     </NextUIProvider>
   );
 }
+
+export const Providers = React.memo(ProvidersComponent);

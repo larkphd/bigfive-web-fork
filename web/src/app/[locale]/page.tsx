@@ -81,13 +81,6 @@ export default function Home({ params: { locale } }: Props) {
     )
   });
 
-  const testsTaken = t.rich('tests_taken', {
-    green: (chunks) => (
-      <span className={title({ color: 'green' })}>{chunks}</span>
-    ),
-    n: '4.000.000'
-  });
-
   return (
     <section className='relative'>
       <div>

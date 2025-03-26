@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+button,
+a,
+input,
+select,
+textarea,
+[role='button'] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 h3 {
   @apply text-xl;
 }
