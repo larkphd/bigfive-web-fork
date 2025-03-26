@@ -3,12 +3,13 @@ import { basePath, locales } from '@/config/site';
 
 const mainPages = [
   '',
-  '/result',
   '/test',
+  '/result',
+  '/compare',
+  '/articles',
   '/about',
-  '/faq',
   '/privacy',
-  '/articles'
+  '/faq'
 ];
 
 const articles = [
