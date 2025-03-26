@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -34,20 +34,35 @@ const NavbarComponent = ({ navItems, navMenuItems }: NavbarProps) => {
   const pathname = usePathname();
   const locale = useLocale();
 
-  const isCurrentPath = (link: string): boolean => {
-    if (link === '/') {
-      return pathname === '/' || pathname === `/${locale}`;
-    } else {
-      return pathname.includes(link);
+  const handleMenuOpenChange = useCallback((open: boolean) => {
+    if (!open) {
+      setIsMenuOpen(false);
+
+      return;
     }
-  };
+
+    requestAnimationFrame(() => {
+      setIsMenuOpen(true);
+    });
+  }, []);
+
+  const isCurrentPath = useCallback(
+    (link: string): boolean => {
+      if (link === '/') {
+        return pathname === '/' || pathname === `/${locale}`;
+      } else {
+        return pathname.includes(link);
+      }
+    },
+    [pathname, locale]
+  );
 
   return (
     <NextUINavbar
       maxWidth='xl'
       position='sticky'
       isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
+      onMenuOpenChange={handleMenuOpenChange}
     >
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
