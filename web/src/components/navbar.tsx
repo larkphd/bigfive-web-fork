@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -28,7 +29,7 @@ interface NavbarProps {
   navMenuItems: { label: string; href: string }[];
 }
 
-export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
+const NavbarComponent = ({ navItems, navMenuItems }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
@@ -130,3 +131,5 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
     </NextUINavbar>
   );
 };
+
+export const Navbar = React.memo(NavbarComponent);

@@ -33,9 +33,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
-  const path = '/';
   const alternates = {
-    canonical: `${basePath}/${locale}${path}`,
+    canonical: `${basePath}/`,
     languages: languages.reduce<Record<string, string>>((result, lang) => {
       result[lang.code] = `${basePath}/${lang.code}`;
 
