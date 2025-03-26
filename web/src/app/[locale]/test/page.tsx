@@ -4,8 +4,20 @@ import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions/test.actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { TestLanguageSwitch } from './test-language-switch';
+import { generatePageMetadata } from '@/lib/metadata';
 
 const questionLanguages = getInfo().languages;
+
+export const generateMetadata = ({
+  params
+}: {
+  params: { locale: string };
+}) => {
+  return generatePageMetadata({
+    locale: params.locale,
+    pagePath: '/test'
+  });
+};
 
 interface Props {
   params: { locale: string };
