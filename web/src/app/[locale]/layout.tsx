@@ -15,7 +15,6 @@ import {
 } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
@@ -142,7 +141,6 @@ export default async function RootLayout({
           strategy='afterInteractive'
         />
         <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
-        <Analytics />
         <GoogleAnalytics gaId={gaId} />
       </body>
     </html>
