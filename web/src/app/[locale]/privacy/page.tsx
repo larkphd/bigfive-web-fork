@@ -1,4 +1,16 @@
 import { Heading } from '@/components/heading';
+import { generatePageMetadata } from '@/lib/metadata';
+
+export const generateMetadata = ({
+  params
+}: {
+  params: { locale: string };
+}) => {
+  return generatePageMetadata({
+    locale: params.locale,
+    pagePath: '/privacy'
+  });
+};
 
 export default function PrivacyPage() {
   return (

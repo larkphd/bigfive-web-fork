@@ -3,9 +3,21 @@ import { allPosts } from 'contentlayer/generated';
 import { PostCard } from '@/components/post-card';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Heading } from '@/components/heading';
+import { generatePageMetadata } from '@/lib/metadata';
 
 interface Props {
   params: { locale: string };
+}
+
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string };
+}) {
+  return generatePageMetadata({
+    locale,
+    pagePath: '/articles'
+  });
 }
 
 export default function ArticlesPage({ params: { locale } }: Props) {

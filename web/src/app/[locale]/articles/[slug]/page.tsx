@@ -9,14 +9,26 @@ import { ViewCounter } from '@/components/view-counter';
 import { Suspense } from 'react';
 import clsx from 'clsx';
 import { link as linkStyles } from '@nextui-org/theme';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = ({
+  params
+}: {
+  params: { slug: string; locale: string };
+}) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-  return { title: post.title };
+
+  return generatePageMetadata({
+    locale: params.locale,
+    pagePath: `/articles/${params.slug}`,
+    additionalMetadata: {
+      title: post.title
+    }
+  });
 };
 
 const PostLayout = async ({ params }: { params: { slug: string } }) => {

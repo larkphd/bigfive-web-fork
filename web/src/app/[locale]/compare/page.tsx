@@ -1,12 +1,25 @@
 import { useTranslations } from 'next-intl';
 import { ComparePeople } from './compare-people';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { unstable_setRequestLocale, getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 import { Heading } from '@/components/heading';
+import { Metadata } from 'next';
+import { generatePageMetadata } from '@/lib/metadata';
 
 interface Props {
   params: { locale: string };
   searchParams: { id: string };
+}
+
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return generatePageMetadata({
+    locale,
+    pagePath: '/compare'
+  });
 }
 
 export default function ComparePage({

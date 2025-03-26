@@ -1,6 +1,7 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Link } from '@/navigation';
 import { Heading } from '@/components/heading';
+import { generatePageMetadata } from '@/lib/metadata';
 
 interface Props {
   params: { locale: string };
@@ -13,10 +14,14 @@ export async function generateMetadata({
 }) {
   const t = await getTranslations({ locale, namespace: 'about' });
 
-  return {
-    title: t('seo.title'),
-    description: t('seo.description')
-  };
+  return generatePageMetadata({
+    locale,
+    pagePath: '/about',
+    additionalMetadata: {
+      title: t('seo.title'),
+      description: t('seo.description')
+    }
+  });
 }
 
 export default function AboutPage({ params: { locale } }: Props) {

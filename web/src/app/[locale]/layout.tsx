@@ -32,18 +32,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
+  const baseLangPath = locale === 'en' ? '' : `/${locale}`;
+  const canonical = `${basePath}${baseLangPath}/`;
+
   const alternates = {
-    canonical: `${basePath}/`,
+    canonical,
     languages: languages.reduce<Record<string, string>>((result, lang) => {
-      result[lang.code] = `${basePath}/${lang.code}`;
+      const langPrefix = lang.code === 'en' ? '' : `/${lang.code}`;
+      result[lang.code] = `${basePath}${langPrefix}/`;
 
       if (lang.map) {
-        lang.map.forEach((code) => (result[code] = `${basePath}/${lang.code}`));
+        lang.map.forEach(
+          (code) => (result[code] = `${basePath}/${lang.code}/`)
+        );
       }
 
       return result;
     }, {}),
-    'x-default': `${basePath}/en`
+    'x-default': `${basePath}/en/`
   };
 
   return {
