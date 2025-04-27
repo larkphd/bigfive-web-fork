@@ -201,7 +201,7 @@ export const ComparePeople = ({
           label='Name'
           autoFocus
           labelPlacement='outside'
-          placeholder='Donald Tramp'
+          placeholder='Your name'
           startContent={
             <PersonIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
           }
