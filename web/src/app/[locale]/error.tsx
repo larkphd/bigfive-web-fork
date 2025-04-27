@@ -27,7 +27,7 @@ export default function Error({
     <main className='flex h-full flex-col items-center justify-center'>
       <h1 className={title()}>Error</h1>
       <h2 className='text-center mt-4'>
-        {error ? error.message : 'Something went wrong!'}
+        {error ? error.message : 'Ohhh no! Something went wrong!'}
       </h2>
       <div className='flex space-x-4'>
         <Button color='danger' className='mt-4' onClick={() => onBackClick()}>
