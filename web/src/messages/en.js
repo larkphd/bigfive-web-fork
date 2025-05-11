@@ -9,7 +9,7 @@ const english = {
   },
   frontpage: {
     seo: {
-      title: 'Free, anonymous, no login, big five big5 personality test',
+      title: 'No login, big5 five personality test compare and articles',
       description:
         'No login or registration! Take a free Big Five personality test to understand yourself better. Read articles, compare partners, colleagues, friends, or family!'
     },
