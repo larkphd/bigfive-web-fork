@@ -42,7 +42,7 @@ export default function Footer({ footerLinks }: FooterProps) {
           height: '20px'
         }}
       >
-        © {year} — understandme2.com - all rights reserved.
+        © {year} — understandme2.com - all rights reserved. <a href="https://www.instagram.com/phdlark/" target="_blank">Visit our Instagram</a>
       </div>
     </footer>
   );
