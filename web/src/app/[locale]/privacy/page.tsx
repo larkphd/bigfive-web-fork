@@ -89,8 +89,8 @@ export default function PrivacyPage() {
         <h2>7. Contact Us</h2>
         <p>
           Questions about this Privacy Policy? Contact us at{' '}
-          <a href="mailto:contact@understandme2.com" target="_blank" rel="noopener noreferrer">
-            contact@understandme2.com
+          <a href="mailto:phdlark@gmail.com" target="_blank" rel="noopener noreferrer">
+            phdlark@gmail.com
           </a>.
         </p>
       </div>
