@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           We respect your privacy and are committed to protecting your personal data.
           This policy explains what we collect, why we collect it, and how we use it.
         </p>
-
+<br></br>
         <h2>1. Information We Collect</h2>
         <ul>
           <li><strong>Test language</strong> you select.</li>
@@ -33,6 +33,8 @@ export default function PrivacyPage() {
           Your browser also automatically shares technical information with our server (standard for all websites),
           including IP address, browser and version, time of access, and the referring page (if any).
         </p>
+
+<br></br>
 
         <h2>2. Analytics and Advertising</h2>
         <p>
@@ -52,6 +54,7 @@ export default function PrivacyPage() {
             Google’s Privacy &amp; Terms
           </a>.
         </p>
+<br></br>
 
         <h2>3. GDPR and Consent</h2>
         <p>
@@ -65,6 +68,7 @@ export default function PrivacyPage() {
           <li><strong>Consent</strong> – for analytics and advertising cookies.</li>
           <li><strong>Legitimate interest</strong> – for strictly necessary site functionality.</li>
         </ul>
+<br></br>
 
         <h2>4. Use and Storage of Data</h2>
         <p>
@@ -72,6 +76,7 @@ export default function PrivacyPage() {
           Individual test responses are stored in our internal system (“understandme2”) for processing and aggregation,
           then deleted or anonymized within a reasonable time period.
         </p>
+<br></br>
 
         <h2>5. Data Retention</h2>
         <ul>
@@ -79,12 +84,14 @@ export default function PrivacyPage() {
           <li>Test responses are retained only as long as necessary for processing/aggregation.</li>
           <li>Aggregated, non‑personal statistics may be retained for research and reporting.</li>
         </ul>
+<br></br>
 
         <h2>6. Your Rights</h2>
         <p>
           Under the GDPR you may request access, correction, deletion, or restriction of your personal data, and you may withdraw consent at any time.
           You also have the right to lodge a complaint with your local data protection authority.
         </p>
+<br></br>
 
         <h2>7. Contact Us</h2>
         <p>

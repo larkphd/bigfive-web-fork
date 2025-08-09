@@ -208,7 +208,7 @@ export const Survey = ({
         className={[
           'relative isolate rounded-lg border w-full',
           // litt ekstra padding topp/bunn for luft mot rammen (1–2 px mer)
-          'pt-2 pb-2 px-2 md:pt-2.5 md:pb-2.5 md:px-2.5',
+          'pt-2 pb-2 px-2 md:pt-2.5 md:pb-2.5 md:px-1.5',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
