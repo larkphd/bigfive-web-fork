@@ -42,7 +42,7 @@ export const Survey = ({
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
-  // map score -> svg filename
+  // score -> icon filename
   const ICONS: Record<number, string> = {
     1: 'angry.svg',
     2: 'sad.svg',
@@ -53,19 +53,14 @@ export const Survey = ({
 
   useEffect(() => {
     const handleResize = () => {
-      // Desktop: 3 questions per page (1x3 grid). Mobile: 1 per page.
+      // Desktop: 3 spørsmål pr side. Mobil: 1 pr side.
       setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
     };
     handleResize();
   }, [width]);
 
   useEffect(() => {
-    const restoreData = () => {
-      if (dataInLocalStorage()) {
-        restoreDataFromLocalStorage();
-      }
-    };
-    restoreData();
+    if (dataInLocalStorage()) restoreDataFromLocalStorage();
   }, []);
 
   const currentQuestions = useMemo(
@@ -189,7 +184,7 @@ export const Survey = ({
     location.reload();
   }
 
-  // single smiley option (fills its grid column)
+  // Enkelt svar-kort som fyller sin grid-kolonne
   function SmileyOption({
     score,
     label,
@@ -211,29 +206,33 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          // fyller kolonnen; litt mer padding siden gap er mindre
-          'relative isolate rounded-lg border w-full p-2 md:p-2.5',
+          'relative isolate rounded-lg border w-full',
+          // litt ekstra padding topp/bunn for luft mot rammen (1–2 px mer)
+          'pt-2 pb-2 px-2 md:pt-2.5 md:pb-2.5 md:px-2.5',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
           disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
-          // stabil høyde så radene ikke hopper i språk med lange ord
-          'min-h-[88px]'
+          // stabil høyde så ikon/tekst topper likt på alle språk
+          'min-h-[92px]'
         ].join(' ')}
       >
-        {/* translucent overlay when selected */}
+        {/* valgt overlay */}
         <div className={['absolute inset-0 rounded-lg -z-10', selected ? 'bg-primary/10' : 'bg-transparent'].join(' ')} />
-        {/* midtstilt horisontalt + toppstilt vertikalt */}
+
+        {/* horisontalt midtstilt, vertikalt toppstilt */}
         <div className='flex flex-col items-center justify-start'>
           <Image
             src={`/icons/${ICONS[score]}`}
             alt={label}
-            width={28}          // litt større ikon
-            height={28}
+            width={30}
+            height={30}
             className='select-none mb-1'
           />
-          {/* all tekst synlig; bryt ord ved behov */}
-          <span className='text-[11px] md:text-[12px] leading-snug text-foreground/80 text-center break-words'>
+          <span
+            className='text-[12px] leading-snug text-foreground/80 text-center break-words'
+            style={{ wordBreak: 'break-word', hyphens: 'auto' }}
+          >
             {label}
           </span>
         </div>
@@ -276,7 +275,7 @@ export const Survey = ({
         aria-label='Progress bar'
         value={progress}
         className='max-w'
-        showValueLabel={true}
+        showValueLabel
         label={formatTimer(seconds)}
         minValue={0}
         maxValue={100}
@@ -284,7 +283,7 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* 1 kolonne på mobil, 3 på desktop */}
+      {/* 1 kolonne mobil, 3 kolonner desktop. Avstanden mellom spørsmålsboksene beholdes. */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
@@ -298,11 +297,11 @@ export const Survey = ({
                 {question.text}
               </h2>
 
-              {/* 5 like kolonner, redusert gap => boksene blir bredere */}
+              {/* 5 like kolonner, minimal gap ⇒ boksene blir bredere */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='grid grid-cols-5 gap-1.5 md:gap-2'
+                className='grid grid-cols-5 items-start gap-1.5 md:gap-2'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
@@ -311,9 +310,7 @@ export const Survey = ({
                     label={choice.text}
                     selected={selected === choice.score}
                     disabled={inProgress}
-                    onSelect={(score) =>
-                      handleAnswer(question.id, String(score))
-                    }
+                    onSelect={(score) => handleAnswer(question.id, String(score))}
                   />
                 ))}
               </div>
