@@ -42,18 +42,18 @@ export const Survey = ({
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
-  // score -> icon filename
-  const ICONS: Record<number, string> = {
-    1: 'angry.svg',
-    2: 'sad.svg',
-    3: 'neutral.svg',
-    4: 'happy.svg',
-    5: 'very-happy.svg'
-  };
+  // icon by POSITION (0..4) in the visible row, not by score
+  const ICONS_BY_POSITION = [
+    'angry.svg',
+    'sad.svg',
+    'neutral.svg',
+    'happy.svg',
+    'very-happy.svg'
+  ];
 
   useEffect(() => {
     const handleResize = () => {
-      // Desktop: 3 spørsmål pr side. Mobil: 1 pr side.
+      // Desktop: 3 questions per page. Mobile: 1 per page.
       setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
     };
     handleResize();
@@ -184,14 +184,16 @@ export const Survey = ({
     location.reload();
   }
 
-  // Enkelt svar-kort som fyller sin grid-kolonne
+  // Single answer card
   function SmileyOption({
+    icon,
     score,
     label,
     selected,
     onSelect,
     disabled
   }: {
+    icon: string;
     score: number;
     label: string;
     selected: boolean;
@@ -207,23 +209,22 @@ export const Survey = ({
         onClick={() => onSelect(score)}
         className={[
           'relative isolate rounded-lg border w-full',
-          // litt ekstra padding topp/bunn for luft mot rammen (1–2 px mer)
+          // inner padding
           'pt-2 pb-2 px-2 md:pt-2.5 md:pb-2.5 md:px-1.5',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
           disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
-          // stabil høyde så ikon/tekst topper likt på alle språk
+          // stable height so icons align top
           'min-h-[92px]'
         ].join(' ')}
       >
-        {/* valgt overlay */}
+        {/* selected overlay */}
         <div className={['absolute inset-0 rounded-lg -z-10', selected ? 'bg-primary/10' : 'bg-transparent'].join(' ')} />
-
-        {/* horisontalt midtstilt, vertikalt toppstilt */}
+        {/* centered horizontally, top-aligned vertically */}
         <div className='flex flex-col items-center justify-start'>
           <Image
-            src={`/icons/${ICONS[score]}`}
+            src={`/icons/${icon}`}
             alt={label}
             width={30}
             height={30}
@@ -283,7 +284,7 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* 1 kolonne mobil, 3 kolonner desktop. Avstanden mellom spørsmålsboksene beholdes. */}
+      {/* 1 column mobile, 3 columns desktop */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
@@ -297,22 +298,26 @@ export const Survey = ({
                 {question.text}
               </h2>
 
-              {/* 5 like kolonner, minimal gap ⇒ boksene blir bredere */}
+              {/* Always render left→right with 5 equal columns */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
                 className='grid grid-cols-5 items-start gap-1.5 md:gap-2'
               >
-                {question.choices.slice(0, 5).map((choice) => (
-                  <SmileyOption
-                    key={choice.score}
-                    score={choice.score}
-                    label={choice.text}
-                    selected={selected === choice.score}
-                    disabled={inProgress}
-                    onSelect={(score) => handleAnswer(question.id, String(score))}
-                  />
-                ))}
+                {question.choices
+                  .slice(0, 5)
+                  .sort((a, b) => a.score - b.score)
+                  .map((choice, idx) => (
+                    <SmileyOption
+                      key={`${question.id}-${choice.score}`}
+                      icon={ICONS_BY_POSITION[idx]}   // <-- icon by position
+                      score={choice.score}            // used for saving/selection
+                      label={choice.text}
+                      selected={selected === choice.score}
+                      disabled={inProgress}
+                      onSelect={(score) => handleAnswer(question.id, String(score))}
+                    />
+                  ))}
               </div>
             </div>
           );
