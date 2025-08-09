@@ -189,7 +189,7 @@ export const Survey = ({
     location.reload();
   }
 
-  // inline “smiley card” button using SVG icons from /public/icons/{angry|sad|neutral|happy|very-happy}.svg
+  // single smiley option (fills its grid column)
   function SmileyOption({
     score,
     label,
@@ -211,44 +211,25 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          // smal og jevn boks
-          'relative isolate rounded-lg border w-[56px] md:w-[64px] shrink-0 p-1',
+          'relative isolate rounded-lg border w-full p-2',        // fyller kolonnen
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
-          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
-          // lås høyden litt så rader ikke hopper når noen labels blir 2 linjer
-          'min-h-[78px] md:min-h-[86px]'
+          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
         ].join(' ')}
       >
         {/* translucent overlay when selected */}
-        <div
-          className={[
-            'absolute inset-0 rounded-lg -z-10',
-            selected ? 'bg-primary/10' : 'bg-transparent'
-          ].join(' ')}
-        />
-        {/* center icon + label */}
+        <div className={['absolute inset-0 rounded-lg -z-10', selected ? 'bg-primary/10' : 'bg-transparent'].join(' ')} />
         <div className='flex flex-col items-center'>
           <Image
             src={`/icons/${ICONS[score]}`}
             alt={label}
-            width={22}
-            height={22}
-            className='select-none mt-0.5 mb-1'
+            width={26}               // litt større ikon
+            height={26}
+            className='select-none mb-1'
           />
-          {/* Wrap, maks 2 linjer, ingen overflow utenfor kortet */}
-          <span
-            className='text-[10px] leading-tight text-foreground/80 text-center'
-            style={{
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-              overflow: 'hidden',
-              wordBreak: 'break-word',
-              hyphens: 'auto'
-            }}
-          >
+          {/* Vis ALT av tekst – ingen ellipsis, bryt ord ved behov */}
+          <span className='text-[11px] md:text-[12px] leading-snug text-foreground/80 text-center break-words'>
             {label}
           </span>
         </div>
@@ -299,7 +280,7 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* Grid: 1 column on mobile, 3 columns on md+ with compact spacing between question cards */}
+      {/* 1 kolonne på mobil, 3 på desktop (samme spacing mellom spørsmålsboksene) */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
@@ -313,11 +294,11 @@ export const Survey = ({
                 {question.text}
               </h2>
 
-              {/* Answers row: mindre gap mellom alternativer */}
+              {/* Bruk HELE bredden: 5 like kolonner, liten gap → alltid én rad */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='flex flex-wrap items-start gap-1.5 md:gap-2'
+                className='grid grid-cols-5 gap-2 md:gap-3'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
