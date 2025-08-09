@@ -32,87 +32,112 @@ export default function AboutPage({ params: { locale } }: Props) {
       <Heading title='About' />
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p className='mb-4'>
-          Welcome to understandme2.com – your gateway to fascinating personality
-          insights! Our free and user-friendly test is based on the renowned Big
-          Five model and provides a deeper understanding of five key personality
-          traits: Openness, Conscientiousness, Extraversion, Agreeableness, and
-          Emotional Stability.
+          Welcome to <strong>understandme2.com</strong> – your space for exploring
+          personality, emotional resilience, and the science of self-awareness.
+          Our platform is here to make personality psychology both insightful
+          and practical, whether you’re here out of curiosity or looking to
+          improve your well-being.
         </p>
+
+        <h2 className='text-xl font-semibold mt-6 mb-2'>Who We Are</h2>
         <p className='mb-4'>
-          Whether you’re an individual seeking self-awareness, a company looking
-          to enhance teamwork, a sports team optimizing group dynamics, an
-          organization aiming for better collaboration, or an educator
-          integrating it into learning – our test offers valuable insights.
+          The site is founded and maintained by{' '}
+          <a
+            href='https://www.linkedin.com/in/kim-larsen-725b52352/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='underline'
+          >
+            Kim Larsen
+          </a>
+          , a freelance mental health advisor passionate about making mental
+          health and personality insights accessible to everyone. The project is
+          a fork of an open-source GitHub project, proudly shared under the{' '}
+          <strong>MIT License</strong>.
         </p>
-        <p className='mb-4'>
-          And why not turn it into a social activity? The test can also be a fun
-          icebreaker at parties or social gatherings! Discover yourself and
-          those around you in a whole new way with understandme2.com – where
-          psychology meets engagement and practical use in every setting.
-        </p>
+
+        <h2 className='text-xl font-semibold mt-6 mb-2'>What We Offer</h2>
         <p className='mb-2'>
-          How Our Platform Helps Our website is designed to provide valuable
-          personality insights through engaging articles, guides, and exercises.
-          Here’s what you’ll find:
+          We use the renowned <strong>Big Five</strong> personality model to
+          give you clear, research-backed insights into five key traits:
+          Openness, Conscientiousness, Extraversion, Agreeableness, and Emotional
+          Stability (also known as Neuroticism, in its inverse form).
         </p>
         <ul className='mb-4 pl-5 list-disc'>
           <li className='mb-2'>
-            Comprehensive Articles – Explore how personality impacts different
-            aspects of life, from teamwork and leadership to parenting and
+            <strong>Comprehensive Articles</strong> – Discover how personality
+            impacts life areas such as teamwork, leadership, parenting, and
             mental health.
           </li>
           <li className='mb-2'>
-            Personality Tests – Learn more about your own Big Five traits with
-            quick and insightful assessments.
+            <strong>Free Personality Tests</strong> – Quick, anonymous, and
+            insightful assessments to better understand yourself.
           </li>
           <li className='mb-2'>
-            Practical Applications – Discover how to use personality psychology
-            in education, family dynamics, sports teams, and personal
-            development.
+            <strong>Practical Applications</strong> – Learn how to use personality
+            insights in education, personal development, sports teams, and
+            workplace collaboration.
           </li>
         </ul>
-        <p className='mb-2'>Who Can Benefit?</p>
+
+        <h2 className='text-xl font-semibold mt-6 mb-2'>Who Can Benefit?</h2>
         <ul className='mb-4 pl-5 list-disc'>
           <li className='mb-2'>
-            Individuals – Gain self-awareness and strategies for personal
-            growth.
+            <strong>Individuals</strong> – Build self-awareness and strategies
+            for personal growth.
           </li>
           <li className='mb-2'>
-            Parents – Understand your child’s personality and support their
-            mental resilience.
+            <strong>Parents</strong> – Support your child’s mental resilience by
+            understanding their personality.
           </li>
           <li className='mb-2'>
-            Educators – Foster a positive classroom environment through
-            personality-based approaches.
+            <strong>Educators</strong> – Foster a positive classroom culture
+            through personality-based approaches.
           </li>
           <li className='mb-2'>
-            Teams & Leaders – Use personality insights to enhance collaboration
-            and performance.
+            <strong>Teams & Leaders</strong> – Improve collaboration and
+            performance using personality insights.
           </li>
         </ul>
-        <p>
-          Your Privacy Matters We prioritize privacy and security. Our
-          personality test does not store personal data, does not require login,
-          and does not collect identifying information. The test is anonymous,
-          ensuring a safe and confidential experience for all users. Just some
-          ads to have the website going.
+
+        <h2 className='text-xl font-semibold mt-6 mb-2'>Privacy First</h2>
+        <p className='mb-4'>
+          Your trust matters. Our personality test is fully anonymous – no login
+          required, no personal data stored, no tracking of individual results.
+          Just some basic ads to keep the lights on.
         </p>
-        <p>Join the Journey of Self-Discovery</p>
+
+        <h2 className='text-xl font-semibold mt-6 mb-2'>Join the Journey</h2>
         <p className='mb-4'>
           Understanding personality is not about labeling—it’s about growth,
-          connection, and unlocking potential. Whether you’re taking the test,
-          reading our articles, or applying Big Five insights in daily life,
-          we’re here to support your journey toward deeper self-awareness and
-          better relationships. Ready to explore? Take the test, read our
-          insights, and discover the power of personality psychology today!
+          empathy, and connection. Whether you’re here to take our free test,
+          read an article, or simply reflect on your own personality, we hope
+          you find something valuable. Start your journey now, and discover the
+          power of understanding yourself and others.
         </p>
+
+        <p className='mb-4'>
+          Ready?{' '}
+          <Link href='/' className='underline'>
+            Take the free test
+          </Link>{' '}
+          or visit our{' '}
+   <a
+  href='https://www.linkedin.com/in/kim-larsen-725b52352/?utm_source=understandme2.com&utm_medium=referral'
+  target='_blank'
+  rel='noopener'
+  className='underline'>
+  LinkedIn profile
+</a> {' '}
+          for more insights and updates.
+        </p>
+
         <p>
-          What if... you wonder read the{' '}
+          Still have questions? Our{' '}
           <Link href='/faq' className='underline'>
             FAQ
           </Link>{' '}
-          . You may try to contact us, but the faq hopefully gives you the
-          answers you need.
+          might have the answers you need.
         </p>
       </div>
     </div>
