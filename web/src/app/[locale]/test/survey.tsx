@@ -5,6 +5,7 @@ import { Button } from '@nextui-org/button';
 import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
+import Image from 'next/image';
 
 import { CloseIcon, InfoIcon } from '@/components/icons';
 import { type Question } from '@bigfive-org/questions';
@@ -41,8 +42,14 @@ export const Survey = ({
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
-  // simple emoji scale (1..5) – from grumpy to happy
-  const EMOJIS = ['😠','🙁','😐','🙂','😄'];
+  // map score -> svg filename
+  const ICONS: Record<number, string> = {
+    1: 'angry.svg',
+    2: 'sad.svg',
+    3: 'neutral.svg',
+    4: 'happy.svg',
+    5: 'very-happy.svg'
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -182,7 +189,7 @@ export const Survey = ({
     location.reload();
   }
 
-  // inline “smiley card” button (no extra files/components)
+  // inline “smiley card” button using SVG icons from /public/icons/{angry|sad|neutral|happy|very-happy}.svg
   function SmileyOption({
     score,
     label,
@@ -204,24 +211,28 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          // narrower card width + smaller padding to fit all five on one row
-          'relative isolate rounded-lg border w-[60px] md:w-[70px] shrink-0 p-1 md:p-1.5',
+          'relative isolate rounded-lg border w-[60px] md:w-[68px] shrink-0 p-1.5',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
           disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
         ].join(' ')}
       >
+        {/* translucent overlay when selected */}
         <div
           className={[
             'absolute inset-0 rounded-lg -z-10',
             selected ? 'bg-primary/10' : 'bg-transparent'
           ].join(' ')}
         />
-        <div className='flex flex-col items-center gap-0.5 md:gap-1'>
-          <span className='text-lg md:text-xl leading-none select-none'>
-            {EMOJIS[score - 1] ?? '•'}
-          </span>
+        <div className='flex items-start flex-col gap-1'>
+          <Image
+            src={`/icons/${ICONS[score]}`}
+            alt={label}
+            width={28}
+            height={28}
+            className='select-none'
+          />
           <span className='text-[10px] md:text-[11px] leading-tight text-foreground/80 text-center'>
             {label}
           </span>
@@ -233,7 +244,7 @@ export const Survey = ({
   return (
     <div className='mt-4'>
       {restored && (
-        <Card className='mb-4 bg-warning/20 text-warning-600 dark:text-warning'>
+        <Card className='mb-3 bg-warning/20 text-warning-600 dark:text-warning'>
           <CardHeader className='justify-between'>
             <div className='flex items-center gap-3'>
               <InfoIcon />
@@ -273,25 +284,25 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* Grid: 1 column on mobile, 3 columns on md+ with tighter gap */}
-      <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-4'>
+      {/* Grid: 1 column on mobile, 3 columns on md+ with compact spacing */}
+      <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
 
           return (
             <div
               key={'q' + question.num}
-              className='rounded-xl border border-default-200 bg-content1/40 p-3 md:p-4'
+              className='rounded-xl border border-default-200 bg-content1/40 p-3'
             >
-              <h2 className='text-base md:text-lg font-medium mb-2 md:mb-3 leading-snug'>
+              <h2 className='text-base md:text-lg font-medium mb-2 leading-snug'>
                 {question.text}
               </h2>
 
-              {/* Pictorial Likert (emoji + label) */}
+              {/* Pictorial Likert with SVG icons */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='flex flex-wrap gap-1.5 md:gap-2'
+                className='flex items-start flex-wrap gap-3'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
@@ -311,7 +322,7 @@ export const Survey = ({
         })}
       </div>
 
-      <div className='my-10 space-x-3 inline-flex'>
+      <div className='my-8 space-x-3 inline-flex'>
         <Button
           color='primary'
           isDisabled={backButtonDisabled}
@@ -320,7 +331,7 @@ export const Survey = ({
           {prevText.toUpperCase()}
         </Button>
 
-        <Button
+      <Button
           color='primary'
           isDisabled={nextButtonDisabled}
           onClick={handleNextQuestions}
