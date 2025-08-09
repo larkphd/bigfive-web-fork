@@ -211,24 +211,28 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          'relative isolate rounded-lg border w-full p-2',        // fyller kolonnen
+          // fyller kolonnen; litt mer padding siden gap er mindre
+          'relative isolate rounded-lg border w-full p-2 md:p-2.5',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
-          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
+          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
+          // stabil høyde så radene ikke hopper i språk med lange ord
+          'min-h-[88px]'
         ].join(' ')}
       >
         {/* translucent overlay when selected */}
         <div className={['absolute inset-0 rounded-lg -z-10', selected ? 'bg-primary/10' : 'bg-transparent'].join(' ')} />
-        <div className='flex flex-col items-center'>
+        {/* midtstilt horisontalt + toppstilt vertikalt */}
+        <div className='flex flex-col items-center justify-start'>
           <Image
             src={`/icons/${ICONS[score]}`}
             alt={label}
-            width={26}               // litt større ikon
-            height={26}
+            width={28}          // litt større ikon
+            height={28}
             className='select-none mb-1'
           />
-          {/* Vis ALT av tekst – ingen ellipsis, bryt ord ved behov */}
+          {/* all tekst synlig; bryt ord ved behov */}
           <span className='text-[11px] md:text-[12px] leading-snug text-foreground/80 text-center break-words'>
             {label}
           </span>
@@ -280,7 +284,7 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* 1 kolonne på mobil, 3 på desktop (samme spacing mellom spørsmålsboksene) */}
+      {/* 1 kolonne på mobil, 3 på desktop */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
@@ -294,11 +298,11 @@ export const Survey = ({
                 {question.text}
               </h2>
 
-              {/* Bruk HELE bredden: 5 like kolonner, liten gap → alltid én rad */}
+              {/* 5 like kolonner, redusert gap => boksene blir bredere */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='grid grid-cols-5 gap-2 md:gap-3'
+                className='grid grid-cols-5 gap-1.5 md:gap-2'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
