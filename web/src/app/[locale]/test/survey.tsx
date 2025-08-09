@@ -211,11 +211,14 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          'relative isolate rounded-lg border w-[60px] md:w-[68px] shrink-0 p-1.5',
+          // smal og jevn boks
+          'relative isolate rounded-lg border w-[56px] md:w-[64px] shrink-0 p-1',
           'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
-          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
+          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
+          // lås høyden litt så rader ikke hopper når noen labels blir 2 linjer
+          'min-h-[78px] md:min-h-[86px]'
         ].join(' ')}
       >
         {/* translucent overlay when selected */}
@@ -225,15 +228,27 @@ export const Survey = ({
             selected ? 'bg-primary/10' : 'bg-transparent'
           ].join(' ')}
         />
-        <div className='flex items-start flex-col gap-1'>
+        {/* center icon + label */}
+        <div className='flex flex-col items-center'>
           <Image
             src={`/icons/${ICONS[score]}`}
             alt={label}
-            width={28}
-            height={28}
-            className='select-none'
+            width={22}
+            height={22}
+            className='select-none mt-0.5 mb-1'
           />
-          <span className='text-[10px] md:text-[11px] leading-tight text-foreground/80 text-center'>
+          {/* Wrap, maks 2 linjer, ingen overflow utenfor kortet */}
+          <span
+            className='text-[10px] leading-tight text-foreground/80 text-center'
+            style={{
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              wordBreak: 'break-word',
+              hyphens: 'auto'
+            }}
+          >
             {label}
           </span>
         </div>
@@ -284,7 +299,7 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* Grid: 1 column on mobile, 3 columns on md+ with compact spacing */}
+      {/* Grid: 1 column on mobile, 3 columns on md+ with compact spacing between question cards */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-3'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
@@ -298,11 +313,11 @@ export const Survey = ({
                 {question.text}
               </h2>
 
-              {/* Pictorial Likert with SVG icons */}
+              {/* Answers row: mindre gap mellom alternativer */}
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='flex items-start flex-wrap gap-3'
+                className='flex flex-wrap items-start gap-1.5 md:gap-2'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
@@ -331,7 +346,7 @@ export const Survey = ({
           {prevText.toUpperCase()}
         </Button>
 
-      <Button
+        <Button
           color='primary'
           isDisabled={nextButtonDisabled}
           onClick={handleNextQuestions}
