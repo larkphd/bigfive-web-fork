@@ -56,14 +56,18 @@ export default function Survey({ questions, onSubmit }) {
                   onClick={() => handleAnswer(q.id, index)}
                   className={[
                     'relative isolate rounded-lg border',
-                    'pt-1.5 pb-1.5 px-2 md:pt-2 md:pb-2 md:px-2.5',
+                    // tighter inner spacing
+                    'pt-1 pb-1 px-1.5 md:pt-1.5 md:pb-1.5 md:px-2',
                     'bg-white/90 dark:bg-content1 transition-colors',
                     'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
                     answers[q.id] === index
                       ? 'border-primary ring-1 ring-primary/30'
                       : 'border-default-200',
                     'cursor-pointer',
-                    'flex flex-col items-center justify-start min-h-[92px] w-[72px]'
+                    // keep centered horizontally, top-aligned vertically
+                    'flex flex-col items-center justify-start',
+                    // slightly smaller min height
+                    'min-h-[88px] w-[72px]'
                   ].join(' ')}
                 >
                   {answers[q.id] === index && (
@@ -74,10 +78,10 @@ export default function Survey({ questions, onSubmit }) {
                     alt={t(`options.${index}`)}
                     width={30}
                     height={30}
-                    className="select-none mb-1"
+                    className="select-none mb-0.5"
                   />
                   <span
-                    className="text-[12px] leading-snug text-foreground/80 text-center break-words"
+                    className="text-[12px] leading-tight text-foreground/80 text-center break-words"
                     style={{ wordBreak: 'break-word', hyphens: 'auto' }}
                   >
                     {t(`options.${index}`)}
