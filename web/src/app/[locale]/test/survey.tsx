@@ -204,8 +204,9 @@ export const Survey = ({
         disabled={disabled}
         onClick={() => onSelect(score)}
         className={[
-          'relative isolate rounded-lg border w-[78px] md:w-[92px] shrink-0',
-          'p-2 md:p-2.5 bg-white/90 dark:bg-content1 transition-colors',
+          // narrower card width + smaller padding to fit all five on one row
+          'relative isolate rounded-lg border w-[60px] md:w-[70px] shrink-0 p-1 md:p-1.5',
+          'bg-white/90 dark:bg-content1 transition-colors',
           'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
           selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
           disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
@@ -217,11 +218,11 @@ export const Survey = ({
             selected ? 'bg-primary/10' : 'bg-transparent'
           ].join(' ')}
         />
-        <div className='flex flex-col items-center gap-1'>
+        <div className='flex flex-col items-center gap-0.5 md:gap-1'>
           <span className='text-lg md:text-xl leading-none select-none'>
             {EMOJIS[score - 1] ?? '•'}
           </span>
-          <span className='text-[11px] md:text-xs leading-tight text-foreground/80 text-center'>
+          <span className='text-[10px] md:text-[11px] leading-tight text-foreground/80 text-center'>
             {label}
           </span>
         </div>
@@ -272,17 +273,17 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* Grid: 1 column on mobile, 3 columns on md+ */}
-      <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-6'>
+      {/* Grid: 1 column on mobile, 3 columns on md+ with tighter gap */}
+      <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-4'>
         {currentQuestions.map((question) => {
           const selected = answers.find((a) => a.id === question.id)?.score;
 
           return (
             <div
               key={'q' + question.num}
-              className='rounded-xl border border-default-200 bg-content1/40 p-4'
+              className='rounded-xl border border-default-200 bg-content1/40 p-3 md:p-4'
             >
-              <h2 className='text-base md:text-lg font-medium mb-3'>
+              <h2 className='text-base md:text-lg font-medium mb-2 md:mb-3 leading-snug'>
                 {question.text}
               </h2>
 
@@ -290,7 +291,7 @@ export const Survey = ({
               <div
                 role='radiogroup'
                 aria-label={`Scale for question ${question.num}`}
-                className='flex flex-wrap gap-2 md:gap-3'
+                className='flex flex-wrap gap-1.5 md:gap-2'
               >
                 {question.choices.slice(0, 5).map((choice) => (
                   <SmileyOption
@@ -310,7 +311,7 @@ export const Survey = ({
         })}
       </div>
 
-      <div className='my-12 space-x-4 inline-flex'>
+      <div className='my-10 space-x-3 inline-flex'>
         <Button
           color='primary'
           isDisabled={backButtonDisabled}
