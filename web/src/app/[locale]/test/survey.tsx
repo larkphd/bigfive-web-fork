@@ -44,6 +44,7 @@ export const Survey = ({
 
   useEffect(() => {
     const handleResize = () => {
+      // Desktop: 3 questions per page (1x3 grid). Mobile: 1 per page.
       setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
     };
     handleResize();
@@ -216,6 +217,7 @@ export const Survey = ({
           </CardHeader>
         </Card>
       )}
+
       <Progress
         aria-label='Progress bar'
         value={progress}
@@ -227,10 +229,17 @@ export const Survey = ({
         size='lg'
         color='primary'
       />
-      {currentQuestions.map((question) => (
-        <div key={'q' + question.num}>
-          <h2 className='text-2xl my-4'>{question.text}</h2>
-          <div>
+
+      {/* NEW: Grid layout (1 column on mobile, 3 columns on md+) */}
+      <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-6'>
+        {currentQuestions.map((question) => (
+          <div
+            key={'q' + question.num}
+            className='rounded-xl border border-default-200 bg-content1/40 p-4'
+          >
+            <h2 className='text-base md:text-lg font-medium mb-3'>
+              {question.text}
+            </h2>
             <RadioGroup
               onValueChange={(value) => handleAnswer(question.id, value)}
               value={answers
@@ -243,14 +252,16 @@ export const Survey = ({
                 <Radio
                   key={index + question.id}
                   value={choice.score.toString()}
+                  className='py-1'
                 >
                   {choice.text}
                 </Radio>
               ))}
             </RadioGroup>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
       <div className='my-12 space-x-4 inline-flex'>
         <Button
           color='primary'
