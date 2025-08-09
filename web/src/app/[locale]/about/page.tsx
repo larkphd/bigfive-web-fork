@@ -116,21 +116,31 @@ export default function AboutPage({ params: { locale } }: Props) {
           power of understanding yourself and others.
         </p>
 
-        <p className='mb-4'>
-          Ready?{' '}
-          <Link href='/' className='underline'>
-            Take the free test
-          </Link>{' '}
-          or visit our{' '}
-   <a
-  href='https://www.linkedin.com/in/kim-larsen-725b52352/?utm_source=understandme2.com&utm_medium=referral'
-  target='_blank'
-  rel='noopener'
-  className='underline'>
-  LinkedIn profile
-</a> {' '}
-          for more insights and updates.
-        </p>
+<p className='mb-4'>
+  Ready?{' '}
+  <Link href='/' className='underline'>
+    Take the free test
+  </Link>{' '}
+  or visit our{' '}
+  <a
+    href='https://www.linkedin.com/in/kim-larsen-725b52352/?utm_source=understandme2.com&utm_medium=referral'
+    target='_blank'
+    rel='noopener'
+    className='underline'
+  >
+    LinkedIn profile
+  </a>{' '}
+  or{' '}
+  <a
+    href='https://www.instagram.com/phdlark/'
+    target='_blank'
+    rel='noopener'
+    className='underline'
+  >
+    Instagram profile
+  </a>{' '}
+  for more insights and updates.
+</p>
 
         <p>
           Still have questions? Our{' '}
