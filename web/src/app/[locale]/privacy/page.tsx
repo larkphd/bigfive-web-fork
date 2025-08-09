@@ -17,7 +17,7 @@ export default function PrivacyPage() {
     <div className="lg:px-16">
       <Heading title="Privacy Policy" />
       <div className="prose prose-neutral dark:prose-invert max-w-none mt-6">
-        <p><strong>Effective date:</strong> [Insert date]</p>
+        <p><strong>Effective date:</strong> 2025-08-09</p>
         <p>
           We respect your privacy and are committed to protecting your personal data.
           This policy explains what we collect, why we collect it, and how we use it.
