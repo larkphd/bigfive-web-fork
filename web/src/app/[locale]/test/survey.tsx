@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Button } from '@nextui-org/button';
-import { RadioGroup, Radio } from '@nextui-org/radio';
 import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
@@ -42,6 +41,9 @@ export const Survey = ({
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
+  // simple emoji scale (1..5) – from grumpy to happy
+  const EMOJIS = ['😠','🙁','😐','🙂','😄'];
+
   useEffect(() => {
     const handleResize = () => {
       // Desktop: 3 questions per page (1x3 grid). Mobile: 1 per page.
@@ -53,7 +55,6 @@ export const Survey = ({
   useEffect(() => {
     const restoreData = () => {
       if (dataInLocalStorage()) {
-        console.log('Restoring data from local storage');
         restoreDataFromLocalStorage();
       }
     };
@@ -70,7 +71,6 @@ export const Survey = ({
   );
 
   const isTestDone = questions.length === answers.length;
-
   const progress = Math.round((answers.length / questions.length) * 100);
 
   const nextButtonDisabled =
@@ -83,7 +83,7 @@ export const Survey = ({
   const backButtonDisabled = currentQuestionIndex === 0 || loading;
 
   async function handleAnswer(id: string, value: string) {
-    const question = questions.find((question) => question.id === id);
+    const question = questions.find((q) => q.id === id);
     if (!question) return;
 
     const newAnswer: Answer = {
@@ -93,10 +93,7 @@ export const Survey = ({
       facet: question.facet
     };
 
-    setAnswers((prevAnswers) => [
-      ...prevAnswers.filter((a) => a.id !== id),
-      newAnswer
-    ]);
+    setAnswers((prev) => [...prev.filter((a) => a.id !== id), newAnswer]);
 
     const latestAnswerId = answers.slice(-1)[0]?.id;
 
@@ -128,11 +125,11 @@ export const Survey = ({
 
   function skipToEnd() {
     const randomAnswers = questions
-      .map((question) => ({
-        id: question.id,
+      .map((q) => ({
+        id: q.id,
         score: Math.floor(Math.random() * 5) + 1,
-        domain: question.domain,
-        facet: question.facet
+        domain: q.domain,
+        facet: q.facet
       }))
       .slice(0, questions.length - 1);
 
@@ -153,7 +150,6 @@ export const Survey = ({
     });
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
-    console.log(result);
     localStorage.setItem('resultId', result.id);
     router.push(`/result/${result.id}`);
   }
@@ -181,10 +177,56 @@ export const Survey = ({
   }
 
   function clearDataInLocalStorage() {
-    console.log('Clearing data from local storage');
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
     location.reload();
+  }
+
+  // inline “smiley card” button (no extra files/components)
+  function SmileyOption({
+    score,
+    label,
+    selected,
+    onSelect,
+    disabled
+  }: {
+    score: number;
+    label: string;
+    selected: boolean;
+    onSelect: (score: number) => void;
+    disabled: boolean;
+  }) {
+    return (
+      <button
+        type='button'
+        role='radio'
+        aria-checked={selected}
+        disabled={disabled}
+        onClick={() => onSelect(score)}
+        className={[
+          'relative isolate rounded-lg border w-[78px] md:w-[92px] shrink-0',
+          'p-2 md:p-2.5 bg-white/90 dark:bg-content1 transition-colors',
+          'hover:bg-content2 focus:outline-none focus:ring-2 focus:ring-primary/40',
+          selected ? 'border-primary ring-1 ring-primary/30' : 'border-default-200',
+          disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'
+        ].join(' ')}
+      >
+        <div
+          className={[
+            'absolute inset-0 rounded-lg -z-10',
+            selected ? 'bg-primary/10' : 'bg-transparent'
+          ].join(' ')}
+        />
+        <div className='flex flex-col items-center gap-1'>
+          <span className='text-lg md:text-xl leading-none select-none'>
+            {EMOJIS[score - 1] ?? '•'}
+          </span>
+          <span className='text-[11px] md:text-xs leading-tight text-foreground/80 text-center'>
+            {label}
+          </span>
+        </div>
+      </button>
+    );
   }
 
   return (
@@ -230,36 +272,42 @@ export const Survey = ({
         color='primary'
       />
 
-      {/* NEW: Grid layout (1 column on mobile, 3 columns on md+) */}
+      {/* Grid: 1 column on mobile, 3 columns on md+ */}
       <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-6'>
-        {currentQuestions.map((question) => (
-          <div
-            key={'q' + question.num}
-            className='rounded-xl border border-default-200 bg-content1/40 p-4'
-          >
-            <h2 className='text-base md:text-lg font-medium mb-3'>
-              {question.text}
-            </h2>
-            <RadioGroup
-              onValueChange={(value) => handleAnswer(question.id, value)}
-              value={answers
-                .find((answer) => answer.id === question.id)
-                ?.score.toString()}
-              color='primary'
-              isDisabled={inProgress}
+        {currentQuestions.map((question) => {
+          const selected = answers.find((a) => a.id === question.id)?.score;
+
+          return (
+            <div
+              key={'q' + question.num}
+              className='rounded-xl border border-default-200 bg-content1/40 p-4'
             >
-              {question.choices.map((choice, index) => (
-                <Radio
-                  key={index + question.id}
-                  value={choice.score.toString()}
-                  className='py-1'
-                >
-                  {choice.text}
-                </Radio>
-              ))}
-            </RadioGroup>
-          </div>
-        ))}
+              <h2 className='text-base md:text-lg font-medium mb-3'>
+                {question.text}
+              </h2>
+
+              {/* Pictorial Likert (emoji + label) */}
+              <div
+                role='radiogroup'
+                aria-label={`Scale for question ${question.num}`}
+                className='flex flex-wrap gap-2 md:gap-3'
+              >
+                {question.choices.slice(0, 5).map((choice) => (
+                  <SmileyOption
+                    key={choice.score}
+                    score={choice.score}
+                    label={choice.text}
+                    selected={selected === choice.score}
+                    disabled={inProgress}
+                    onSelect={(score) =>
+                      handleAnswer(question.id, String(score))
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <div className='my-12 space-x-4 inline-flex'>
