@@ -35,15 +35,34 @@ export default function Footer({ footerLinks }: FooterProps) {
           ))}
         </ul>
       </div>
-      <div
-        className='flex text-sm text-gray-500 justify-center'
-        style={{
-          marginTop: '24px',
-          height: '20px'
-        }}
-      >
-        © {year} — understandme2.com - all rights reserved. Please <a href="https://www.instagram.com/phdlark/" target="_blank">_visit our Instagram</a>
-      </div>
+     <div
+  className='flex text-sm text-gray-500 justify-center'
+  style={{
+    marginTop: '24px',
+    height: '20px'
+  }}
+>
+  © {year} — understandme2.com - all rights reserved. 
+  Please{' '}
+  <a
+    href="https://www.instagram.com/phdlark/"
+    target="_blank"
+    rel="noopener"
+    className="underline"
+  >
+    visit Instagram
+  </a>{' '}
+  or{' '}
+  <a
+    href="https://www.linkedin.com/in/kim-larsen-725b52352/?utm_source=understandme2.com&utm_medium=referral"
+    target="_blank"
+    rel="noopener"
+    className="underline"
+  >
+    LinkedIn
+  </a>
+  {' '}— because your personality isn’t going to understand itself.
+</div>
     </footer>
   );
 }
