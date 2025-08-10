@@ -31,7 +31,10 @@ export default function ComparePage({
 
   return (
     <div className='lg:px-16'>
-      <Heading title={t('title')} subtitle={t('description1')} />
+     <h2 className="text-2xl font-bold">{t('title')}</h2>
+<p className="text-gray-500">{t('description1')}</p>
+      
+    
       <Suspense fallback='loading...'>
         <ComparePeople
           addPersonText={t('addPerson')}
