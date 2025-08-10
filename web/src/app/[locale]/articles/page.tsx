@@ -28,10 +28,9 @@ export default function ArticlesPage({ params: { locale } }: Props) {
 
   return (
     <div className='w-full lg:px-16'>
-      <Heading
-        title='Articles on personalityes'
-        subtitle='Some articles on Personality'
-      />
+<h2 className="text-2xl font-bold">Articles on personalityes</h2>
+<p className="text-gray-500">Some articles on Personality</p>
+
       <div className='grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]'>
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
