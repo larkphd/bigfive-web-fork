@@ -14,52 +14,47 @@ import {
   siteConfig
 } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
-import process from 'node:process';
 import GoogleAnalytics from '@/components/google-analytics';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+// ✅ Ikke 'use server' — og flytt env-variabler inni funksjonene
 
-export async function generateMetadata({
+export function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string };
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'frontpage' });
-  const s = await getTranslations({ locale, namespace: 'seo' });
+}): Metadata {
+  const googleAdsenseAccount = process.env.NEXT_PUBLIC_AD_KEY || '';
   const baseLangPath = locale === 'en' ? '' : `/${locale}`;
-  const canonical = `${basePath}${baseLangPath}/`;
+  const canonical = `${basePath}${baseLangPath}`;
 
   const alternates = {
     canonical,
     languages: languages.reduce<Record<string, string>>((result, lang) => {
       const langPrefix = lang.code === 'en' ? '' : `/${lang.code}`;
-      result[lang.code] = `${basePath}${langPrefix}/`;
-
+      result[lang.code] = `${basePath}${langPrefix}`;
       if (lang.map) {
         lang.map.forEach(
-          (code) => (result[code] = `${basePath}/${lang.code}/`)
+          (code) => (result[code] = `${basePath}/${lang.code}`)
         );
       }
-
       return result;
     }, {}),
-    'x-default': `${basePath}/en/`
+    'x-default': `${basePath}`
   };
 
   return {
     title: {
-      default: t('seo.title'),
-      template: `%s - ${t('seo.title')}`
+      default: 'UnderstandMe2 – Explore Your Personality',
+      template: '%s - UnderstandMe2'
     },
-    description: t('seo.description'),
-    keywords: s('keywords'),
-    authors: [{ name: 'Reborn from github', url: basePath }],
+    description:
+      'Discover your Big Five personality traits with UnderstandMe2. Learn more about yourself and improve your well-being.',
+    keywords:
+      'personality test, big five, psychology, mental health, self-discovery',
+    authors: [{ name: 'UnderstandMe2 Team', url: basePath }],
     icons: {
       icon: '/favicon.ico',
       shortcut: '/favicon-16x16.png',
@@ -69,29 +64,36 @@ export async function generateMetadata({
     alternates,
     openGraph: {
       type: 'website',
-      url: basePath,
-      title: t('seo.title'),
-      description: t('seo.description'),
+      url: canonical,
+      title: 'UnderstandMe2 – Explore Your Personality',
+      description:
+        'Take the Big Five personality test and understand yourself better.',
       images: {
         url: `${basePath}/og-image.png`,
-        alt: 'People comparing personality tests'
+        alt: 'People comparing personality traits'
       }
     },
     twitter: {
-      title: t('seo.title'),
+      title: 'UnderstandMe2 – Explore Your Personality',
       card: 'summary_large_image',
-      description: t('seo.description'),
+      description:
+        'Take the Big Five personality test and understand yourself better.',
       site: basePath,
       creator: siteConfig.creator,
       images: {
         url: `${basePath}/og-image.png`,
-        alt: 'People comparing personality tests'
+        alt: 'People comparing personality traits'
       }
     },
     other: {
-      'google-adsense-account': process.env.NEXT_PUBLIC_AD_KEY || ''
+      'google-adsense-account': googleAdsenseAccount
     }
   };
+}
+
+// ✅ Må være async i Next 14
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
@@ -140,9 +142,10 @@ export default async function RootLayout({
             <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
+
         <Script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY}`}
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY || ''}`}
           crossOrigin='anonymous'
           strategy='afterInteractive'
         />
