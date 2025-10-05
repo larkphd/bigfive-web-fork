@@ -1,5 +1,3 @@
-'use server';
-
 import '@/styles/globals.css';
 import { Metadata, Viewport } from 'next';
 import { fontSans } from '@/config/fonts';
@@ -21,19 +19,17 @@ import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
 import GoogleAnalytics from '@/components/google-analytics';
 
-// ✅ Miljøvariabler flyttet ut av metadata
-const googleAdsenseAccount = process.env.NEXT_PUBLIC_AD_KEY || '';
-const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
+// ✅ Ikke 'use server' — og flytt env-variabler inni funksjonene
 
 export function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string };
 }): Metadata {
+  const googleAdsenseAccount = process.env.NEXT_PUBLIC_AD_KEY || '';
   const baseLangPath = locale === 'en' ? '' : `/${locale}`;
-  const canonical = `${basePath}${baseLangPath}`; // uten trailing slash
+  const canonical = `${basePath}${baseLangPath}`;
 
-  // ✅ Canonical og alternates matcher sitemap uten redirect
   const alternates = {
     canonical,
     languages: languages.reduce<Record<string, string>>((result, lang) => {
@@ -95,7 +91,7 @@ export function generateMetadata({
   };
 }
 
-// ✅ Må være async for Next.js 14
+// ✅ Må være async i Next 14
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -117,6 +113,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
   const direction = getTextDirectionBasedOnLocale(locale);
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
@@ -146,10 +143,9 @@ export default async function RootLayout({
           </div>
         </Providers>
 
-        {/* ✅ Scriptene ligger etter DOM (for stabil prerender) */}
         <Script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseAccount}`}
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_KEY || ''}`}
           crossOrigin='anonymous'
           strategy='afterInteractive'
         />
