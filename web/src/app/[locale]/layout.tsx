@@ -21,11 +21,10 @@ import CookieBanner from '@/components/cookie-consent';
 import { getTextDirectionBasedOnLocale } from '@/lib/helpers';
 import GoogleAnalytics from '@/components/google-analytics';
 
-// ✅ Flytt miljøvariabler ut av metadata-funksjon
+// ✅ Miljøvariabler flyttet ut av metadata
 const googleAdsenseAccount = process.env.NEXT_PUBLIC_AD_KEY || '';
 const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
 
-// ✅ Fjern async/await fra generateMetadata (årsaken til crash)
 export function generateMetadata({
   params: { locale }
 }: {
@@ -34,7 +33,7 @@ export function generateMetadata({
   const baseLangPath = locale === 'en' ? '' : `/${locale}`;
   const canonical = `${basePath}${baseLangPath}`; // uten trailing slash
 
-  // ✅ Bygg alternates uten / på slutten
+  // ✅ Canonical og alternates matcher sitemap uten redirect
   const alternates = {
     canonical,
     languages: languages.reduce<Record<string, string>>((result, lang) => {
@@ -96,6 +95,11 @@ export function generateMetadata({
   };
 }
 
+// ✅ Må være async for Next.js 14
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -105,10 +109,6 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: 'black' }
   ]
 };
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
 
 export default async function RootLayout({
   children,
@@ -145,7 +145,8 @@ export default async function RootLayout({
             <Footer footerLinks={footerLinks} />
           </div>
         </Providers>
-        {/* ✅ GA + Ads moved safely below Providers */}
+
+        {/* ✅ Scriptene ligger etter DOM (for stabil prerender) */}
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${googleAdsenseAccount}`}
